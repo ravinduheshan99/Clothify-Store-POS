@@ -1,0 +1,61 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import com.jfoenix.controls.JFXButton?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.image.Image?>
+<?import javafx.scene.image.ImageView?>
+<?import javafx.scene.layout.AnchorPane?>
+<?import javafx.scene.shape.Rectangle?>
+<?import javafx.scene.text.Font?>
+
+<AnchorPane prefHeight="551.0" prefWidth="711.0" xmlns="http://javafx.com/javafx/21" xmlns:fx="http://javafx.com/fxml/1" fx:controller="edu.icet.coursework.controller.report.ReportsForAdminFormController">
+   <children>
+      <ImageView fitHeight="505.0" fitWidth="755.0" layoutY="60.0" pickOnBounds="true" preserveRatio="true">
+         <image>
+            <Image url="@../../../../assets/pexels-kish-1488463.jpg" />
+         </image>
+      </ImageView>
+      <Rectangle arcHeight="5.0" arcWidth="5.0" fill="WHITE" height="59.0" stroke="BLACK" strokeType="INSIDE" width="755.0" />
+      <Label layoutX="637.0" layoutY="18.0" text="Login">
+         <font>
+            <Font name="Segoe UI" size="18.0" />
+         </font>
+      </Label>
+      <ImageView fitHeight="49.0" fitWidth="50.0" layoutX="694.0" layoutY="5.0" pickOnBounds="true" preserveRatio="true">
+         <image>
+            <Image url="@../../../../assets/logo.jpg" />
+         </image>
+      </ImageView>
+      <Rectangle arcHeight="50.0" arcWidth="50.0" fill="#ffffff36" height="490.0" layoutX="20.0" layoutY="67.0" stroke="WHITE" strokeType="INSIDE" width="716.0" />
+      <Label layoutX="47.0" layoutY="72.0" text="Admin Reports" textFill="WHITE">
+         <font>
+            <Font size="20.0" />
+         </font>
+      </Label>
+      <JFXButton layoutX="228.0" layoutY="158.0" onAction="#btnInventoryReportOnAction" prefHeight="49.0" prefWidth="299.0" style="-fx-background-color: #000000; -fx-border-color: #ffffff; -fx-border-width: 2;" text="Inventory Report" textFill="WHITE">
+         <font>
+            <Font size="15.0" />
+         </font>
+      </JFXButton>
+      <JFXButton layoutX="228.0" layoutY="226.0" onAction="#btnSupplierReportOnAction" prefHeight="49.0" prefWidth="299.0" style="-fx-background-color: #000000; -fx-border-color: #ffffff; -fx-border-width: 2;" text="Supplier Report" textFill="WHITE">
+         <font>
+            <Font size="15.0" />
+         </font>
+      </JFXButton>
+      <JFXButton layoutX="228.0" layoutY="291.0" onAction="#btnSalesReportOnAction" prefHeight="49.0" prefWidth="299.0" style="-fx-background-color: #000000; -fx-border-color: #ffffff; -fx-border-width: 2;" text="Sales Report" textFill="WHITE">
+         <font>
+            <Font size="15.0" />
+         </font>
+      </JFXButton>
+      <JFXButton layoutX="228.0" layoutY="356.0" onAction="#btnEmployeeReportOnAction" prefHeight="49.0" prefWidth="299.0" style="-fx-background-color: #000000; -fx-border-color: #ffffff; -fx-border-width: 2;" text="Employee Report" textFill="WHITE">
+         <font>
+            <Font size="15.0" />
+         </font>
+      </JFXButton>
+      <JFXButton layoutX="228.0" layoutY="418.0" onAction="#btnBackOnAction" prefHeight="49.0" prefWidth="299.0" style="-fx-background-color: #000000; -fx-border-color: #ffffff; -fx-border-width: 2;" text="Back" textFill="WHITE">
+         <font>
+            <Font size="15.0" />
+         </font>
+      </JFXButton>
+   </children>
+</AnchorPane>

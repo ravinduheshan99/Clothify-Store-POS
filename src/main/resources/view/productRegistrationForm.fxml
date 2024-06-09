@@ -1,0 +1,61 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import com.jfoenix.controls.JFXButton?>
+<?import com.jfoenix.controls.JFXComboBox?>
+<?import com.jfoenix.controls.JFXTextField?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.image.Image?>
+<?import javafx.scene.image.ImageView?>
+<?import javafx.scene.layout.AnchorPane?>
+<?import javafx.scene.shape.Rectangle?>
+<?import javafx.scene.text.Font?>
+
+<AnchorPane maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="536.0" prefWidth="711.0" xmlns="http://javafx.com/javafx/21" xmlns:fx="http://javafx.com/fxml/1" fx:controller="edu.icet.coursework.controller.product.ProductRegistrationFormController">
+   <children>
+      <ImageView fitHeight="481.0" fitWidth="711.0" layoutY="61.0" pickOnBounds="true" preserveRatio="true">
+         <image>
+            <Image url="@../../../../assets/pexels-kish-1488463.jpg" />
+         </image>
+      </ImageView>
+      <Rectangle arcHeight="50.0" arcWidth="50.0" fill="#ffffff36" height="380.0" layoutX="24.0" layoutY="108.0" stroke="WHITE" strokeType="INSIDE" width="663.0" />
+      <Label layoutX="53.0" layoutY="131.0" onDragDetected="#lblOnActionRegistrationFormMainNav" text="Product Registration" textFill="WHITE">
+         <font>
+            <Font size="20.0" />
+         </font>
+      </Label>
+      <JFXTextField fx:id="txtPid" focusColor="WHITE" layoutX="58.0" layoutY="201.0" prefHeight="25.0" prefWidth="170.0" style="-fx-background-color: ffffff;" unFocusColor="WHITE" />
+      <JFXTextField fx:id="txtProductPic" focusColor="WHITE" layoutX="59.0" layoutY="299.0" prefHeight="30.0" prefWidth="170.0" style="-fx-background-color: ffffff;" unFocusColor="WHITE" />
+      <JFXTextField fx:id="txtProductName" focusColor="WHITE" layoutX="60.0" layoutY="352.0" prefHeight="17.0" prefWidth="170.0" promptText="Product Name" style="-fx-background-color: ffffff;" unFocusColor="WHITE" />
+      <JFXTextField fx:id="txtPrice" focusColor="WHITE" layoutX="266.0" layoutY="352.0" prefHeight="17.0" prefWidth="170.0" promptText="Price" style="-fx-background-color: ffffff;" unFocusColor="WHITE" />
+      <JFXComboBox fx:id="cbxCategory" focusColor="WHITE" layoutX="265.0" layoutY="299.0" prefHeight="30.0" prefWidth="170.0" promptText="Category" style="-fx-background-color: #ffffff;" unFocusColor="WHITE" />
+      <JFXTextField fx:id="txtProductDescription" focusColor="WHITE" layoutX="59.0" layoutY="440.0" prefHeight="17.0" prefWidth="377.0" promptText="Product Description" style="-fx-background-color: ffffff;" unFocusColor="WHITE" />
+      <JFXButton layoutX="69.0" layoutY="299.0" onAction="#btnChooseImageOnAction" prefHeight="25.0" prefWidth="80.0" style="-fx-background-color: #cdcdcd;" text="Choose File" />
+      <Label fx:id="lblProductPicName" layoutX="169.0" layoutY="303.0" prefHeight="17.0" prefWidth="39.0" text="No File" textFill="#8a8888" />
+      <Label layoutX="60.0" layoutY="178.0" prefHeight="17.0" prefWidth="58.0" text="Product ID" textFill="WHITE" />
+      <JFXComboBox fx:id="cbxSize" focusColor="WHITE" layoutX="59.0" layoutY="396.0" prefHeight="17.0" prefWidth="170.0" promptText="Size" style="-fx-background-color: #ffffff;" unFocusColor="WHITE" />
+      <JFXButton layoutX="478.0" layoutY="340.0" onAction="#btnAddOnAction" prefHeight="25.0" prefWidth="170.0" style="-fx-background-color: #000000;" text="Add Product" textFill="WHITE" />
+      <JFXButton layoutX="478.0" layoutY="407.0" onAction="#btnRemoveOnAction" prefHeight="25.0" prefWidth="170.0" style="-fx-background-color: #000000;" text="Remove Product" textFill="WHITE" />
+      <JFXButton layoutX="478.0" layoutY="440.0" onAction="#btnBackOnAction" prefHeight="23.0" prefWidth="170.0" style="-fx-background-color: #000000;" text="Back" textFill="WHITE" />
+      <JFXButton layoutX="265.0" layoutY="196.0" onAction="#btnSearchOnAction" prefHeight="36.0" prefWidth="170.0" style="-fx-background-color: #000000;" text="Search Product" textFill="WHITE" />
+      <JFXTextField fx:id="txtQty" focusColor="WHITE" layoutX="265.0" layoutY="396.0" prefHeight="25.0" prefWidth="170.0" promptText="Quantity" style="-fx-background-color: ffffff;" unFocusColor="WHITE" />
+      <JFXButton layoutX="478.0" layoutY="373.0" onAction="#btnUpdateOnAction" prefHeight="25.0" prefWidth="170.0" style="-fx-background-color: #000000;" text="Update Product" textFill="WHITE" />
+      <JFXTextField fx:id="txtSid" focusColor="WHITE" layoutX="58.0" layoutY="256.0" prefHeight="25.0" prefWidth="377.0" style="-fx-background-color: ffffff;" unFocusColor="WHITE" />
+      <Label layoutX="59.0" layoutY="235.0" prefHeight="17.0" prefWidth="72.0" text="Supplier ID" textFill="WHITE" />
+      <Rectangle arcHeight="5.0" arcWidth="5.0" fill="WHITE" height="60.0" stroke="BLACK" strokeType="INSIDE" width="711.0" />
+      <Label layoutX="593.0" layoutY="18.0" text="Login">
+         <font>
+            <Font name="Segoe UI" size="18.0" />
+         </font>
+      </Label>
+      <ImageView fitHeight="49.0" fitWidth="50.0" layoutX="651.0" layoutY="5.0" pickOnBounds="true" preserveRatio="true">
+         <image>
+            <Image url="@../../../../assets/logo.jpg" />
+         </image>
+      </ImageView>
+      <ImageView fx:id="imgProductPic" fitHeight="138.0" fitWidth="190.0" layoutX="468.0" layoutY="196.0" pickOnBounds="true" preserveRatio="true">
+         <image>
+            <Image url="@../../../../assets/pexels-dom-j-7304-45982.jpg" />
+         </image>
+      </ImageView>
+   </children>
+</AnchorPane>

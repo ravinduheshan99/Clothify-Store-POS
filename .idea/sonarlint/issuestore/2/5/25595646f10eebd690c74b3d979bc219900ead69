@@ -1,0 +1,16 @@
+
+
+java:S1104"TMake txtEmail a static final constant or non-public and provide accessors if needed.(Ψ¦½όÿÿÿÿ8κυυÿ1J$1282d484-410f-4edc-8927-aa760788ab62
+
+java:S1104	"TMake txtNewPw a static final constant or non-public and provide accessors if needed.(£…δ€ϋÿÿÿÿ8Λ…φυÿ1J$605f8125-e4b2-4d8c-a40b-aa42c0979923
+£
+java:S1104
+"[Make txtNewPwConfirm a static final constant or non-public and provide accessors if needed.(ΥΛΩÿÿÿÿÿ8ζφυÿ1J$54af011c-2860-460e-9004-7455dc9e4160
+Δ
+java:S1186"€Add a nested comment explaining why this method is empty, throw an UnsupportedOperationException or complete the implementation.(•»8΄ΐτυÿ1J$9433bca5-946d-4c98-8946-57085c82d49d
+Δ
+java:S1186"€Add a nested comment explaining why this method is empty, throw an UnsupportedOperationException or complete the implementation.(άΞ£8τέτυÿ1J$d136be47-c305-46e9-b2b3-c459fcc2654f
+Γ
+java:S1186"€Add a nested comment explaining why this method is empty, throw an UnsupportedOperationException or complete the implementation.(υέή78Χφυÿ1J$0b9bf8e6-d86b-4b9e-940d-ea6b227a823c
+Ι
+java:S1186"€Add a nested comment explaining why this method is empty, throw an UnsupportedOperationException or complete the implementation.(†ωΰύÿÿÿÿ8ξ„χυÿ1J$44812542-d898-4263-b8ac-ec3e74dda564

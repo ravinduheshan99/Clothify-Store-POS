@@ -1,0 +1,90 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import com.jfoenix.controls.JFXButton?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.image.Image?>
+<?import javafx.scene.image.ImageView?>
+<?import javafx.scene.layout.AnchorPane?>
+<?import javafx.scene.shape.Rectangle?>
+<?import javafx.scene.text.Font?>
+
+<AnchorPane prefHeight="535.0" prefWidth="711.0" xmlns="http://javafx.com/javafx/21" xmlns:fx="http://javafx.com/fxml/1" fx:controller="edu.icet.coursework.controller.user.EmployeeDashboardFormController">
+   <children>
+      <Rectangle arcHeight="5.0" arcWidth="5.0" fill="WHITE" height="59.0" stroke="BLACK" strokeType="INSIDE" width="711.0" />
+      <Label layoutX="590.0" layoutY="17.0" text="Login">
+         <font>
+            <Font name="Segoe UI" size="18.0" />
+         </font>
+      </Label>
+      <ImageView fitHeight="49.0" fitWidth="50.0" layoutX="648.0" layoutY="4.0" pickOnBounds="true" preserveRatio="true">
+         <image>
+            <Image url="@../../../../assets/logo.jpg" />
+         </image>
+      </ImageView>
+      <ImageView fitHeight="494.0" fitWidth="711.0" layoutY="60.0" pickOnBounds="true" preserveRatio="true">
+         <image>
+            <Image url="@../../../../assets/pexels-kish-1488463.jpg" />
+         </image>
+      </ImageView>
+      <Rectangle arcHeight="50.0" arcWidth="50.0" fill="#ffffff36" height="443.0" layoutX="28.0" layoutY="76.0" stroke="WHITE" strokeType="INSIDE" width="656.0" />
+      <Label layoutX="56.0" layoutY="97.0" text="Employee Dashboard" textFill="WHITE">
+         <font>
+            <Font name="Segoe UI" size="20.0" />
+         </font>
+      </Label>
+      <JFXButton contentDisplay="GRAPHIC_ONLY" layoutX="172.0" layoutY="152.0" onAction="#btnPointOfSaleOnAction" prefHeight="75.0" prefWidth="118.0" style="-fx-background-color: #000000; -fx-border-color: #ffffff; -fx-border-width: 2;">
+         <graphic>
+            <ImageView fitHeight="103.0" fitWidth="111.0" pickOnBounds="true" preserveRatio="true">
+               <image>
+                  <Image url="@../../../../assets/point of sale.png" />
+               </image></ImageView>
+         </graphic></JFXButton>
+      <Label layoutX="190.0" layoutY="267.0" style="-fx-background-color: #000000;" text="POINT OF SALE" textFill="WHITE">
+         <font>
+            <Font name="Segoe UI Bold" size="12.0" />
+         </font>
+      </Label>
+      <JFXButton contentDisplay="GRAPHIC_ONLY" layoutX="416.0" layoutY="152.0" onAction="#btnItemsOnAction" prefHeight="75.0" prefWidth="118.0" style="-fx-background-color: #000000; -fx-border-color: #ffffff; -fx-border-width: 2;">
+         <graphic>
+            <ImageView fitHeight="103.0" fitWidth="111.0" pickOnBounds="true" preserveRatio="true">
+               <image>
+                  <Image url="@../../../../assets/items.png" />
+               </image>
+            </ImageView>
+         </graphic>
+      </JFXButton>
+      <Label layoutX="460.0" layoutY="267.0" style="-fx-background-color: #000000;" text="ITEMS" textFill="WHITE">
+         <font>
+            <Font name="Segoe UI Bold" size="12.0" />
+         </font>
+      </Label>
+      <JFXButton contentDisplay="GRAPHIC_ONLY" layoutX="173.0" layoutY="314.0" onAction="#btnSuppliersOnAction" prefHeight="75.0" prefWidth="118.0" style="-fx-background-color: #000000; -fx-border-color: #ffffff; -fx-border-width: 2;">
+         <graphic>
+            <ImageView fitHeight="103.0" fitWidth="111.0" pickOnBounds="true" preserveRatio="true">
+               <image>
+                  <Image url="@../../../../assets/suppliers.jpg" />
+               </image>
+            </ImageView>
+         </graphic>
+      </JFXButton>
+      <Label layoutX="203.0" layoutY="429.0" style="-fx-background-color: #000000;" text="SUPPLIERS" textFill="WHITE">
+         <font>
+            <Font name="Segoe UI Bold" size="12.0" />
+         </font>
+      </Label>
+      <JFXButton contentDisplay="GRAPHIC_ONLY" layoutX="417.0" layoutY="314.0" onAction="#btnReportsOnAction" prefHeight="75.0" prefWidth="118.0" style="-fx-background-color: #000000; -fx-border-color: #ffffff; -fx-border-width: 2;">
+         <graphic>
+            <ImageView fitHeight="103.0" fitWidth="111.0" pickOnBounds="true" preserveRatio="true">
+               <image>
+                  <Image url="@../../../../assets/reports.jpg" />
+               </image>
+            </ImageView>
+         </graphic>
+      </JFXButton>
+      <Label layoutX="451.0" layoutY="429.0" style="-fx-background-color: #000000;" text="REPORTS" textFill="WHITE">
+         <font>
+            <Font name="Segoe UI Bold" size="12.0" />
+         </font>
+      </Label>
+   </children>
+</AnchorPane>

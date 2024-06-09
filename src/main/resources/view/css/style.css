@@ -1,0 +1,11 @@
+.white-background{
+    -fx-background-color: #ffffff;
+}
+
+.transparent{
+    -fx-background-color: rgba(0,0,0,0);
+}
+
+.imgProPic{
+    -fx-border-radius:50;
+}

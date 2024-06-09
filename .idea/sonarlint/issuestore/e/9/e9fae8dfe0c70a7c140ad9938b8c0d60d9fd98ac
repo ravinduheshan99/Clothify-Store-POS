@@ -1,0 +1,39 @@
+
+w
+java:S3740
+"/Provide the parametrized type for this generic.(–¤³Òşÿÿÿÿ8±ÇÁôÿ1J$54a7e27d-3e46-4678-b9b3-6f034301ff4b
+w
+java:S3740"/Provide the parametrized type for this generic.(§Û¾‡üÿÿÿÿ8…—Âôÿ1J$b233422c-c5f5-466e-bc96-d467215ad085
+r
+java:S3740"/Provide the parametrized type for this generic.(¦¢éÑ8íÅÂôÿ1J$1aec6684-9660-4e7f-8baa-e58e9a21d80a
+w
+java:S3740"/Provide the parametrized type for this generic.(©Úú»ùÿÿÿÿ8¨àÂôÿ1J$9e43ed0b-d5b9-416e-bdd6-d2c49f0b1a05
+r
+java:S3740"/Provide the parametrized type for this generic.(¾ú€8£ûÂôÿ1J$a007a06c-8401-4b45-9588-afd6c17c0c7c
+r
+java:S3740"/Provide the parametrized type for this generic.(Õ…¼í8ä•Ãôÿ1J$4f63c676-04a5-4e4b-923e-c782efe96222
+w
+java:S3740"/Provide the parametrized type for this generic.(‰å¾…úÿÿÿÿ8›°Ãôÿ1J$d6663cea-102e-47b2-b379-544fd995589c
+r
+java:S3740"/Provide the parametrized type for this generic.(¨­Ì˜8áÇÃôÿ1J$f67570b8-04c3-498b-a15b-033626499b1e
+
+java:S1104
+"UMake tblOrders a static final constant or non-public and provide accessors if needed.(–¤³Òşÿÿÿÿ8³ÇÁôÿ1J$58b9bfa1-3d6e-4657-892b-fafa0bb6e1a1
+š
+java:S1104"RMake colOid a static final constant or non-public and provide accessors if needed.(§Û¾‡üÿÿÿÿ8‡—Âôÿ1J$e5e50d40-cf3d-4336-ba0d-68e30caa0a19
+•
+java:S1104"RMake colUid a static final constant or non-public and provide accessors if needed.(¦¢éÑ8ñÅÂôÿ1J$f2a1975e-9206-4d3c-94c9-bfd81cb9d412
+š
+java:S1104"RMake colPid a static final constant or non-public and provide accessors if needed.(©Úú»ùÿÿÿÿ8ªàÂôÿ1J$7241b421-a7dd-4418-9464-6363d7e8e93c
+
+java:S1104"ZMake colProductName a static final constant or non-public and provide accessors if needed.(¾ú€8¤ûÂôÿ1J$74f84f42-7685-4b37-a2a9-61f6dc6416dc
+›
+java:S1104"XMake colUnitPrice a static final constant or non-public and provide accessors if needed.(Õ…¼í8æ•Ãôÿ1J$cdab2930-3b4f-4542-b17f-97d30a6f42f6
+š
+java:S1104"RMake colQty a static final constant or non-public and provide accessors if needed.(‰å¾…úÿÿÿÿ8°Ãôÿ1J$cc436821-8fc9-4c38-958d-c9887b2a447c
+—
+java:S1104"TMake colTotal a static final constant or non-public and provide accessors if needed.(¨­Ì˜8òÇÃôÿ1J$f5af5ec9-c900-4c3b-aa30-186d529fcfa0
+É
+java:S1186"€Add a nested comment explaining why this method is empty, throw an UnsupportedOperationException or complete the implementation.(†ùàıÿÿÿÿ8ßÌÅôÿ1J$b16cecb4-7d30-4fae-a6f5-20603a744b2d
+‚
+java:S1128":Remove this unused import 'javafx.scene.input.MouseEvent'.(˜¬‹æÿÿÿÿÿ8¬ ¿ôÿ1J$b2b8ea81-6566-421b-b8f3-fe45fcde998a

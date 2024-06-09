@@ -1,0 +1,53 @@
+
+r
+java:S3740"/Provide the parametrized type for this generic.(‚–ç‡8û¨ş1J$b8c034a8-5fd9-49d0-b5be-7a679a8c3fd4
+r
+java:S3740"/Provide the parametrized type for this generic.(¾–¾ã8ƒû¨ş1J$17a3d4f6-a6f4-4f89-afa5-7b33823c839b
+w
+java:S3740"/Provide the parametrized type for this generic.(º°Çşûÿÿÿÿ8²™©ş1J$a868b869-2dd5-4419-9d6c-35104c410515
+w
+java:S3740"/Provide the parametrized type for this generic.(‰å¾…úÿÿÿÿ8ş¼ªş1J$a6e737ac-1ec2-4784-8eea-8543f96381c3
+r
+java:S3740"/Provide the parametrized type for this generic.(Õ…¼í8ìíªş1J$f78be7d6-4639-4cf5-9504-118f829e0b8f
+r
+java:S3740"/Provide the parametrized type for this generic.(¨­Ì˜8è‘«ş1J$4276ed7b-40ce-4756-9e26-bf15831eec3b
+š
+java:S1104"RMake txtOid a static final constant or non-public and provide accessors if needed.(èîóÙøÿÿÿÿ8åÎ¥ş1J$04a40b1e-a630-406c-aa15-d19e2c447039
+›
+java:S1104"XMake txtCashierId a static final constant or non-public and provide accessors if needed.(ï•“î8Àî¥ş1J$33e66f8c-595f-4ca3-9417-539cac4fc144
+£
+java:S1104"[Make txtAvailableQty a static final constant or non-public and provide accessors if needed.(³İ¢°ûÿÿÿÿ8Š‘¦ş1J$f2586c67-e1dc-4abd-8f94-c7e447fa6391
+›
+java:S1104"XMake cbxProductId a static final constant or non-public and provide accessors if needed.(‚–ç‡8¸¦ş1J$c91e84c0-5545-43fa-8ad7-56b1e5c74e79
+
+java:S1104"VMake txtQtyNeed a static final constant or non-public and provide accessors if needed.(‡·’–ÿÿÿÿÿ8÷¦ş1J$55b84093-3803-4781-ba10-055009fb1ddf
+
+java:S1104"ZMake txtProductName a static final constant or non-public and provide accessors if needed.(•Ôò8ãã¨ş1J$cf11b2c7-c52b-4dd1-917c-e21675befc59
+ 
+java:S1104"XMake txtUnitPrice a static final constant or non-public and provide accessors if needed.(©›×Ğùÿÿÿÿ8†û¨ş1J$01b4abc2-1e66-4bcf-835e-baf2336c5b54
+
+java:S1104"ZMake tblProductCart a static final constant or non-public and provide accessors if needed.(¾–¾ã8†û¨ş1J$d307a5d6-f69c-4e2e-b99f-c11a66bedb88
+ 
+java:S1104"XMake colProductId a static final constant or non-public and provide accessors if needed.(º°Çşûÿÿÿÿ8µ™©ş1J$065d525f-0cc9-4a90-bd34-a789507ef225
+š
+java:S1104"RMake colQty a static final constant or non-public and provide accessors if needed.(‰å¾…úÿÿÿÿ8†½ªş1J$493e174b-d158-470e-8f29-929d8f02bba9
+›
+java:S1104"XMake colUnitPrice a static final constant or non-public and provide accessors if needed.(Õ…¼í8óíªş1J$42684e59-3246-46a1-9fb5-2506dedd6195
+—
+java:S1104"TMake colTotal a static final constant or non-public and provide accessors if needed.(¨­Ì˜8ò‘«ş1J$caf8447f-faa1-4e48-80d4-2bb33181a39b
+Ÿ
+java:S1104"\Make txtCustomerEmail a static final constant or non-public and provide accessors if needed.(îÜÆ˜8³¸«ş1J$cded02e5-6609-484a-ba55-c58fdef33eb8
+Ÿ
+java:S1104"WMake txtDiscount a static final constant or non-public and provide accessors if needed.(²ÿ¢ÿÿÿÿÿ8ŸÊ«ş1J$8cf1ffa5-f026-4b72-879c-75c6f1ba6f8d
+¡
+java:S1104"^Make lblTotalBillAmount a static final constant or non-public and provide accessors if needed.(„ß‡È8éè«ş1J$a88a7c0b-1e22-41c5-94b5-a9db2e382a91
+É
+java:S1186"€Add a nested comment explaining why this method is empty, throw an UnsupportedOperationException or complete the implementation.(âÂÍÒşÿÿÿÿ8©Ê«ş1J$02ab9f5d-1eed-46e1-8847-9731d6e647e0
+É
+java:S1186"€Add a nested comment explaining why this method is empty, throw an UnsupportedOperationException or complete the implementation.(ˆÏóÎüÿÿÿÿ8©Ê«ş1J$8cdc8dc1-1b22-4586-855e-889011e2c37b
+É
+java:S1186!"€Add a nested comment explaining why this method is empty, throw an UnsupportedOperationException or complete the implementation.(†ùàıÿÿÿÿ8©Ê«ş1J$ac1d43e6-55d4-411d-a2b8-d8075c8a459b
+É
+java:S1186$"€Add a nested comment explaining why this method is empty, throw an UnsupportedOperationException or complete the implementation.(Š²Ô¢úÿÿÿÿ8©Ê«ş1J$00065fa5-42af-4796-8e28-c78e35049796
+Ä
+java:S1186'"€Add a nested comment explaining why this method is empty, throw an UnsupportedOperationException or complete the implementation.(¯”ÖŸ8Û«óÿ1J$3598b2e2-7a7d-4f12-9ef4-65b61dd1ef20

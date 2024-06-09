@@ -1,0 +1,38 @@
+
+w
+java:S3740"/Provide the parametrized type for this generic.(èÖğ£üÿÿÿÿ8´“úı1J$edb82017-e9bb-404d-abe4-52420cf97f63
+r
+java:S3740"/Provide the parametrized type for this generic.(•Œ¯©8¿¼úı1J$bc6dc542-9c31-47f0-8253-a9d0656bd8fd
+š
+java:S1104"RMake txtUid a static final constant or non-public and provide accessors if needed.(¤¸¡šüÿÿÿÿ8†¸œúı1J$c7a93889-ad10-41f3-9df8-21c08d2cabc1
+œ
+java:S1104"TMake txtFname a static final constant or non-public and provide accessors if needed.(à³Ä›úÿÿÿÿ8öÕœúı1J$ad8bec52-c3c3-4ed4-a20f-440cc0fde60a
+œ
+java:S1104"TMake txtLname a static final constant or non-public and provide accessors if needed.(®ªŸùÿÿÿÿ8÷øœúı1J$9b8c1afa-4d46-4383-b8a4-f493284524cc
+Ÿ
+java:S1104"WMake cbxUserType a static final constant or non-public and provide accessors if needed.(èÖğ£üÿÿÿÿ8·“úı1J$114d433a-573b-4849-83a1-4c7da17ed7ce
+
+java:S1104"VMake txtAddress a static final constant or non-public and provide accessors if needed.(©ûîùıÿÿÿÿ8·¨úı1J$a7cbc47a-a688-4309-9549-0d96c44e7c2b
+ 
+java:S1104"XMake txtContactNo a static final constant or non-public and provide accessors if needed.(¤«Î£ıÿÿÿÿ8Æúı1J$51180b55-2b07-4f97-b8ac-4c44bca0f42e
+œ
+java:S1104"TMake txtEmail a static final constant or non-public and provide accessors if needed.(Ø¦½üÿÿÿÿ8ªîúı1J$5146da31-bf12-4fdd-a880-17168288c30d
+ 
+java:S1104"XMake txtPwConfirm a static final constant or non-public and provide accessors if needed.(¨³ã‹ÿÿÿÿÿ8Æüúı1J$1cf42893-f415-42ff-983d-03463709de69
+˜
+java:S1104"UMake cbxGender a static final constant or non-public and provide accessors if needed.(•Œ¯©8Ã¼úı1J$163e6de6-aeaa-4e05-a664-e976ed363b5d
+•
+java:S1104"RMake DtpDob a static final constant or non-public and provide accessors if needed.(¾–¦’8õÕúı1J$0e378a7e-10c6-4f7d-a3e1-2426a7bf77bc
+™
+java:S1104"QMake txtPw a static final constant or non-public and provide accessors if needed.(¹‘Ìäüÿÿÿÿ8üòúı1J$7df79daa-43f9-4561-811b-2947c29f4a4c
+›
+java:S1104"YMake imgProfilePic a static final constant or non-public and provide accessors if needed.(Ö›Ô8ì“Ÿúı1J$a12dc57c-192e-401b-bbc9-648903c129a6
+˜
+java:S1104"UMake txtProPic a static final constant or non-public and provide accessors if needed.(Ñöõè8®Îìïÿ1J$491cdf72-5904-4d26-805f-2c99a416750c
+¡
+java:S1104"YMake lblProPicName a static final constant or non-public and provide accessors if needed.(ÆŸ°ûşÿÿÿÿ8Ğ™íïÿ1J$c51c9f73-9462-4207-93f5-c86298713e93
+“	java:S116"QRename this field "DtpDob" to match the regular expression '^[a-z][a-zA-Z0-9]*$'.(¾–¦’8™Öúı1J$520b915d-8e30-4a25-9783-23e7c8ac4818
+Ä
+java:S1186"€Add a nested comment explaining why this method is empty, throw an UnsupportedOperationException or complete the implementation.(Ÿ´À£8×üúı1J$d5538686-97f1-487d-a0c9-2b6df17e4970
+É
+java:S1186"€Add a nested comment explaining why this method is empty, throw an UnsupportedOperationException or complete the implementation.(Úó¥üøÿÿÿÿ8Øüúı1J$cad6278f-afde-4621-ab8c-a2e3f4421995
