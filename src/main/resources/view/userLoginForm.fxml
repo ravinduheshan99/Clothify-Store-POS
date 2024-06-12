@@ -12,15 +12,15 @@
 
 <AnchorPane prefHeight="551.0" prefWidth="711.0" xmlns="http://javafx.com/javafx/21" xmlns:fx="http://javafx.com/fxml/1" fx:controller="edu.icet.coursework.controller.user.UserLoginFormController">
     <children>
-        <ImageView fitHeight="508.0" fitWidth="755.0" layoutY="59.0" pickOnBounds="true" preserveRatio="true">
+        <ImageView fitHeight="431.0" fitWidth="685.0" layoutX="57.0" layoutY="83.0" pickOnBounds="true" preserveRatio="true">
             <image>
-                <Image url="@../../../../assets/pexels-kish-1488463.jpg" />
+                <Image url="@../../../../assets/Background.jpg" />
             </image>
         </ImageView>
         <Rectangle arcHeight="100.0" arcWidth="100.0" fill="#ffffff36" height="442.0" layoutX="220.0" layoutY="90.0" stroke="WHITE" strokeType="INSIDE" width="315.0" />
         <ImageView fitHeight="188.0" fitWidth="188.0" layoutX="284.0" layoutY="110.0" pickOnBounds="true" preserveRatio="true">
             <image>
-                <Image url="@../../../../assets/logo.jpg" />
+                <Image url="@../../../../assets/Logo.jpg" />
             </image>
         </ImageView>
         <JFXTextField fx:id="txtEmail" focusColor="WHITE" layoutX="268.0" layoutY="342.0" prefHeight="25.0" prefWidth="221.0" promptText="Email" style="-fx-background-color: #ffffff;" unFocusColor="WHITE">
@@ -65,7 +65,7 @@
       </Label>
       <ImageView fitHeight="49.0" fitWidth="50.0" layoutX="694.0" layoutY="5.0" pickOnBounds="true" preserveRatio="true">
          <image>
-            <Image url="@../../../../assets/logo.jpg" />
+            <Image url="@../../../../assets/Logo.jpg" />
          </image>
       </ImageView>
     </children>
