@@ -1,26 +1,31 @@
 
+	java:S112C"FDefine and throw a dedicated exception instead of using a generic one.(¯åÕøÿÿÿÿ8½ìÂ»2J$5882c913-06ce-418d-858f-2bf1a5ad0098
 •
-java:S1104"RMake txtSid a static final constant or non-public and provide accessors if needed.(·•»¦8˜ó”ôÿ1J$f01384af-77f6-4a05-b528-ff664f26ad6b
+java:S1104"RMake txtSid a static final constant or non-public and provide accessors if needed.(·•»¦8ÂìÂ»2J$ff6e261c-9554-450d-a316-056fb078214c
 š
-java:S1104	"RMake txtPid a static final constant or non-public and provide accessors if needed.(¸¯…Ùÿÿÿÿÿ8€‹•ôÿ1J$8e9f6380-b595-4e11-b041-0d6a5d31cd7c
+java:S1104"RMake txtPid a static final constant or non-public and provide accessors if needed.(¸¯…Ùÿÿÿÿÿ8ÂìÂ»2J$05ee6c35-067e-4596-a253-cf4d7de11e76
 
-java:S1104
-"ZMake txtProductName a static final constant or non-public and provide accessors if needed.(•Ôò8È¦•ôÿ1J$9634c7da-98b3-4792-bdd5-76b32b468f3c
+java:S1104"ZMake txtProductName a static final constant or non-public and provide accessors if needed.(•Ôò8ÂìÂ»2J$73387a9e-8d81-4ea4-b840-a9db61850e34
 
-java:S1104"[Make txtCompanyEmail a static final constant or non-public and provide accessors if needed.(™ª€8¶¼•ôÿ1J$7e549648-9a96-4642-9413-abbe53a3c96d
-w
-java:S1104"ZMake txtCompanyName a static final constant or non-public and provide accessors if needed.(‚¶ÉÇ8Î’—ôÿ1
+java:S1104"[Make txtCompanyEmail a static final constant or non-public and provide accessors if needed.(™ª€8ÂìÂ»2J$f039fd32-efb6-4eac-98ef-a03f46c8af87
+
+java:S1104"ZMake txtCompanyName a static final constant or non-public and provide accessors if needed.(‚¶ÉÇ8ÂìÂ»2J$bec0a189-54e5-4e13-9219-e36a3f3daf40
+i
+java:S2095&"GUse try-with-resources or close this "Statement" in a "finally" clause.(é°Áµşÿÿÿÿ8ôôê»2
+i
+java:S20951"GUse try-with-resources or close this "Statement" in a "finally" clause.(›ï¢Üùÿÿÿÿ8ôôê»2
 Ä
-java:S1186"€Add a nested comment explaining why this method is empty, throw an UnsupportedOperationException or complete the implementation.(ˆ„ä…8ÇÌ”ôÿ1J$02c2a53d-f455-4b28-ba53-a3ba1a243f83
+java:S1186Q"€Add a nested comment explaining why this method is empty, throw an UnsupportedOperationException or complete the implementation.(ˆ„ä…8ğÂ»2J$1d013652-31a9-41dc-9fc2-fd5b4a61e6a5
 Ä
-java:S1186"€Add a nested comment explaining why this method is empty, throw an UnsupportedOperationException or complete the implementation.(áÄ´ü8ºà•ôÿ1J$bd302608-0411-47ba-a082-6925fa204562
+java:S1186T"€Add a nested comment explaining why this method is empty, throw an UnsupportedOperationException or complete the implementation.(áÄ´ü8“ğÂ»2J$c8e978c2-d9dd-49a4-be21-bc918f034fd3
 É
-java:S1186"€Add a nested comment explaining why this method is empty, throw an UnsupportedOperationException or complete the implementation.(»…ä«ùÿÿÿÿ8İú•ôÿ1J$9245ad09-318e-47c0-a104-df1a20fd39df
-É
-java:S1186"€Add a nested comment explaining why this method is empty, throw an UnsupportedOperationException or complete the implementation.(¿˜å•øÿÿÿÿ8Ô–ôÿ1J$30da90b1-4847-4725-ae91-678b38a7c42a
+java:S1186h"€Add a nested comment explaining why this method is empty, throw an UnsupportedOperationException or complete the implementation.(¿˜å•øÿÿÿÿ8™ğÂ»2J$5d0670b0-184b-4766-abf2-0f6eb02e4eb4
 Ä
-java:S1186"€Add a nested comment explaining why this method is empty, throw an UnsupportedOperationException or complete the implementation.(¶ú‡ó8ä«–ôÿ1J$14b1ddff-ae97-4d96-a8bc-2da0e27d79b2
+java:S1186k"€Add a nested comment explaining why this method is empty, throw an UnsupportedOperationException or complete the implementation.(¶ú‡ó8šğÂ»2J$d53f6857-540c-44c7-a992-e39341c91527
 É
-java:S1186"€Add a nested comment explaining why this method is empty, throw an UnsupportedOperationException or complete the implementation.(†ùàıÿÿÿÿ8ÃÉ–ôÿ1J$bc411e5c-91f9-4b8f-99f5-3cfb526232e8
+java:S1186n"€Add a nested comment explaining why this method is empty, throw an UnsupportedOperationException or complete the implementation.(†ùàıÿÿÿÿ8¡ğÂ»2J$7ff8b88a-4ef3-48c9-9682-7fbf37da3262
 Ä
-java:S1186 "€Add a nested comment explaining why this method is empty, throw an UnsupportedOperationException or complete the implementation.(•»Š8ÿë–ôÿ1J$6229f70f-1c20-4903-a823-15c7431c6366
+java:S1186q"€Add a nested comment explaining why this method is empty, throw an UnsupportedOperationException or complete the implementation.(•»Š8¤ğÂ»2J$520d946e-9541-450f-b478-49c2b0d91cff
+m	java:S106+"+Replace this use of System.out by a logger.(ŠÔö·8ÓğÂ»2J$eb7cec19-77f1-43b9-8495-ad0368fda80c
+z
+java:S1172W"2Remove this unused method parameter "actionEvent".(»…ä«ùÿÿÿÿ8¯ñÂ»2J$bf4c5111-ae05-48e3-8cad-f7f02ae42337

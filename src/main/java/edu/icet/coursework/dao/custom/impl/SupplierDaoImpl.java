@@ -1,15 +1,19 @@
 package edu.icet.coursework.dao.custom.impl;
 
-import edu.icet.coursework.dao.custom.UserDao;
-import edu.icet.coursework.entity.UserEntity;
+import edu.icet.coursework.dao.custom.SupplierDao;
+import edu.icet.coursework.entity.SupplierEntity;
 import edu.icet.coursework.util.HibernateUtil;
 import org.hibernate.Session;
 import org.hibernate.Transaction;
 
-public class UserDaoImpl implements UserDao {
+public class SupplierDaoImpl implements SupplierDao {
     @Override
-    public boolean addUser(UserEntity entity) {
+    public boolean addUser(SupplierEntity entity) {
+        return false;
+    }
 
+    @Override
+    public boolean addSupplier(SupplierEntity entity) {
         Session session = null;
         Transaction transaction = null;
 
@@ -30,10 +34,5 @@ public class UserDaoImpl implements UserDao {
                 session.close();
             }
         }
-    }
-
-    @Override
-    public boolean addSupplier(UserEntity entity) {
-        return false;
     }
 }

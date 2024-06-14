@@ -1,5 +1,6 @@
 package edu.icet.coursework.bo;
 
+import edu.icet.coursework.bo.custom.impl.SupplierBoImpl;
 import edu.icet.coursework.bo.custom.impl.UserBoImpl;
 import edu.icet.coursework.util.BoType;
 
@@ -18,6 +19,8 @@ public class BoFactory {
         switch (type){
             case USER:
                 return (T) new UserBoImpl();
+            case SUPPLIER:
+                return (T) new SupplierBoImpl();
         }
         return null;
     }

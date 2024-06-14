@@ -77,3 +77,13 @@ c
 3src/main/java/edu/icet/coursework/util/DaoType.java,1\4\14923a2745b7ce5d6c9b828a90a928a305b5de3c
 i
 9src/main/java/edu/icet/coursework/util/HibernateUtil.java,8\5\85d4dd367998665124a41ba17e79fdd0da719b8c
+t
+Dsrc/main/java/edu/icet/coursework/bo/custom/impl/SupplierBoImpl.java,b\a\bae32019187fb45a09d52e9de694bc246743a0e0
+p
+@src/main/java/edu/icet/coursework/bo/custom/impl/SupplierBo.java,b\e\bee26bd5179889488800352dc592c88c719c0957
+k
+;src/main/java/edu/icet/coursework/bo/custom/SupplierBo.java,2\9\29cc7f614ef7c24716b9905cee915bae3b68ba12
+m
+=src/main/java/edu/icet/coursework/dao/custom/SupplierDao.java,9\e\9ebe439f1fc483c07574e46664a0ae3ef73ca1e9
+v
+Fsrc/main/java/edu/icet/coursework/dao/custom/impl/SupplierDaoImpl.java,a\9\a9138710629e3cedc87056d1f91456b10d05dffb

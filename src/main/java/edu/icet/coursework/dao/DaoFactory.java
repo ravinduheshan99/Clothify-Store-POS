@@ -1,5 +1,7 @@
 package edu.icet.coursework.dao;
 
+import edu.icet.coursework.bo.custom.impl.SupplierBoImpl;
+import edu.icet.coursework.dao.custom.impl.SupplierDaoImpl;
 import edu.icet.coursework.dao.custom.impl.UserDaoImpl;
 import edu.icet.coursework.util.DaoType;
 
@@ -17,6 +19,8 @@ public class DaoFactory {
         switch (type){
             case USER:
                 return (T)new UserDaoImpl();
+            case SUPPLIER:
+                return (T) new SupplierDaoImpl();
         }
         return null;
     }
