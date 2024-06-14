@@ -1,3 +1,8 @@
 
-_
-java:S2094"BRemove this empty class, write its code or make it an "interface".(ÄßÜê8îÛ’á€2
+q
+java:S1121".Extract the assignment out of this expression.(Ùûé‘8Òº€“2J$5538ae3c-8520-4ff0-af07-ea3f1261bb73
+Ü
+java:S6548"˜A Singleton implementation was detected. Make sure the use of the Singleton pattern is required and the implementation is the right one for the context.(ÄßÜê8’»€“2J$aacfb89a-69d3-4315-b32b-f08616cdfccc
+›	java:S131"YComplete cases by adding the missing enum constants or add a default case to this switch.(ÜŸ•8§»€“2J$b22bebbb-3fa9-45a1-bc82-dde6ccd96084
+
+java:S1301"KReplace this "switch" statement by "if" statements to increase readability.(ÜŸ•8¨»€“2J$02d4e3e7-3c1e-434f-bf05-076f9bffa08d

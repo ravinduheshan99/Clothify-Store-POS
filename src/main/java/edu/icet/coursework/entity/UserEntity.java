@@ -22,10 +22,10 @@ public class UserEntity {
     private String fname;
     private String lname;
     private LocalDate dob;
-    private Integer age;
     private String gender;
-    private String adress;
+    private String address;
     private String contactNo;
     private String email;
     private String password;
+    private String passwordConfirm;
 }

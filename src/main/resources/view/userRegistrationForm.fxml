@@ -16,7 +16,7 @@
         <Rectangle arcHeight="5.0" arcWidth="5.0" fill="WHITE" height="59.0" stroke="BLACK" strokeType="INSIDE" width="734.0" />
         <ImageView fitHeight="499.0" fitWidth="734.0" layoutY="59.0" pickOnBounds="true" preserveRatio="true">
             <image>
-                <Image url="@../../../../assets/pexels-kish-1488463.jpg" />
+                <Image url="@../../../../assets/Background.jpg" />
             </image>
         </ImageView>
         <Label layoutX="615.0" layoutY="18.0" text="Login">
