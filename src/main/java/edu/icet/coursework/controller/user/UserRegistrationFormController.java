@@ -98,6 +98,20 @@ public class UserRegistrationFormController implements Initializable {
         }
     }
 
+    private void clearText() {
+        txtUid.setText(null);
+        txtFname.setText(null);
+        txtLname.setText(null);
+        cbxUserType.setValue(null);
+        txtAddress.setText(null);
+        txtContactNo.setText(null);
+        txtEmail.setText(null);
+        txtPwConfirm.setText(null);
+        cbxGender.setValue(null);
+        DtpDob.setValue(null);
+        txtPw.setText(null);
+    }
+
     private UserBo userBoImpl = BoFactory.getInstance().getBo(BoType.USER);
 
     public void btnChooseImageOnAction(ActionEvent actionEvent) {
@@ -117,6 +131,12 @@ public class UserRegistrationFormController implements Initializable {
                         txtPwConfirm.getText());
 
         boolean b = userBoImpl.addUser(user);
+        if(b){
+            clearText();
+            new Alert(Alert.AlertType.CONFIRMATION,"User Added Successfully!").show();
+        }else {
+            new Alert(Alert.AlertType.ERROR,"Operation Unsuccessfull!").show();
+        }
     }
 
 }

@@ -4,4 +4,5 @@ public interface CrudDao <T> extends SuperDao{
 
     public boolean addUser(T entity);
     public boolean addSupplier(T entity);
+    public boolean addProduct(T entity);
 }

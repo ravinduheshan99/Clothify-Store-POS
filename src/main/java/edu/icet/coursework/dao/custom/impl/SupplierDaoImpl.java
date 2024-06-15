@@ -35,4 +35,9 @@ public class SupplierDaoImpl implements SupplierDao {
             }
         }
     }
+
+    @Override
+    public boolean addProduct(SupplierEntity entity) {
+        return false;
+    }
 }

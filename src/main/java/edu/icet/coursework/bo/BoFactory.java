@@ -1,7 +1,9 @@
 package edu.icet.coursework.bo;
 
+import edu.icet.coursework.bo.custom.impl.ProductBoImpl;
 import edu.icet.coursework.bo.custom.impl.SupplierBoImpl;
 import edu.icet.coursework.bo.custom.impl.UserBoImpl;
+import edu.icet.coursework.dao.custom.impl.ProductDaoImpl;
 import edu.icet.coursework.util.BoType;
 
 //Factory Design Pattern
@@ -21,6 +23,8 @@ public class BoFactory {
                 return (T) new UserBoImpl();
             case SUPPLIER:
                 return (T) new SupplierBoImpl();
+            case PRODUCT:
+                return (T) new ProductBoImpl();
         }
         return null;
     }
