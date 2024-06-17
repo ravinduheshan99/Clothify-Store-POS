@@ -1,5 +1,6 @@
 package edu.icet.coursework.bo;
 
+import edu.icet.coursework.bo.custom.impl.OrderBoImpl;
 import edu.icet.coursework.bo.custom.impl.ProductBoImpl;
 import edu.icet.coursework.bo.custom.impl.SupplierBoImpl;
 import edu.icet.coursework.bo.custom.impl.UserBoImpl;
@@ -25,6 +26,8 @@ public class BoFactory {
                 return (T) new SupplierBoImpl();
             case PRODUCT:
                 return (T) new ProductBoImpl();
+            case ORDER:
+                return (T) new OrderBoImpl();
         }
         return null;
     }

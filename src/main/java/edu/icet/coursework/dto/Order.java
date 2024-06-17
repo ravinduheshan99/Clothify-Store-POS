@@ -1,6 +1,9 @@
 package edu.icet.coursework.dto;
 
-import jakarta.persistence.Id;
+
+import java.util.Date;
+import java.util.List;
+
 import lombok.AllArgsConstructor;
 import lombok.Data;
 import lombok.NoArgsConstructor;
@@ -11,15 +14,10 @@ import lombok.ToString;
 @AllArgsConstructor
 @NoArgsConstructor
 public class Order {
-
-    @Id
     private String orderId;
-
     private String userId;
-    private String productId;
-    private Double unitPrice;
-    private Integer qty;
-    private Double total;
-    private String customerEmail;
-
+    private Date orderDate;
+    private String orderTime;  // Use LocalDateTime instead of TemporalAccessor
+    private List<OrderDetails> orderDetailsList;
+    private Double totalBillAmount;
 }

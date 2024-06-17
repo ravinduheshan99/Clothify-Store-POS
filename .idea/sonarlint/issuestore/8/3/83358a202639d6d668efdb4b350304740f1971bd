@@ -1,7 +1,7 @@
 
 v
-java:S1121".Extract the assignment out of this expression.(ÒÛÛÅúÿÿÿÿ8îöçº2J$79f54252-cd25-442a-a115-818364b40f55
+java:S1121".Extract the assignment out of this expression.(ÒÛÛÅúÿÿÿÿ8é×âÏ2J$7d8c3a82-79fd-46f8-88e9-376af796b966
 á
-java:S6548
-"˜A Singleton implementation was detected. Make sure the use of the Singleton pattern is required and the implementation is the right one for the context.(§İüáşÿÿÿÿ8™÷çº2J$76d0f561-991b-4407-bc54-94865593246b
-›	java:S131"YComplete cases by adding the missing enum constants or add a default case to this switch.(ÜŸ•8¦÷çº2J$8b435eed-bcee-4a09-9e66-59fd31caa7e9
+java:S6548"˜A Singleton implementation was detected. Make sure the use of the Singleton pattern is required and the implementation is the right one for the context.(§İüáşÿÿÿÿ8ò×âÏ2J$7b42d8c9-0a34-4b01-9f5f-b67db05a136e
+’
+java:S1128"ORemove this unused import 'edu.icet.coursework.dao.custom.impl.ProductDaoImpl'.(¥ëñˆ8—ûÚÑ2J$87898fa2-e88d-4b92-a948-c7eee071fdb9

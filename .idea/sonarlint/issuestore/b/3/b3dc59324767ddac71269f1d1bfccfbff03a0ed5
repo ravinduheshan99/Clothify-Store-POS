@@ -1,6 +1,8 @@
 
-K
-java:S1121".Extract the assignment out of this expression.(Ùûé‘8ŠñÎ¿2
-¶
-java:S6548	"˜A Singleton implementation was detected. Make sure the use of the Singleton pattern is required and the implementation is the right one for the context.(ÄßÜê8ÁñÎ¿2
-u	java:S131"YComplete cases by adding the missing enum constants or add a default case to this switch.(ÜŸ•8ÑñÎ¿2
+q
+java:S1121".Extract the assignment out of this expression.(Ùûé‘8ˆ”àÏ2J$b1757b98-c48b-4c8c-b4d3-4f556a000cd6
+Ü
+java:S6548
+"˜A Singleton implementation was detected. Make sure the use of the Singleton pattern is required and the implementation is the right one for the context.(ÄßÜê8•”àÏ2J$87985c0a-7926-4829-b6af-5c40e5bc7896
+p
+java:S1128"NRemove this unused import 'edu.icet.coursework.bo.custom.impl.SupplierBoImpl'.(Ñ¥è»øÿÿÿÿ8ß†ĞÑ2

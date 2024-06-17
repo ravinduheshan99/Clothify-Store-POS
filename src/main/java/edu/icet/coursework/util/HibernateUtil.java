@@ -1,8 +1,6 @@
 package edu.icet.coursework.util;
 
-import edu.icet.coursework.entity.ProductEntity;
-import edu.icet.coursework.entity.SupplierEntity;
-import edu.icet.coursework.entity.UserEntity;
+import edu.icet.coursework.entity.*;
 import org.hibernate.Session;
 import org.hibernate.SessionFactory;
 import org.hibernate.boot.Metadata;
@@ -28,7 +26,9 @@ public class HibernateUtil {
         List<Class<?>> entityClasses = Arrays.asList(
                 UserEntity.class,
                 SupplierEntity.class,
-                ProductEntity.class
+                ProductEntity.class,
+                OrderEntity.class,
+                OrderDetailsEntity.class
         );
 
         // Dynamically add all entity classes to MetadataSources
