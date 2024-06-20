@@ -32,6 +32,8 @@ import java.sql.Statement;
 import java.text.DateFormat;
 import java.text.ParseException;
 import java.text.SimpleDateFormat;
+import java.time.LocalDate;
+import java.time.LocalDateTime;
 import java.time.LocalTime;
 import java.time.format.DateTimeFormatter;
 import java.util.*;
@@ -58,19 +60,25 @@ public class PointOfSaleFormController implements Initializable {
     public Label lblDate;
     public Label lblTime;
 
+    private ProductBo productBoImpl = BoFactory.getInstance().getBo(BoType.PRODUCT);
+    private OrderBo orderBo = BoFactory.getInstance().getBo(BoType.ORDER);
+    private ObservableList<TableModelCart> cartList = FXCollections.observableArrayList();
+
     @Override
     public void initialize(URL url, ResourceBundle resourceBundle) {
         colProductId.setCellValueFactory(new PropertyValueFactory<>("productId"));
         colProductName.setCellValueFactory(new PropertyValueFactory<>("productName"));
         colQty.setCellValueFactory(new PropertyValueFactory<>("qty"));
         colUnitPrice.setCellValueFactory(new PropertyValueFactory<>("unitPrice"));
-        colTotal.setCellValueFactory(new PropertyValueFactory<>("Total"));
+        colTotal.setCellValueFactory(new PropertyValueFactory<>("total"));
 
         loadDateAndTime();
-        //generateOrderId();
         loadProductIds();
+
         cbxProductId.getSelectionModel().selectedItemProperty().addListener((observable, oldValue, newValue) -> {
-            setProductData((String) newValue);
+            if (newValue != null) {
+                setProductData((String) newValue);
+            }
         });
     }
 
@@ -81,132 +89,171 @@ public class PointOfSaleFormController implements Initializable {
 
         Timeline timeline = new Timeline(new KeyFrame(Duration.ZERO, e -> {
             LocalTime time = LocalTime.now();
-            lblTime.setText(time.getHour() + " : " + time.getMinute() + " : " + time.getSecond());
+            lblTime.setText(String.format("%02d : %02d : %02d", time.getHour(), time.getMinute(), time.getSecond()));
         }), new KeyFrame(Duration.seconds(1)));
         timeline.setCycleCount(Animation.INDEFINITE);
         timeline.play();
     }
 
-    private ProductBo productBoImpl = BoFactory.getInstance().getBo(BoType.PRODUCT);
-
     private void loadProductIds() {
         ObservableList<Product> allProducts = productBoImpl.loadProducts();
         ObservableList<String> productIds = FXCollections.observableArrayList();
-        allProducts.forEach(product -> {
+        for (Product product : allProducts) {
             productIds.add(product.getProductId());
-        });
+        }
         cbxProductId.setItems(productIds);
     }
 
     private void setProductData(String pid) {
         Product product = productBoImpl.searchProduct(pid);
-        txtProductName.setText(product.getProductName());
-        txtUnitPrice.setText(product.getUnitPrice() + "0");
-        txtAvailableQty.setText(product.getQty() + "");
+        if (product != null) {
+            txtProductName.setText(product.getProductName());
+            txtUnitPrice.setText(String.valueOf(product.getUnitPrice()));
+            txtAvailableQty.setText(String.valueOf(product.getQty()));
+        }
     }
 
-    private void generateOrderId() {
+    public void btnAddToCartOnAction(ActionEvent actionEvent) {
         try {
-            Connection connection = DBConnection.getInstance().getConnection();
-            Statement statement = connection.createStatement();
-            ResultSet resultset = statement.executeQuery("SELECT COUNT(*) FROM orderentity");
-            Integer count = 0;
-            while (resultset.next()) {
-                count = resultset.getInt(1);
-                System.out.println(count + " count ");
-            }
-            if (count == 0) {
-                txtOid.setText("O001");
-            }
-            String lastOid = "";
-            ResultSet resultSet1 = connection.createStatement().executeQuery("SELECT orderId\n" +
-                    "From orderentity\n" +
-                    "ORDER BY orderId DESC\n" +
-                    "LIMIT 1;");
-            if (resultSet1.next()) {
-                lastOid = resultSet1.getString(1);
-                Pattern pattern = Pattern.compile("[A-Za-z](\\d+)");
-                Matcher matcher = pattern.matcher(lastOid);
-                if (matcher.find()) {
-                    int number = Integer.parseInt(matcher.group(1));
-                    number++;
-                    txtOid.setText(String.format("O%03d", number));
-                } else {
-                    new Alert(Alert.AlertType.WARNING, "Warning").show();
-                }
+            // Check if ComboBox and TextFields are initialized
+            if (cbxProductId.getValue() == null || txtProductName.getText() == null || txtUnitPrice.getText() == null ||
+                    txtAvailableQty.getText() == null || txtQtyNeed.getText() == null) {
+                throw new NullPointerException("One or more UI components are not initialized.");
             }
 
-        } catch (SQLException | ClassNotFoundException e) {
-            throw new RuntimeException();
+            // Check if ComboBox has a value
+            if (cbxProductId.getValue() == null) {
+                new Alert(Alert.AlertType.WARNING, "Product ID is required!").show();
+                return;
+            }
+
+            String pid = cbxProductId.getValue().toString();
+            String productName = txtProductName.getText();
+
+            if (productName == null || productName.isEmpty()) {
+                new Alert(Alert.AlertType.WARNING, "Product Name is required!").show();
+                return;
+            }
+
+            double unitPrice;
+            try {
+                unitPrice = Double.parseDouble(txtUnitPrice.getText());
+            } catch (NumberFormatException e) {
+                new Alert(Alert.AlertType.WARNING, "Invalid Unit Price!").show();
+                return;
+            }
+
+            int availableQty;
+            try {
+                availableQty = Integer.parseInt(txtAvailableQty.getText());
+            } catch (NumberFormatException e) {
+                new Alert(Alert.AlertType.WARNING, "Invalid Available Quantity!").show();
+                return;
+            }
+
+            int needQty;
+            try {
+                needQty = Integer.parseInt(txtQtyNeed.getText());
+            } catch (NumberFormatException e) {
+                new Alert(Alert.AlertType.WARNING, "Invalid Needed Quantity!").show();
+                return;
+            }
+
+            double total = needQty * unitPrice;
+
+            if (needQty > availableQty) {
+                new Alert(Alert.AlertType.WARNING, "Available Quantity Exceeded!").show();
+                txtQtyNeed.setText(null);
+            } else {
+                TableModelCart cart = new TableModelCart(pid, productName, needQty, unitPrice, total);
+                cartList.add(cart);
+                tblProductCart.setItems(cartList);
+                calcNetTotal();
+                clearProductDetails();
+            }
+        } catch (Exception e) {
+            e.printStackTrace();
+            new Alert(Alert.AlertType.ERROR, "Error adding to cart: " + e.getMessage()).show();
         }
+    }
+
+    private void calcNetTotal() {
+        double netTot = cartList.stream().mapToDouble(TableModelCart::getTotal).sum();
+        lblTotalBillAmount.setText("Total Amount : " + String.format("%.2f", netTot) + " LKR");
     }
 
     private void clearProductDetails() {
         cbxProductId.setValue(null);
-        txtProductName.setText(null);
-        txtUnitPrice.setText(null);
-        txtAvailableQty.setText(null);
-        txtQtyNeed.setText(null);
+        txtProductName.clear();
+        txtUnitPrice.clear();
+        txtAvailableQty.clear();
+        txtQtyNeed.clear();
     }
 
-    private void calcNetTotal() {
-        Double netTot = 0.0;
-        for (TableModelCart cartObject : cartList) {
-            netTot += cartObject.getTotal();
-        }
-        lblTotalBillAmount.setText("Total Amount : " + netTot + "0 LKR");
-    }
+    public void btnCheckoutOnAction(ActionEvent actionEvent) {
+        try {
+            // Ensure order ID is manually set
+            String oid = txtOid.getText();
+            if (oid == null || oid.trim().isEmpty()) {
+                new Alert(Alert.AlertType.ERROR, "Order ID is required!").show();
+                return;
+            }
 
-    private String extractBillAmount(String text) {
-        // Define the regex pattern to match the numeric part
-        Pattern pattern = Pattern.compile("\\d+\\.\\d{2}");
-        Matcher matcher = pattern.matcher(text);
+            String uid = txtCashierId.getText();
+            LocalDate orderDate = LocalDate.now();
+            LocalDateTime orderTime = LocalDateTime.now();
 
-        // Find and return the matched numeric value
-        if (matcher.find()) {
-            return matcher.group();
-        } else {
-            return "No match found";
+            double discount = 0.0;
+            String cmail = txtCustomerEmail.getText();
+            double totalBillAmount = Double.parseDouble(extractBillAmount(lblTotalBillAmount.getText()));
+
+            if (totalBillAmount > 10000) {
+                discount = 0.15;
+                totalBillAmount = totalBillAmount - (totalBillAmount * discount);
+            }
+
+            List<OrderDetails> orderDetailList = new ArrayList<>();
+            for (TableModelCart cartItem : cartList) {
+                OrderDetails orderDetails = new OrderDetails(oid, cartItem.getProductId(), cartItem.getUnitPrice(), cartItem.getQty(), cartItem.getTotal(), discount, cmail);
+                orderDetailList.add(orderDetails);
+            }
+
+            Order order = new Order(oid, uid, orderDate, orderTime, orderDetailList, totalBillAmount);
+            boolean success = orderBo.addOrder(order);
+            if (success) {
+                new Alert(Alert.AlertType.CONFIRMATION, "Order Placed Successfully!").show();
+                clearForm();
+            } else {
+                new Alert(Alert.AlertType.ERROR, "Operation Unsuccessful!").show();
+            }
+        } catch (Exception e) {
+            new Alert(Alert.AlertType.ERROR, "Error placing order: " + e.getMessage()).show();
         }
     }
 
     private void clearForm() {
-        txtOid.setText(null);
-        txtCashierId.setText(null);
+        txtOid.clear();
+        txtCashierId.clear();
         cbxProductId.setValue(null);
-        txtProductName.setText(null);
-        txtUnitPrice.setText(null);
-        txtAvailableQty.setText(null);
-        txtQtyNeed.setText(null);
-        txtDiscount.setText(null);
-        txtCustomerEmail.setText(null);
+        txtProductName.clear();
+        txtUnitPrice.clear();
+        txtAvailableQty.clear();
+        txtQtyNeed.clear();
+        txtDiscount.clear();
+        txtCustomerEmail.clear();
         lblTotalBillAmount.setText("Total Amount : 0.00 LKR");
         cartList.clear();
         tblProductCart.setItems(cartList);
         calcNetTotal();
     }
 
-
-    ObservableList<TableModelCart> cartList = FXCollections.observableArrayList();
-
-
-    public void btnAddToCartOnAction(ActionEvent actionEvent) throws ParseException {
-        String pid = cbxProductId.getValue().toString();
-        String productName = txtProductName.getText();
-        double unitPrice = Double.parseDouble(txtUnitPrice.getText());
-        int availableQty = Integer.parseInt(txtAvailableQty.getText());
-        int needQty = Integer.parseInt(txtQtyNeed.getText());
-        double total = needQty * unitPrice;
-
-        if (needQty > availableQty) {
-            new Alert(Alert.AlertType.WARNING, "Available Quantity Exceeded!").show();
-            txtQtyNeed.setText(null);
+    private String extractBillAmount(String text) {
+        Pattern pattern = Pattern.compile("\\d+\\.\\d{2}");
+        Matcher matcher = pattern.matcher(text);
+        if (matcher.find()) {
+            return matcher.group();
         } else {
-            TableModelCart cart = new TableModelCart(pid, productName, needQty, unitPrice, total);
-            cartList.add(cart);
-            tblProductCart.setItems(cartList);
-            calcNetTotal();
-            clearProductDetails();
+            return "0.00";
         }
     }
 
@@ -216,63 +263,21 @@ public class PointOfSaleFormController implements Initializable {
         calcNetTotal();
     }
 
-
-    private OrderBo orderBo = BoFactory.getInstance().getBo(BoType.ORDER);
-
-
-    public void btnCheckoutOnAction(ActionEvent actionEvent) {
-        try {
-            String oid = txtOid.getText();
-            String uid = txtCashierId.getText();
-
-            DateFormat format = new SimpleDateFormat("yyyy-MM-dd");
-            Date orderDate = format.parse(lblDate.getText());
-
-            LocalTime time = LocalTime.now();
-            DateTimeFormatter formatter = DateTimeFormatter.ofPattern("HH:mm:ss");
-            String orderTime = time.format(formatter);
-
-            Double discount = 0.0;
-            String cmail = txtCustomerEmail.getText();
-            Double totalBillAmount = Double.parseDouble(extractBillAmount(lblTotalBillAmount.getText()));
-
-            if (totalBillAmount>10000){
-                discount=0.15;
-                totalBillAmount=totalBillAmount-(totalBillAmount*discount);
-            }
-
-            List<OrderDetails> orderDetailList = new ArrayList<>();
-            for (TableModelCart cartItem: cartList){
-                OrderDetails orderDetails = new OrderDetails(oid, cartItem.getProductId(), cartItem.getUnitPrice(), cartItem.getQty(), cartItem.getTotal(), discount, cmail);
-                orderDetailList.add(orderDetails);
-            }
-
-            Order order = new Order(oid,uid,orderDate,orderTime,orderDetailList,totalBillAmount);
-            boolean b = orderBo.addOrder(order);
-            if(b){
-                new Alert(Alert.AlertType.CONFIRMATION,"Order Placed Successfully!").show();
-                clearForm();
-            }else {
-                new Alert(Alert.AlertType.ERROR,"Operation Unsuccessfull!").show();
-            }
-        } catch (ParseException e) {
-            throw new RuntimeException(e);
+    public void btnCheckDiscountOnAction(ActionEvent actionEvent) {
+        if (Double.parseDouble(extractBillAmount(lblTotalBillAmount.getText())) > 10000) {
+            txtDiscount.setText("15%");
+            new Alert(Alert.AlertType.INFORMATION, "Discount Added Successfully").show();
+        } else {
+            new Alert(Alert.AlertType.INFORMATION, "No Discount Available For This Product").show();
+            txtDiscount.setText("0%");
         }
     }
 
     public void btnViewOrdersOnAction(ActionEvent actionEvent) {
+        // Implement order viewing functionality
     }
 
     public void btnBackOnAction(ActionEvent actionEvent) {
-    }
-
-    public void btnCheckDiscountOnAction(ActionEvent actionEvent) {
-        if (Double.parseDouble(extractBillAmount(lblTotalBillAmount.getText()))>10000){
-            txtDiscount.setText("15%");
-            new Alert(Alert.AlertType.INFORMATION,"Discount Added Successfully").show();
-        }else{
-            new Alert(Alert.AlertType.INFORMATION,"No Discount Available For This Product").show();
-            txtDiscount.setText("0%");
-        }
+        // Implement back navigation functionality
     }
 }

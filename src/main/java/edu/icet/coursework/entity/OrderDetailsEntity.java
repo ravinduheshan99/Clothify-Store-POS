@@ -11,8 +11,10 @@ import lombok.ToString;
 @AllArgsConstructor
 @NoArgsConstructor
 @Entity
+@Table(name = "OrderDetailsEntity")
 public class OrderDetailsEntity {
     @Id
+    @Column(name = "orderId2", nullable = false, length = 255)
     private String orderId2;
 
     private String productId;
@@ -22,7 +24,7 @@ public class OrderDetailsEntity {
     private Double discount;
     private String customerEmail;
 
-    @ManyToOne  // Define the relationship to OrderEntity
-    @JoinColumn(name = "orderId1")
+    @ManyToOne
+    @JoinColumn(name = "orderId1", nullable = false)
     private OrderEntity order;
 }

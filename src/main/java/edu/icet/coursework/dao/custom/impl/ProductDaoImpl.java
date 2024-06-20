@@ -3,6 +3,7 @@ package edu.icet.coursework.dao.custom.impl;
 import edu.icet.coursework.dao.custom.ProductDao;
 import edu.icet.coursework.dto.Order;
 import edu.icet.coursework.dto.Product;
+import edu.icet.coursework.dto.User;
 import edu.icet.coursework.entity.OrderEntity;
 import edu.icet.coursework.entity.ProductEntity;
 import edu.icet.coursework.util.HibernateUtil;
@@ -86,6 +87,12 @@ public class ProductDaoImpl implements ProductDao {
     public boolean addOrder(ProductEntity entity) {
         return false;
     }
+
+    @Override
+    public ObservableList<User> searchUser() {
+        return null;
+    }
+
 
     @Override
     public Product searchProduct(String pid) {

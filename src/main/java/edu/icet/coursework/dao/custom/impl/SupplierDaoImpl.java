@@ -3,6 +3,7 @@ package edu.icet.coursework.dao.custom.impl;
 import edu.icet.coursework.dao.custom.SupplierDao;
 import edu.icet.coursework.dto.Order;
 import edu.icet.coursework.dto.Product;
+import edu.icet.coursework.dto.User;
 import edu.icet.coursework.entity.OrderEntity;
 import edu.icet.coursework.entity.SupplierEntity;
 import edu.icet.coursework.util.HibernateUtil;
@@ -59,5 +60,12 @@ public class SupplierDaoImpl implements SupplierDao {
     public boolean addOrder(SupplierEntity entity) {
         return false;
     }
+
+    @Override
+    public ObservableList<User> searchUser() {
+        return null;
+    }
+
+
 
 }

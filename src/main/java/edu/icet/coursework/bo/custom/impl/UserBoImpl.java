@@ -6,6 +6,7 @@ import edu.icet.coursework.dao.custom.UserDao;
 import edu.icet.coursework.dto.User;
 import edu.icet.coursework.entity.UserEntity;
 import edu.icet.coursework.util.DaoType;
+import javafx.collections.ObservableList;
 import org.modelmapper.ModelMapper;
 
 public class UserBoImpl implements UserBo {
@@ -16,4 +17,10 @@ public class UserBoImpl implements UserBo {
     public boolean addUser(User dto) {
         return userDaoImpl.addUser(new ModelMapper().map(dto, UserEntity.class));
     }
+
+    @Override
+    public ObservableList<User> searchUser() {
+        return userDaoImpl.searchUser();
+    }
+
 }

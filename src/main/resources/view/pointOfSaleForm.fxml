@@ -47,7 +47,7 @@
       </TableView>
       <JFXTextField fx:id="txtCustomerEmail" alignment="CENTER" focusColor="WHITE" layoutX="461.0" layoutY="443.0" prefHeight="25.0" prefWidth="256.0" promptText="Customer Email" style="-fx-background-color: ffffff;" unFocusColor="WHITE" />
       <JFXTextField fx:id="txtDiscount" alignment="CENTER" focusColor="WHITE" layoutX="209.0" layoutY="411.0" prefHeight="25.0" prefWidth="244.0" promptText="Discount (%)" style="-fx-background-color: ffffff;" unFocusColor="WHITE" />
-      <Label fx:id="lblTotalBillAmount" layoutX="209.0" layoutY="443.0" prefHeight="27.0" prefWidth="244.0" style="-fx-background-color: #000000;" text="Total Amount : 1000000.00 LKR" textFill="#1abc9c">
+      <Label fx:id="lblTotalBillAmount" layoutX="209.0" layoutY="443.0" prefHeight="27.0" prefWidth="244.0" style="-fx-background-color: #000000;" text="Total Amount : 0.00 LKR" textFill="#1abc9c">
          <font>
             <Font size="16.0" />
          </font>

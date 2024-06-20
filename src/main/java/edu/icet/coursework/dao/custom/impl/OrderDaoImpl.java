@@ -3,6 +3,7 @@ package edu.icet.coursework.dao.custom.impl;
 import edu.icet.coursework.dao.custom.OrderDao;
 import edu.icet.coursework.dto.Order;
 import edu.icet.coursework.dto.Product;
+import edu.icet.coursework.dto.User;
 import edu.icet.coursework.entity.OrderEntity;
 import edu.icet.coursework.util.HibernateUtil;
 import javafx.collections.ObservableList;
@@ -58,5 +59,11 @@ public class OrderDaoImpl implements OrderDao {
             }
         }
     }
+
+    @Override
+    public ObservableList<User> searchUser() {
+        return null;
+    }
+
 
 }
