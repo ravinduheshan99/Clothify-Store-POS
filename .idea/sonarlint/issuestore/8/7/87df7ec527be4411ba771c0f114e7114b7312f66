@@ -1,42 +1,41 @@
 
+	java:S112G"FDefine and throw a dedicated exception instead of using a generic one.(Ò‚Òéüÿÿÿÿ8ıøÈ¨ƒ2J$629c37e7-89ca-41d5-b12a-8479660b00ff
 w
-java:S3740"/Provide the parametrized type for this generic.(èÖğ£üÿÿÿÿ8¢ƒ¸”ş1J$0042df38-1386-4f37-9e5f-a5616dd7c6a4
+java:S3740"/Provide the parametrized type for this generic.(èÖğ£üÿÿÿÿ8¢ƒ¸”ş1J$e22dc394-52bc-477d-8907-907a4db45b7e
 r
-java:S3740"/Provide the parametrized type for this generic.(•Œ¯©8Ô—º”ş1J$ebf47aa5-e801-4f3b-a82c-bb9790a15f54
+java:S3740"/Provide the parametrized type for this generic.(•Œ¯©8Ô—º”ş1J$25f51b16-5b5c-4dfd-abc7-db413f8f5d45
 š
-java:S1104"RMake txtUid a static final constant or non-public and provide accessors if needed.(¤¸¡šüÿÿÿÿ8ó‘·”ş1J$87ad6731-f93d-4d08-8da1-f4927289de1d
+java:S1104"RMake txtUid a static final constant or non-public and provide accessors if needed.(¤¸¡šüÿÿÿÿ8ó‘·”ş1J$f6b4c269-372c-4fde-8810-3ae7789b2fbe
 œ
-java:S1104"TMake txtFname a static final constant or non-public and provide accessors if needed.(à³Ä›úÿÿÿÿ8û¾·”ş1J$7131b71f-83e1-4e05-9798-b3af26089200
+java:S1104"TMake txtFname a static final constant or non-public and provide accessors if needed.(à³Ä›úÿÿÿÿ8û¾·”ş1J$34cdc983-e583-4fca-a36e-9fa22e175477
 œ
-java:S1104"TMake txtLname a static final constant or non-public and provide accessors if needed.(®ªŸùÿÿÿÿ8÷ç·”ş1J$9b077efb-1ebb-40de-9d38-eeb685e58ab3
+java:S1104"TMake txtLname a static final constant or non-public and provide accessors if needed.(®ªŸùÿÿÿÿ8÷ç·”ş1J$431b3f1c-a29b-4576-89c9-55f8de8d26ca
 Ÿ
-java:S1104"WMake cbxUserType a static final constant or non-public and provide accessors if needed.(èÖğ£üÿÿÿÿ8¥ƒ¸”ş1J$d53e3e91-63fa-4092-96a7-dc2c8aab1bfe
+java:S1104"WMake cbxUserType a static final constant or non-public and provide accessors if needed.(èÖğ£üÿÿÿÿ8¥ƒ¸”ş1J$fbc57a4b-9280-4b15-b46e-e091069250d1
 
-java:S1104"VMake txtAddress a static final constant or non-public and provide accessors if needed.(©ûîùıÿÿÿÿ8ÓŸ¸”ş1J$0668d0fc-eaeb-42f1-86fd-df6f6531b39d
+java:S1104"VMake txtAddress a static final constant or non-public and provide accessors if needed.(©ûîùıÿÿÿÿ8ÓŸ¸”ş1J$01c40d7a-09e7-4f45-af36-f9cf053e45e1
  
-java:S1104"XMake txtContactNo a static final constant or non-public and provide accessors if needed.(¤«Î£ıÿÿÿÿ8·¸”ş1J$86af2e48-18f4-497a-a455-76d550a98806
+java:S1104"XMake txtContactNo a static final constant or non-public and provide accessors if needed.(¤«Î£ıÿÿÿÿ8·¸”ş1J$c69e779a-0125-4a62-b06f-e9fa7c906d24
 œ
-java:S1104"TMake txtEmail a static final constant or non-public and provide accessors if needed.(Ø¦½üÿÿÿÿ8İ¸”ş1J$4bbdfd7f-334d-474a-bf65-49801461754e
+java:S1104"TMake txtEmail a static final constant or non-public and provide accessors if needed.(Ø¦½üÿÿÿÿ8İ¸”ş1J$47f7d748-41a2-421c-afdd-3533196208bc
 ˜
-java:S1104"UMake cbxGender a static final constant or non-public and provide accessors if needed.(•Œ¯©8Ø—º”ş1J$e12a3b12-cff7-4127-b861-a3ef794dba10
+java:S1104"UMake cbxGender a static final constant or non-public and provide accessors if needed.(•Œ¯©8Ø—º”ş1J$f99e8061-bf7b-4245-a16a-a7bb5a7ee8a3
 •
-java:S1104"RMake DtpDob a static final constant or non-public and provide accessors if needed.(¾–¦’8ò³º”ş1J$492b20b7-7862-40fe-93b8-fd30db162594
-›
-java:S1104"YMake imgProfilePic a static final constant or non-public and provide accessors if needed.(Ö›Ô8êÎº”ş1J$e2cd9332-f320-400c-b934-e874e5bce0c5
+java:S1104"RMake DtpDob a static final constant or non-public and provide accessors if needed.(¾–¦’8ò³º”ş1J$5fbe431b-476c-410f-93d3-cd9e5d3148a0
 ˜
-java:S1104"UMake txtProPic a static final constant or non-public and provide accessors if needed.(Ñöõè8„ªöòÿ1J$58320277-5060-4667-abbb-f3fdbb80ef58
-¡
-java:S1104"YMake lblProPicName a static final constant or non-public and provide accessors if needed.(ÆŸ°ûşÿÿÿÿ8ÂÙöòÿ1J$685bb9b7-e091-4e4f-9a6f-442836940d27
-“	java:S116"QRename this field "DtpDob" to match the regular expression '^[a-z][a-zA-Z0-9]*$'.(¾–¦’8„´º”ş1J$2efc67f4-adaa-48d5-9309-e13f367409ef
-Ä
-java:S1186"€Add a nested comment explaining why this method is empty, throw an UnsupportedOperationException or complete the implementation.(ˆ„ä…8‡à³”ş1J$ad8f8d61-d416-41a0-af3f-6205312c3e76
-Ä
-java:S1186"€Add a nested comment explaining why this method is empty, throw an UnsupportedOperationException or complete the implementation.(Ÿ´À£8Ê´”ş1J$5ef24f73-b5d5-4598-8579-d96baa2fdb11
+java:S1104"UMake lblUserId a static final constant or non-public and provide accessors if needed.(«†´±8š­»¨ƒ2J$3e22a6d5-2011-4d15-ade3-eaab754fab28
+š
+java:S1104 "WMake lblUserType a static final constant or non-public and provide accessors if needed.(Œø±8š­»¨ƒ2J$33b13d89-cf9e-49ae-b625-5e130bb6bf68
+
+java:S1104!"UMake adminpane a static final constant or non-public and provide accessors if needed.(ˆ×£ÿÿÿÿÿ8Ô„Ê¨ƒ2J$c068f36a-03d4-4dae-8e82-a32a02b5d3d5
+“	java:S116"QRename this field "DtpDob" to match the regular expression '^[a-z][a-zA-Z0-9]*$'.(¾–¦’8„´º”ş1J$2592e1e2-bbc2-4fc4-b583-b00884e54350
 É
-java:S1186 "€Add a nested comment explaining why this method is empty, throw an UnsupportedOperationException or complete the implementation.(¿˜å•øÿÿÿÿ8ï´´”ş1J$a9f2d4d8-53d4-42be-b440-303c4840c365
+java:S1186<"€Add a nested comment explaining why this method is empty, throw an UnsupportedOperationException or complete the implementation.(¿˜å•øÿÿÿÿ8ÏÄ½¨ƒ2J$41228b26-6c9a-4044-a3f8-b19832bf0707
 Ä
-java:S1186#"€Add a nested comment explaining why this method is empty, throw an UnsupportedOperationException or complete the implementation.(¶ú‡ó8†Ñ´”ş1J$c38f8ec6-b326-434d-9f86-989b32f55ee7
-É
-java:S1186&"€Add a nested comment explaining why this method is empty, throw an UnsupportedOperationException or complete the implementation.(†ùàıÿÿÿÿ8çë´”ş1J$02cd0c76-8851-4b1a-b583-30f08c1aa784
+java:S1186?"€Add a nested comment explaining why this method is empty, throw an UnsupportedOperationException or complete the implementation.(¶ú‡ó8ÏÄ½¨ƒ2J$739886ad-9616-43de-bf7d-efa120fb9fd5
 Ä
-java:S1186)"€Add a nested comment explaining why this method is empty, throw an UnsupportedOperationException or complete the implementation.(áÄ´ü8–‘µ”ş1J$28430c4c-aa1c-4482-8dce-356ad6a1f69b
+java:S1186M"€Add a nested comment explaining why this method is empty, throw an UnsupportedOperationException or complete the implementation.(áÄ´ü8ÏÄ½¨ƒ2J$6695212c-cca5-4940-91fe-1206b4db5069
+z
+java:S1172B"2Remove this unused method parameter "actionEvent".(†ùàıÿÿÿÿ8½ùÈ¨ƒ2J$2f57d56b-2f35-47af-aa30-6f8c8e25d1bb
+‚
+java:S1128":Remove this unused import 'javafx.scene.input.MouseEvent'.(˜¬‹æÿÿÿÿÿ8 ÓÔ¨ƒ2J$ac81c5dd-3064-4358-9676-054cd6b92b78

@@ -5,10 +5,12 @@ import com.jfoenix.controls.JFXTextField;
 import edu.icet.coursework.bo.BoFactory;
 import edu.icet.coursework.bo.custom.OrderBo;
 import edu.icet.coursework.bo.custom.ProductBo;
+import edu.icet.coursework.controller.user.UserSession;
 import edu.icet.coursework.db.DBConnection;
 import edu.icet.coursework.dto.Order;
 import edu.icet.coursework.dto.OrderDetails;
 import edu.icet.coursework.dto.Product;
+import edu.icet.coursework.dto.User;
 import edu.icet.coursework.dto.tm.TableModelCart;
 import edu.icet.coursework.util.BoType;
 import javafx.animation.Animation;
@@ -17,13 +19,19 @@ import javafx.animation.Timeline;
 import javafx.collections.FXCollections;
 import javafx.collections.ObservableList;
 import javafx.event.ActionEvent;
+import javafx.fxml.FXMLLoader;
 import javafx.fxml.Initializable;
+import javafx.scene.Scene;
 import javafx.scene.control.Alert;
 import javafx.scene.control.Label;
 import javafx.scene.control.TableColumn;
 import javafx.scene.control.TableView;
 import javafx.scene.control.cell.PropertyValueFactory;
+import javafx.scene.layout.AnchorPane;
+import javafx.stage.Stage;
 import javafx.util.Duration;
+
+import java.io.IOException;
 import java.net.URL;
 import java.sql.Connection;
 import java.sql.ResultSet;
@@ -59,6 +67,9 @@ public class PointOfSaleFormController implements Initializable {
     public TableColumn colProductName;
     public Label lblDate;
     public Label lblTime;
+    public AnchorPane adminpane;
+    public Label lblUserId;
+    public Label lblUserType;
 
     private ProductBo productBoImpl = BoFactory.getInstance().getBo(BoType.PRODUCT);
     private OrderBo orderBo = BoFactory.getInstance().getBo(BoType.ORDER);
@@ -66,6 +77,10 @@ public class PointOfSaleFormController implements Initializable {
 
     @Override
     public void initialize(URL url, ResourceBundle resourceBundle) {
+        User currentUser = UserSession.getInstance().getCurrentSession();
+        lblUserId.setText(currentUser.getUserId()+"-");
+        lblUserType.setText(currentUser.getUserType());
+
         colProductId.setCellValueFactory(new PropertyValueFactory<>("productId"));
         colProductName.setCellValueFactory(new PropertyValueFactory<>("productName"));
         colQty.setCellValueFactory(new PropertyValueFactory<>("qty"));
@@ -274,10 +289,35 @@ public class PointOfSaleFormController implements Initializable {
     }
 
     public void btnViewOrdersOnAction(ActionEvent actionEvent) {
-        // Implement order viewing functionality
+        Stage stage=(Stage) adminpane.getScene().getWindow();
+        try {
+            stage.setScene(new Scene(FXMLLoader.load(getClass().getResource("/view/viewOrdersForm.fxml"))));
+        } catch (IOException e) {
+            throw new RuntimeException(e);
+        }
+        stage.show();
+        ((Stage) adminpane.getScene().getWindow()).close();
     }
 
     public void btnBackOnAction(ActionEvent actionEvent) {
-        // Implement back navigation functionality
+        User currentUser = UserSession.getInstance().getCurrentSession();
+        if (currentUser.getUserType().equals("Admin")){
+            Stage stage=(Stage) adminpane.getScene().getWindow();
+            try {
+                stage.setScene(new Scene(FXMLLoader.load(getClass().getResource("/view/adminDashboardForm.fxml"))));
+            } catch (IOException e) {
+                throw new RuntimeException(e);
+            }
+            stage.show();
+            ((Stage) adminpane.getScene().getWindow()).close();
+        }
+        Stage stage=(Stage) adminpane.getScene().getWindow();
+        try {
+            stage.setScene(new Scene(FXMLLoader.load(getClass().getResource("/view/employeeDashboardForm.fxml"))));
+        } catch (IOException e) {
+            throw new RuntimeException(e);
+        }
+        stage.show();
+        ((Stage) adminpane.getScene().getWindow()).close();
     }
 }

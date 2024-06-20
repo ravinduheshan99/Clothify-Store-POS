@@ -12,7 +12,7 @@
 <?import javafx.scene.shape.Rectangle?>
 <?import javafx.scene.text.Font?>
 
-<AnchorPane prefHeight="551.0" prefWidth="711.0" xmlns="http://javafx.com/javafx/21" xmlns:fx="http://javafx.com/fxml/1" fx:controller="edu.icet.coursework.controller.order.PointOfSaleFormController">
+<AnchorPane fx:id="adminpane" prefHeight="551.0" prefWidth="711.0" xmlns="http://javafx.com/javafx/21" xmlns:fx="http://javafx.com/fxml/1" fx:controller="edu.icet.coursework.controller.order.PointOfSaleFormController">
    <children>
       <ImageView fitHeight="509.0" fitWidth="762.0" layoutY="60.0" pickOnBounds="true" preserveRatio="true">
          <image>
@@ -77,13 +77,8 @@
             <Font size="15.0" />
          </font>
       </JFXButton>
-      <Rectangle arcHeight="5.0" arcWidth="5.0" fill="WHITE" height="62.0" stroke="BLACK" strokeType="INSIDE" width="735.0" />
-      <Label layoutX="615.0" layoutY="18.0" text="Login">
-         <font>
-            <Font name="Segoe UI" size="18.0" />
-         </font>
-      </Label>
-      <ImageView fitHeight="49.0" fitWidth="50.0" layoutX="673.0" layoutY="5.0" pickOnBounds="true" preserveRatio="true">
+      <Rectangle arcHeight="5.0" arcWidth="5.0" height="62.0" stroke="BLACK" strokeType="INSIDE" width="735.0" />
+      <ImageView fitHeight="56.0" fitWidth="59.0" layoutX="678.0" layoutY="3.0" pickOnBounds="true" preserveRatio="true">
          <image>
             <Image url="@../../../../assets/Logo.jpg" />
          </image>
@@ -111,6 +106,16 @@
       <Label fx:id="lblTime" layoutX="619.0" layoutY="88.0" text="13 : 10 : 28" textFill="WHITE">
          <font>
             <Font size="20.0" />
+         </font>
+      </Label>
+      <Label fx:id="lblUserId" layoutX="551.0" layoutY="22.0" text="U001-" textFill="WHITE">
+         <font>
+            <Font name="Segoe UI" size="16.0" />
+         </font>
+      </Label>
+      <Label fx:id="lblUserType" layoutX="598.0" layoutY="22.0" text="Employee" textFill="WHITE">
+         <font>
+            <Font name="Segoe UI" size="16.0" />
          </font>
       </Label>
    </children>

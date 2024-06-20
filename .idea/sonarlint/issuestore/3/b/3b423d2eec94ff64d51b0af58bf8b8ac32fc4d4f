@@ -1,9 +1,17 @@
 
+g	java:S112-"FDefine and throw a dedicated exception instead of using a generic one.(Ò‚Òéüÿÿÿÿ8½·ƒ©ƒ2
+g	java:S1126"FDefine and throw a dedicated exception instead of using a generic one.(Ò‚Òéüÿÿÿÿ8¾·ƒ©ƒ2
+
+java:S1104"UMake adminpane a static final constant or non-public and provide accessors if needed.(ˆ×£ÿÿÿÿÿ8ùÏ÷¨ƒ2J$bdfeb977-1f44-4222-98ce-b643e58e45df
+˜
+java:S1104"UMake lblUserId a static final constant or non-public and provide accessors if needed.(«†´±8‘ü÷¨ƒ2J$4c0fe157-bb76-4d9e-9d08-a15a3f8dd30b
+š
+java:S1104"WMake lblUserType a static final constant or non-public and provide accessors if needed.(Œø±8¦Ÿø¨ƒ2J$f411b9ed-79ac-44a3-a8f7-a9dda690bdcc
 Ä
-java:S1186"€Add a nested comment explaining why this method is empty, throw an UnsupportedOperationException or complete the implementation.(Ã¦¿ó8ÈŒ†õÿ1J$7e435151-c4aa-4ff1-8d97-387ca45ceffd
+java:S1186"€Add a nested comment explaining why this method is empty, throw an UnsupportedOperationException or complete the implementation.(Ã¦¿ó8¬Ôú¨ƒ2J$acbcf773-a3f6-4691-bac6-ac8836c85a62
 Ä
-java:S1186	"€Add a nested comment explaining why this method is empty, throw an UnsupportedOperationException or complete the implementation.(ò÷³Ù8¦¶†õÿ1J$6c65e501-d2ac-4e21-b33d-55c12e417f15
+java:S1186 "€Add a nested comment explaining why this method is empty, throw an UnsupportedOperationException or complete the implementation.(ò÷³Ù8­Ôú¨ƒ2J$d7090a74-371a-4940-b612-8215228725bb
 É
-java:S1186"€Add a nested comment explaining why this method is empty, throw an UnsupportedOperationException or complete the implementation.(ÚÃ¾úÿÿÿÿ8ÔÓ†õÿ1J$aaafc219-827a-4f15-a5b5-cc96cb992a1c
-£
-java:S1186"€Add a nested comment explaining why this method is empty, throw an UnsupportedOperationException or complete the implementation.(†ùàıÿÿÿÿ8àê†õÿ1
+java:S1186#"€Add a nested comment explaining why this method is empty, throw an UnsupportedOperationException or complete the implementation.(ÚÃ¾úÿÿÿÿ8­Ôú¨ƒ2J$6a0d4da1-c83f-435c-9dca-02cb4b11deab
+T
+java:S1172&"2Remove this unused method parameter "actionEvent".(†ùàıÿÿÿÿ8ç·ƒ©ƒ2

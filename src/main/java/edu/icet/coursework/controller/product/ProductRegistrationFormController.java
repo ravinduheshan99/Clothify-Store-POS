@@ -4,18 +4,25 @@ import com.jfoenix.controls.JFXComboBox;
 import com.jfoenix.controls.JFXTextField;
 import edu.icet.coursework.bo.BoFactory;
 import edu.icet.coursework.bo.custom.ProductBo;
+import edu.icet.coursework.controller.user.UserSession;
 import edu.icet.coursework.db.DBConnection;
 import edu.icet.coursework.dto.Product;
+import edu.icet.coursework.dto.User;
 import edu.icet.coursework.util.BoType;
 import javafx.collections.FXCollections;
 import javafx.collections.ObservableList;
 import javafx.event.ActionEvent;
+import javafx.fxml.FXMLLoader;
 import javafx.fxml.Initializable;
+import javafx.scene.Scene;
 import javafx.scene.control.Alert;
 import javafx.scene.control.Label;
 import javafx.scene.image.ImageView;
 import javafx.scene.input.MouseEvent;
+import javafx.scene.layout.AnchorPane;
+import javafx.stage.Stage;
 
+import java.io.IOException;
 import java.net.URL;
 import java.sql.Connection;
 import java.sql.ResultSet;
@@ -37,9 +44,16 @@ public class ProductRegistrationFormController implements Initializable {
     public JFXTextField txtQty;
     public JFXTextField txtSid;
     public ImageView imgProductPic;
+    public AnchorPane adminpane;
+    public Label lblUserId;
+    public Label lblUserType;
 
     @Override
     public void initialize(URL url, ResourceBundle resourceBundle) {
+        User currentUser = UserSession.getInstance().getCurrentSession();
+        lblUserId.setText(currentUser.getUserId()+"-");
+        lblUserType.setText(currentUser.getUserType());
+
         generateProductId();
         loadCategoryMenu();
         loadSizeMenu();
@@ -147,6 +161,25 @@ public class ProductRegistrationFormController implements Initializable {
     }
 
     public void btnBackOnAction(ActionEvent actionEvent) {
+        User currentUser = UserSession.getInstance().getCurrentSession();
+        if (currentUser.getUserType().equals("Admin")){
+            Stage stage=(Stage) adminpane.getScene().getWindow();
+            try {
+                stage.setScene(new Scene(FXMLLoader.load(getClass().getResource("/view/adminDashboardForm.fxml"))));
+            } catch (IOException e) {
+                throw new RuntimeException(e);
+            }
+            stage.show();
+            ((Stage) adminpane.getScene().getWindow()).close();
+        }
+        Stage stage=(Stage) adminpane.getScene().getWindow();
+        try {
+            stage.setScene(new Scene(FXMLLoader.load(getClass().getResource("/view/employeeDashboardForm.fxml"))));
+        } catch (IOException e) {
+            throw new RuntimeException(e);
+        }
+        stage.show();
+        ((Stage) adminpane.getScene().getWindow()).close();
     }
 
     public void btnSearchOnAction(ActionEvent actionEvent) {

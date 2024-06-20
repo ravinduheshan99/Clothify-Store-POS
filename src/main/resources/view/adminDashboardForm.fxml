@@ -9,22 +9,22 @@
 <?import javafx.scene.shape.Rectangle?>
 <?import javafx.scene.text.Font?>
 
-<AnchorPane maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="535.0" prefWidth="711.0" xmlns="http://javafx.com/javafx/21" xmlns:fx="http://javafx.com/fxml/1" fx:controller="edu.icet.coursework.controller.user.AdminDashboardFormController">
+<AnchorPane fx:id="adminpane" maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="535.0" prefWidth="711.0" xmlns="http://javafx.com/javafx/21" xmlns:fx="http://javafx.com/fxml/1" fx:controller="edu.icet.coursework.controller.user.AdminDashboardFormController">
    <children>
-      <Rectangle arcHeight="5.0" arcWidth="5.0" fill="WHITE" height="59.0" stroke="BLACK" strokeType="INSIDE" width="711.0" />
-      <Label layoutX="590.0" layoutY="17.0" text="Login">
+      <Rectangle arcHeight="5.0" arcWidth="5.0" height="59.0" stroke="WHITE" strokeType="INSIDE" width="711.0" />
+      <Label fx:id="lblUserId" layoutX="560.0" layoutY="20.0" text="U001- " textFill="WHITE">
          <font>
-            <Font name="Segoe UI" size="18.0" />
+            <Font name="Segoe UI" size="16.0" />
          </font>
       </Label>
-      <ImageView fitHeight="49.0" fitWidth="50.0" layoutX="648.0" layoutY="4.0" pickOnBounds="true" preserveRatio="true">
+      <ImageView fitHeight="49.0" fitWidth="50.0" layoutX="660.0" layoutY="4.0" pickOnBounds="true" preserveRatio="true">
          <image>
-            <Image url="@../../../../assets/logo.jpg" />
+            <Image url="@../../../../assets/Logo.jpg" />
          </image>
       </ImageView>
-      <ImageView fitHeight="493.0" fitWidth="711.0" layoutY="60.0" pickOnBounds="true" preserveRatio="true">
+      <ImageView fitHeight="493.0" fitWidth="711.0" layoutY="59.0" pickOnBounds="true" preserveRatio="true">
          <image>
-            <Image url="@../../../../assets/pexels-kish-1488463.jpg" />
+            <Image url="@../../../../assets/Background 2.jpg" />
          </image>
       </ImageView>
       <Rectangle arcHeight="50.0" arcWidth="50.0" fill="#ffffff36" height="443.0" layoutX="28.0" layoutY="76.0" stroke="WHITE" strokeType="INSIDE" width="656.0" />
@@ -37,7 +37,7 @@
          <graphic>
             <ImageView fitHeight="103.0" fitWidth="111.0" pickOnBounds="true" preserveRatio="true">
                <image>
-                  <Image url="@../../../../assets/point of sale.png" />
+                  <Image url="@../../../../assets/Point Of Sale.png" />
                </image>
                <viewport>
                   <Rectangle2D width="111.0" />
@@ -53,7 +53,7 @@
          <graphic>
             <ImageView fitHeight="103.0" fitWidth="111.0" pickOnBounds="true" preserveRatio="true">
                <image>
-                  <Image url="@../../../../assets/items.png" />
+                  <Image url="@../../../../assets/Items.png" />
                </image>
                <viewport>
                   <Rectangle2D width="111.0" />
@@ -70,7 +70,7 @@
          <graphic>
             <ImageView fitHeight="103.0" fitWidth="111.0" pickOnBounds="true" preserveRatio="true">
                <image>
-                  <Image url="@../../../../assets/suppliers.jpg" />
+                  <Image url="@../../../../assets/Suppliers.jpg" />
                </image>
                <viewport>
                   <Rectangle2D width="111.0" />
@@ -104,7 +104,7 @@
          <graphic>
             <ImageView fitHeight="103.0" fitWidth="111.0" pickOnBounds="true" preserveRatio="true">
                <image>
-                  <Image url="@../../../../assets/reports.jpg" />
+                  <Image url="@../../../../assets/Reports.jpg" />
                </image>
                <viewport>
                   <Rectangle2D width="111.0" />
@@ -117,5 +117,15 @@
             <Font name="Segoe UI Bold" size="12.0" />
          </font>
       </Label>
+      <Label fx:id="lblUserType" layoutX="606.0" layoutY="20.0" text="Admin" textFill="WHITE">
+         <font>
+            <Font name="Segoe UI" size="16.0" />
+         </font>
+      </Label>
+      <JFXButton layoutX="585.0" layoutY="470.0" onAction="#btnLogOutOnAction" style="-fx-background-color: #ffffff;" text="Logout">
+         <font>
+            <Font name="Segoe UI" size="15.0" />
+         </font>
+      </JFXButton>
    </children>
 </AnchorPane>

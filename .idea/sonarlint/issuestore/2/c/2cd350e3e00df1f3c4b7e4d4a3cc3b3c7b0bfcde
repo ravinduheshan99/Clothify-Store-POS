@@ -1,31 +1,37 @@
 
-	java:S112C"FDefine and throw a dedicated exception instead of using a generic one.(¯åÕøÿÿÿÿ8½ìÂ»2J$5882c913-06ce-418d-858f-2bf1a5ad0098
+	java:S112R"FDefine and throw a dedicated exception instead of using a generic one.(¯åÕøÿÿÿÿ8½ìÂ»2J$e94d9b02-d4a3-4166-bcde-77a742058bf4
+	java:S112‚"FDefine and throw a dedicated exception instead of using a generic one.(Ò‚Òéüÿÿÿÿ8ä‘¥ƒ2J$815133a3-7982-4cfe-992d-8ad1a4eb4539
+	java:S112‹"FDefine and throw a dedicated exception instead of using a generic one.(Ò‚Òéüÿÿÿÿ8ä‘¥ƒ2J$d58f9cb1-7dee-4fe1-8a55-5970e7bf2be5
 •
-java:S1104"RMake txtSid a static final constant or non-public and provide accessors if needed.(·•»¦8ÂìÂ»2J$ff6e261c-9554-450d-a316-056fb078214c
+java:S1104 "RMake txtSid a static final constant or non-public and provide accessors if needed.(·•»¦8ÂìÂ»2J$315bcf65-8002-462b-a97e-3b736183e50f
 š
-java:S1104"RMake txtPid a static final constant or non-public and provide accessors if needed.(¸¯…Ùÿÿÿÿÿ8ÂìÂ»2J$05ee6c35-067e-4596-a253-cf4d7de11e76
+java:S1104!"RMake txtPid a static final constant or non-public and provide accessors if needed.(¸¯…Ùÿÿÿÿÿ8ÂìÂ»2J$84f4d9ad-ba0c-4edf-8bf6-ce8b0ad73117
 
-java:S1104"ZMake txtProductName a static final constant or non-public and provide accessors if needed.(•Ôò8ÂìÂ»2J$73387a9e-8d81-4ea4-b840-a9db61850e34
+java:S1104""ZMake txtProductName a static final constant or non-public and provide accessors if needed.(•Ôò8ÂìÂ»2J$bc4d453b-7f1d-477c-9f06-b574749a99e3
 
-java:S1104"[Make txtCompanyEmail a static final constant or non-public and provide accessors if needed.(™ª€8ÂìÂ»2J$f039fd32-efb6-4eac-98ef-a03f46c8af87
+java:S1104#"[Make txtCompanyEmail a static final constant or non-public and provide accessors if needed.(™ª€8ÂìÂ»2J$7f52398d-cc2a-4065-aa85-b1341a3900d1
 
-java:S1104"ZMake txtCompanyName a static final constant or non-public and provide accessors if needed.(‚¶ÉÇ8ÂìÂ»2J$bec0a189-54e5-4e13-9219-e36a3f3daf40
-i
-java:S2095&"GUse try-with-resources or close this "Statement" in a "finally" clause.(é°Áµşÿÿÿÿ8ôôê»2
-i
-java:S20951"GUse try-with-resources or close this "Statement" in a "finally" clause.(›ï¢Üùÿÿÿÿ8ôôê»2
+java:S1104$"ZMake txtCompanyName a static final constant or non-public and provide accessors if needed.(‚¶ÉÇ8ÂìÂ»2J$b493fe71-e99f-48d6-b4d9-2287b3f3fb38
+
+java:S1104%"UMake adminpane a static final constant or non-public and provide accessors if needed.(ˆ×£ÿÿÿÿÿ8¦ƒ‹¥ƒ2J$705d325d-5294-4022-a51a-66d5062cf5af
+˜
+java:S1104&"UMake lblUserId a static final constant or non-public and provide accessors if needed.(«†´±8Ù¨Œ¥ƒ2J$3037469b-c1e8-42ae-a50e-789ee90302f6
+š
+java:S1104'"WMake lblUserType a static final constant or non-public and provide accessors if needed.(Œø±8ñÈŒ¥ƒ2J$36cda668-90b2-4e58-af4f-9ae006331035
+
+java:S20955"GUse try-with-resources or close this "Statement" in a "finally" clause.(é°Áµşÿÿÿÿ8ôôê»2J$30ac012b-1d9a-4407-be5a-1d80999a8f70
+
+java:S2095@"GUse try-with-resources or close this "Statement" in a "finally" clause.(›ï¢Üùÿÿÿÿ8ôôê»2J$92dceac2-407d-4644-83ae-d01b89fc06a3
 Ä
-java:S1186Q"€Add a nested comment explaining why this method is empty, throw an UnsupportedOperationException or complete the implementation.(ˆ„ä…8ğÂ»2J$1d013652-31a9-41dc-9fc2-fd5b4a61e6a5
+java:S1186`"€Add a nested comment explaining why this method is empty, throw an UnsupportedOperationException or complete the implementation.(ˆ„ä…8ğÂ»2J$1c38d138-021f-43e7-b519-721177411c50
 Ä
-java:S1186T"€Add a nested comment explaining why this method is empty, throw an UnsupportedOperationException or complete the implementation.(áÄ´ü8“ğÂ»2J$c8e978c2-d9dd-49a4-be21-bc918f034fd3
+java:S1186c"€Add a nested comment explaining why this method is empty, throw an UnsupportedOperationException or complete the implementation.(áÄ´ü8“ğÂ»2J$d847f610-eb4b-4747-9e78-37f7c00a5b0a
 É
-java:S1186h"€Add a nested comment explaining why this method is empty, throw an UnsupportedOperationException or complete the implementation.(¿˜å•øÿÿÿÿ8™ğÂ»2J$5d0670b0-184b-4766-abf2-0f6eb02e4eb4
+java:S1186u"€Add a nested comment explaining why this method is empty, throw an UnsupportedOperationException or complete the implementation.(¿˜å•øÿÿÿÿ8™ğÂ»2J$de7596c5-0750-42fb-a747-ff6112a27501
 Ä
-java:S1186k"€Add a nested comment explaining why this method is empty, throw an UnsupportedOperationException or complete the implementation.(¶ú‡ó8šğÂ»2J$d53f6857-540c-44c7-a992-e39341c91527
-É
-java:S1186n"€Add a nested comment explaining why this method is empty, throw an UnsupportedOperationException or complete the implementation.(†ùàıÿÿÿÿ8¡ğÂ»2J$7ff8b88a-4ef3-48c9-9682-7fbf37da3262
-Ä
-java:S1186q"€Add a nested comment explaining why this method is empty, throw an UnsupportedOperationException or complete the implementation.(•»Š8¤ğÂ»2J$520d946e-9541-450f-b478-49c2b0d91cff
-m	java:S106+"+Replace this use of System.out by a logger.(ŠÔö·8ÓğÂ»2J$eb7cec19-77f1-43b9-8495-ad0368fda80c
+java:S1186x"€Add a nested comment explaining why this method is empty, throw an UnsupportedOperationException or complete the implementation.(¶ú‡ó8šğÂ»2J$29a3a820-ce60-47ac-80a2-73c043dab1dc
+m	java:S106:"+Replace this use of System.out by a logger.(ŠÔö·8ÓğÂ»2J$385ef0ea-bdd7-4418-bb41-57d593de55b3
 z
-java:S1172W"2Remove this unused method parameter "actionEvent".(»…ä«ùÿÿÿÿ8¯ñÂ»2J$bf4c5111-ae05-48e3-8cad-f7f02ae42337
+java:S1172f"2Remove this unused method parameter "actionEvent".(»…ä«ùÿÿÿÿ8¯ñÂ»2J$f634859f-9585-462d-bac9-7d557ff2a482
+z
+java:S1172{"2Remove this unused method parameter "actionEvent".(†ùàıÿÿÿÿ8¸å‘¥ƒ2J$b7cdab79-d769-4179-afa1-2bf2d8bc9b99

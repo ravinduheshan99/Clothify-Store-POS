@@ -1,6 +1,7 @@
 <?xml version="1.0" encoding="UTF-8"?>
 
 <?import com.jfoenix.controls.JFXButton?>
+<?import com.jfoenix.controls.JFXPasswordField?>
 <?import com.jfoenix.controls.JFXTextField?>
 <?import javafx.scene.control.CheckBox?>
 <?import javafx.scene.control.Label?>
@@ -10,24 +11,20 @@
 <?import javafx.scene.shape.Rectangle?>
 <?import javafx.scene.text.Font?>
 
-<AnchorPane prefHeight="551.0" prefWidth="711.0" xmlns="http://javafx.com/javafx/21" xmlns:fx="http://javafx.com/fxml/1" fx:controller="edu.icet.coursework.controller.user.UserLoginFormController">
+<AnchorPane fx:id="adminPane" prefHeight="551.0" prefWidth="711.0" xmlns="http://javafx.com/javafx/21" xmlns:fx="http://javafx.com/fxml/1" fx:controller="edu.icet.coursework.controller.user.UserLoginFormController">
     <children>
-        <ImageView fitHeight="431.0" fitWidth="685.0" layoutX="57.0" layoutY="83.0" pickOnBounds="true" preserveRatio="true">
+        <ImageView fitHeight="523.0" fitWidth="858.0" layoutY="56.0" pickOnBounds="true" preserveRatio="true">
             <image>
-                <Image url="@../../../../assets/Background.jpg" />
+                <Image url="@../../../../assets/Background 2.jpg" />
             </image>
         </ImageView>
-        <Rectangle arcHeight="100.0" arcWidth="100.0" fill="#ffffff36" height="442.0" layoutX="220.0" layoutY="90.0" stroke="WHITE" strokeType="INSIDE" width="315.0" />
-        <ImageView fitHeight="188.0" fitWidth="188.0" layoutX="284.0" layoutY="110.0" pickOnBounds="true" preserveRatio="true">
+        <Rectangle arcHeight="100.0" arcWidth="100.0" fill="#ffffff36" height="442.0" layoutX="223.0" layoutY="97.0" stroke="WHITE" strokeType="INSIDE" width="315.0" />
+        <ImageView fitHeight="188.0" fitWidth="188.0" layoutX="287.0" layoutY="117.0" pickOnBounds="true" preserveRatio="true">
             <image>
                 <Image url="@../../../../assets/Logo.jpg" />
             </image>
         </ImageView>
-        <JFXTextField fx:id="txtEmail" focusColor="WHITE" layoutX="268.0" layoutY="342.0" prefHeight="25.0" prefWidth="221.0" promptText="Email" style="-fx-background-color: #ffffff;" unFocusColor="WHITE">
-         <font>
-            <Font name="Segoe UI Italic" size="12.0" />
-         </font></JFXTextField>
-        <JFXTextField fx:id="txtPw" focusColor="WHITE" layoutX="267.0" layoutY="385.0" prefHeight="25.0" prefWidth="221.0" promptText="Password" style="-fx-background-color: #ffffff;" unFocusColor="WHITE">
+        <JFXTextField fx:id="txtEmail" focusColor="WHITE" layoutX="271.0" layoutY="349.0" prefHeight="25.0" prefWidth="221.0" promptText="Email" style="-fx-background-color: #ffffff;" unFocusColor="WHITE">
          <font>
             <Font name="Segoe UI Italic" size="12.0" />
          </font></JFXTextField>
@@ -36,37 +33,34 @@
                 <Font name="Segoe UI Bold Italic" size="20.0" />
             </font>
         </Label>
-        <CheckBox layoutX="267.0" layoutY="421.0" mnemonicParsing="false" onAction="#checkboxShowPasswordOnAction" text="Show Password" textFill="WHITE">
+        <CheckBox fx:id="checkBoxShowPw" layoutX="270.0" layoutY="428.0" mnemonicParsing="false" text="Show Password" textFill="WHITE">
          <font>
             <Font name="Segoe UI" size="12.0" />
          </font></CheckBox>
-        <Label layoutX="400.0" layoutY="421.0" onMouseClicked="#lblForgetPasswordOnAction" text="Forget Password" textFill="WHITE" underline="true">
+        <Label layoutX="403.0" layoutY="428.0" onMouseClicked="#lblForgetPasswordOnAction" text="Forget Password" textFill="WHITE" underline="true">
          <font>
             <Font name="Segoe UI" size="12.0" />
          </font></Label>
-        <Label layoutX="283.0" layoutY="500.0" text="Don't have an account?" textFill="WHITE">
-         <font>
-            <Font name="Segoe UI" size="12.0" />
-         </font></Label>
-        <Label layoutX="416.0" layoutY="500.0" onMouseClicked="#lblRegistrationFormNavOnAction" text="Register" textFill="WHITE" underline="true">
-         <font>
-            <Font name="Segoe UI Bold" size="12.0" />
-         </font></Label>
-      <JFXButton layoutX="334.0" layoutY="452.0" onAction="#btnLoginOnAction" prefHeight="31.0" prefWidth="88.0" style="-fx-background-color: #000000;" text="Login" textFill="WHITE">
+      <JFXButton layoutX="337.0" layoutY="459.0" onAction="#btnLoginOnAction" prefHeight="31.0" prefWidth="88.0" style="-fx-background-color: #000000;" text="Login" textFill="WHITE">
          <font>
             <Font size="15.0" />
          </font>
       </JFXButton>
-      <Rectangle arcHeight="5.0" arcWidth="5.0" fill="WHITE" height="59.0" stroke="BLACK" strokeType="INSIDE" width="755.0" />
-      <Label layoutX="618.0" layoutY="18.0" onMouseClicked="#lblRegistrationFormMainNavOnAction" text="Register">
-         <font>
-            <Font name="Segoe UI" size="18.0" />
-         </font>
-      </Label>
+      <Rectangle arcHeight="5.0" arcWidth="5.0" height="59.0" stroke="WHITE" strokeType="INSIDE" width="755.0" />
       <ImageView fitHeight="49.0" fitWidth="50.0" layoutX="694.0" layoutY="5.0" pickOnBounds="true" preserveRatio="true">
          <image>
             <Image url="@../../../../assets/Logo.jpg" />
          </image>
       </ImageView>
+      <JFXTextField fx:id="txtPwShow" focusColor="WHITE" layoutX="271.0" layoutY="387.0" prefHeight="25.0" prefWidth="221.0" style="-fx-background-color: #ffffff;" unFocusColor="WHITE" visible="false">
+         <font>
+            <Font name="Segoe UI Italic" size="12.0" />
+         </font>
+      </JFXTextField>
+      <JFXPasswordField fx:id="txtPw" focusColor="BLACK" layoutX="271.0" layoutY="387.0" prefHeight="25.0" prefWidth="221.0" promptText="Password" style="-fx-background-color: #ffffff;" unFocusColor="WHITE">
+         <font>
+            <Font name="Segoe UI Italic" size="12.0" />
+         </font>
+      </JFXPasswordField>
     </children>
 </AnchorPane>

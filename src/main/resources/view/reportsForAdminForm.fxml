@@ -8,54 +8,59 @@
 <?import javafx.scene.shape.Rectangle?>
 <?import javafx.scene.text.Font?>
 
-<AnchorPane prefHeight="551.0" prefWidth="711.0" xmlns="http://javafx.com/javafx/21" xmlns:fx="http://javafx.com/fxml/1" fx:controller="edu.icet.coursework.controller.report.ReportsForAdminFormController">
+<AnchorPane fx:id="adminpane" prefHeight="551.0" prefWidth="711.0" xmlns="http://javafx.com/javafx/21" xmlns:fx="http://javafx.com/fxml/1" fx:controller="edu.icet.coursework.controller.report.ReportsForAdminFormController">
    <children>
-      <ImageView fitHeight="505.0" fitWidth="755.0" layoutY="60.0" pickOnBounds="true" preserveRatio="true">
+      <ImageView fitHeight="523.0" fitWidth="816.0" layoutX="-1.0" layoutY="59.0" pickOnBounds="true" preserveRatio="true">
          <image>
-            <Image url="@../../../../assets/pexels-kish-1488463.jpg" />
+            <Image url="@../../../../assets/Background 2.jpg" />
          </image>
       </ImageView>
-      <Rectangle arcHeight="5.0" arcWidth="5.0" fill="WHITE" height="59.0" stroke="BLACK" strokeType="INSIDE" width="755.0" />
-      <Label layoutX="637.0" layoutY="18.0" text="Login">
-         <font>
-            <Font name="Segoe UI" size="18.0" />
-         </font>
-      </Label>
-      <ImageView fitHeight="49.0" fitWidth="50.0" layoutX="694.0" layoutY="5.0" pickOnBounds="true" preserveRatio="true">
+      <Rectangle arcHeight="5.0" arcWidth="5.0" height="59.0" stroke="WHITE" strokeType="INSIDE" width="755.0" />
+      <ImageView fitHeight="59.0" fitWidth="55.0" layoutX="698.0" layoutY="2.0" pickOnBounds="true" preserveRatio="true">
          <image>
-            <Image url="@../../../../assets/logo.jpg" />
+            <Image url="@../../../../assets/Logo.jpg" />
          </image>
       </ImageView>
-      <Rectangle arcHeight="50.0" arcWidth="50.0" fill="#ffffff36" height="490.0" layoutX="20.0" layoutY="67.0" stroke="WHITE" strokeType="INSIDE" width="716.0" />
-      <Label layoutX="47.0" layoutY="72.0" text="Admin Reports" textFill="WHITE">
+      <Rectangle arcHeight="50.0" arcWidth="50.0" fill="#ffffff36" height="441.0" layoutX="57.0" layoutY="101.0" stroke="WHITE" strokeType="INSIDE" width="643.0" />
+      <Label layoutX="77.0" layoutY="118.0" text="Admin Reports" textFill="WHITE">
          <font>
             <Font size="20.0" />
          </font>
       </Label>
-      <JFXButton layoutX="228.0" layoutY="158.0" onAction="#btnInventoryReportOnAction" prefHeight="49.0" prefWidth="299.0" style="-fx-background-color: #000000; -fx-border-color: #ffffff; -fx-border-width: 2;" text="Inventory Report" textFill="WHITE">
+      <JFXButton layoutX="228.0" layoutY="167.0" onAction="#btnInventoryReportOnAction" prefHeight="49.0" prefWidth="299.0" style="-fx-background-color: #000000; -fx-border-color: #ffffff; -fx-border-width: 2;" text="Inventory Report" textFill="WHITE">
          <font>
             <Font size="15.0" />
          </font>
       </JFXButton>
-      <JFXButton layoutX="228.0" layoutY="226.0" onAction="#btnSupplierReportOnAction" prefHeight="49.0" prefWidth="299.0" style="-fx-background-color: #000000; -fx-border-color: #ffffff; -fx-border-width: 2;" text="Supplier Report" textFill="WHITE">
+      <JFXButton layoutX="228.0" layoutY="235.0" onAction="#btnSupplierReportOnAction" prefHeight="49.0" prefWidth="299.0" style="-fx-background-color: #000000; -fx-border-color: #ffffff; -fx-border-width: 2;" text="Supplier Report" textFill="WHITE">
          <font>
             <Font size="15.0" />
          </font>
       </JFXButton>
-      <JFXButton layoutX="228.0" layoutY="291.0" onAction="#btnSalesReportOnAction" prefHeight="49.0" prefWidth="299.0" style="-fx-background-color: #000000; -fx-border-color: #ffffff; -fx-border-width: 2;" text="Sales Report" textFill="WHITE">
+      <JFXButton layoutX="228.0" layoutY="300.0" onAction="#btnSalesReportOnAction" prefHeight="49.0" prefWidth="299.0" style="-fx-background-color: #000000; -fx-border-color: #ffffff; -fx-border-width: 2;" text="Sales Report" textFill="WHITE">
          <font>
             <Font size="15.0" />
          </font>
       </JFXButton>
-      <JFXButton layoutX="228.0" layoutY="356.0" onAction="#btnEmployeeReportOnAction" prefHeight="49.0" prefWidth="299.0" style="-fx-background-color: #000000; -fx-border-color: #ffffff; -fx-border-width: 2;" text="Employee Report" textFill="WHITE">
+      <JFXButton layoutX="228.0" layoutY="365.0" onAction="#btnEmployeeReportOnAction" prefHeight="49.0" prefWidth="299.0" style="-fx-background-color: #000000; -fx-border-color: #ffffff; -fx-border-width: 2;" text="Employee Report" textFill="WHITE">
          <font>
             <Font size="15.0" />
          </font>
       </JFXButton>
-      <JFXButton layoutX="228.0" layoutY="418.0" onAction="#btnBackOnAction" prefHeight="49.0" prefWidth="299.0" style="-fx-background-color: #000000; -fx-border-color: #ffffff; -fx-border-width: 2;" text="Back" textFill="WHITE">
+      <JFXButton layoutX="228.0" layoutY="427.0" onAction="#btnBackOnAction" prefHeight="49.0" prefWidth="299.0" style="-fx-background-color: #000000; -fx-border-color: #ffffff; -fx-border-width: 2;" text="Back" textFill="WHITE">
          <font>
             <Font size="15.0" />
          </font>
       </JFXButton>
+      <Label fx:id="lblUserId" layoutX="598.0" layoutY="20.0" text="U001- " textFill="WHITE">
+         <font>
+            <Font name="Segoe UI" size="16.0" />
+         </font>
+      </Label>
+      <Label fx:id="lblUserType" layoutX="644.0" layoutY="20.0" text="Admin" textFill="WHITE">
+         <font>
+            <Font name="Segoe UI" size="16.0" />
+         </font>
+      </Label>
    </children>
 </AnchorPane>
