@@ -5,6 +5,7 @@ import edu.icet.coursework.bo.BoFactory;
 import edu.icet.coursework.bo.custom.SupplierBo;
 import edu.icet.coursework.controller.user.UserSession;
 import edu.icet.coursework.db.DBConnection;
+import edu.icet.coursework.dto.Product;
 import edu.icet.coursework.dto.Supplier;
 import edu.icet.coursework.dto.User;
 import edu.icet.coursework.util.BoType;
@@ -97,6 +98,16 @@ public class SupplierRegistrationFormController implements Initializable {
     }
 
     public void btnSearchOnAction(ActionEvent actionEvent) {
+        Supplier supplier = supplierBo.searchSupplier(txtSid.getText());
+        if(supplier==null){
+            new Alert(Alert.AlertType.WARNING,"Supplier Not Found!").show();
+            clearText();
+        }else {
+            txtPid.setText(supplier.getProductId());
+            txtProductName.setText(supplier.getProductName());
+            txtCompanyName.setText(supplier.getCompanyName());
+            txtCompanyEmail.setText(supplier.getCompanyEmail());
+        }
     }
 
     public void btnAddOnAction(ActionEvent actionEvent) {
@@ -115,9 +126,29 @@ public class SupplierRegistrationFormController implements Initializable {
     }
 
     public void btnUpdateOnAction(ActionEvent actionEvent) {
+        Supplier supplier = new Supplier(txtSid.getText(),
+                txtPid.getText(),
+                txtProductName.getText(),
+                txtCompanyName.getText(),
+                txtCompanyEmail.getText());
+        boolean b = supplierBo.updateSupplier(supplier);
+        if (b) {
+            clearText();
+            new Alert(Alert.AlertType.CONFIRMATION, "Supplier Updated Successfully!").show();
+        } else {
+            new Alert(Alert.AlertType.ERROR, "Supplier Not Updated!").show();
+        }
     }
 
     public void btnRemoveOnAction(ActionEvent actionEvent) {
+        boolean b = supplierBo.removeSupplier(txtSid.getText());
+        if(b){
+            new Alert(Alert.AlertType.CONFIRMATION,"Supplier Removed Successfully!").show();
+            clearText();
+        }else {
+            new Alert(Alert.AlertType.ERROR,"Operation Unsuccessfull!").show();
+            clearText();
+        }
     }
 
     public void btnBackOnAction(ActionEvent actionEvent) {

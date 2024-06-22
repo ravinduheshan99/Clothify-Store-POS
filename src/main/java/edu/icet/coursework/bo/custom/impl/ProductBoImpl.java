@@ -24,6 +24,16 @@ public class ProductBoImpl implements ProductBo {
     }
 
     @Override
+    public boolean removeProduct(String cid) {
+        return productDaoImpl.removeProduct(cid);
+    }
+
+    @Override
+    public boolean updateProduct(Product dto) {
+        return productDaoImpl.updateProduct(new ModelMapper().map(dto, ProductEntity.class));
+    }
+
+    @Override
     public Product searchProduct(String pid) {
         return productDaoImpl.searchProduct(pid);
     }

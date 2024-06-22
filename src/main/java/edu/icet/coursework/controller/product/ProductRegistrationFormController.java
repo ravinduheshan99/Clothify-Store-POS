@@ -128,13 +128,9 @@ public class ProductRegistrationFormController implements Initializable {
         cbxCategory.setValue(null);
     }
 
-
     ProductBo productBoImpl = BoFactory.getInstance().getBo(BoType.PRODUCT);
 
     public void lblOnActionRegistrationFormMainNav(MouseEvent mouseEvent) {
-    }
-
-    public void btnChooseImageOnAction(ActionEvent actionEvent) {
     }
 
     public void btnAddOnAction(ActionEvent actionEvent) {
@@ -156,8 +152,15 @@ public class ProductRegistrationFormController implements Initializable {
         }
     }
 
-
     public void btnRemoveOnAction(ActionEvent actionEvent) {
+        boolean b = productBoImpl.removeProduct(txtPid.getText());
+        if(b){
+            new Alert(Alert.AlertType.CONFIRMATION,"Product Removed Successfully!").show();
+            clearText();
+        }else {
+            new Alert(Alert.AlertType.ERROR,"Operation Unsuccessfull!").show();
+            clearText();
+        }
     }
 
     public void btnBackOnAction(ActionEvent actionEvent) {
@@ -183,9 +186,35 @@ public class ProductRegistrationFormController implements Initializable {
     }
 
     public void btnSearchOnAction(ActionEvent actionEvent) {
+        Product product = productBoImpl.searchProduct(txtPid.getText());
+        if(product==null){
+            new Alert(Alert.AlertType.WARNING,"Product Not Found!").show();
+            clearText();
+        }else {
+            cbxCategory.setValue(product.getCategory());
+            txtProductName.setText(product.getProductName());
+            txtPrice.setText(product.getUnitPrice().toString());
+            cbxSize.setValue(product.getSize());
+            txtQty.setText(product.getQty().toString());
+            txtProductDescription.setText(product.getDescription());
+        }
     }
 
     public void btnUpdateOnAction(ActionEvent actionEvent) {
+        Product product = new Product(txtPid.getText(),
+                txtProductName.getText(),
+                Double.parseDouble(txtPrice.getText()),
+                Integer.parseInt(txtQty.getText()),
+                txtProductDescription.getText(),
+                cbxSize.getValue().toString(),
+                cbxCategory.getValue().toString()
+        );
+        boolean b = productBoImpl.updateProduct(product);
+        if (b) {
+            clearText();
+            new Alert(Alert.AlertType.CONFIRMATION, "Product Updated Successfully!").show();
+        } else {
+            new Alert(Alert.AlertType.ERROR, "Product Not Updated!").show();
+        }
     }
-
 }

@@ -13,8 +13,6 @@ Usrc/main/java/edu/icet/coursework/controller/user/UserRegistrationFormControlle
 Ssrc/main/java/edu/icet/coursework/controller/user/AdminDashboardFormController.java,7\b\7b4ab7afa8e71e23c85176ab7d71c0e16aef2aae
 Ü
 Vsrc/main/java/edu/icet/coursework/controller/user/EmployeeDashboardFormController.java,e\3\e3685c99175c4e977460b34574980361862173ad
-Ñ
-Tsrc/main/java/edu/icet/coursework/controller/user/EmployeeDetailsFormController.java,8\7\87df7ec527be4411ba771c0f114e7114b7312f66
 Å
 Qsrc/main/java/edu/icet/coursework/controller/order/PointOfSaleFormController.java,c\6\c621de288bb2a8a0a1b4b5bc7c561193c7c79340
 ã
@@ -105,7 +103,5 @@ g
 7src/main/java/edu/icet/coursework/dto/OrderDetails.java,0\2\025c380327532bc1fafe269c59d25c7be3824b26
 p
 @src/main/java/edu/icet/coursework/entity/OrderDetailsEntity.java,8\e\8e8796c8889ae1c9ef7c44d4fad3e4471170b5b1
-m
-=src/main/java/edu/icet/coursework/controller/UserSession.java,4\a\4abe4be9d0ef94003b7a91e1456f30f6a7b45789
 r
 Bsrc/main/java/edu/icet/coursework/controller/user/UserSession.java,e\2\e26e69f0bd5cf479f697bd19855499a3b3c927c0

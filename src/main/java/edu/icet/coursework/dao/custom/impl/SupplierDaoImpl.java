@@ -3,13 +3,16 @@ package edu.icet.coursework.dao.custom.impl;
 import edu.icet.coursework.dao.custom.SupplierDao;
 import edu.icet.coursework.dto.Order;
 import edu.icet.coursework.dto.Product;
+import edu.icet.coursework.dto.Supplier;
 import edu.icet.coursework.dto.User;
 import edu.icet.coursework.entity.OrderEntity;
+import edu.icet.coursework.entity.ProductEntity;
 import edu.icet.coursework.entity.SupplierEntity;
 import edu.icet.coursework.util.HibernateUtil;
 import javafx.collections.ObservableList;
 import org.hibernate.Session;
 import org.hibernate.Transaction;
+import org.modelmapper.ModelMapper;
 
 public class SupplierDaoImpl implements SupplierDao {
     @Override
@@ -66,6 +69,113 @@ public class SupplierDaoImpl implements SupplierDao {
         return null;
     }
 
+    @Override
+    public boolean removeProduct(String cid) {
+        return false;
+    }
+
+    @Override
+    public boolean updateProduct(SupplierEntity entity) {
+        return false;
+    }
+
+    @Override
+    public Supplier searchSupplier(String sid) {
+        Session session = null;
+        Transaction transaction = null;
+
+        try {
+            session = HibernateUtil.getSession();
+            transaction = session.beginTransaction();
+
+            SupplierEntity supplierEntity = session.get(SupplierEntity.class,sid);
+            if (supplierEntity == null){
+                return null;
+            }
+
+            Supplier supplier = new ModelMapper().map(supplierEntity,Supplier.class);
+            transaction.commit();
+            return supplier;
+
+        }catch (Exception e){
+            if (transaction!=null){
+                transaction.rollback();
+            }
+            e.printStackTrace();
+            return null;
+
+        }finally {
+            if (session!=null){
+                session.close();
+            }
+        }
+    }
+
+    @Override
+    public boolean removeSupplier(String sid) {
+        Session session = null;
+        Transaction transaction = null;
+
+        try {
+            session = HibernateUtil.getSession();
+            transaction = session.beginTransaction();
+
+            SupplierEntity supplierEntity = session.get(SupplierEntity.class, sid);
+            if (supplierEntity == null) {
+                return false;  // No customer found with the given ID
+            }
+
+            session.delete(supplierEntity);
+
+            transaction.commit();
+            return true;
+
+        } catch (Exception e) {
+
+            if (transaction != null) {
+                transaction.rollback();
+            }
+            e.printStackTrace(); // or use a logger to log the exception
+            return false;
+
+        } finally {
+
+            if (session != null) {
+                session.close();
+            }
+
+        }
+    }
+
+    @Override
+    public boolean updateSupplier(SupplierEntity entity) {
+        Session session = null;
+        Transaction transaction = null;
+
+        try {
+
+            session = HibernateUtil.getSession();
+            transaction = session.beginTransaction();
+            session.merge(entity); // merge does not require entity.getId(), just the entity
+            transaction.commit();
+            return true;
+
+        } catch (Exception e) {
+
+            if (transaction != null) {
+                transaction.rollback();
+            }
+            e.printStackTrace(); // or use a logger to log the exception
+            return false;
+
+        } finally {
+
+            if (session != null) {
+                session.close();
+            }
+
+        }
+    }
 
 
 }

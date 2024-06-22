@@ -6,7 +6,9 @@ import edu.icet.coursework.dto.Supplier;
 import javafx.collections.ObservableList;
 
 public interface ProductBo extends SuperBo {
+    public ObservableList<Product> loadProducts();
     public boolean addProduct(Product product);
     public Product searchProduct(String pid);
-    public ObservableList<Product> loadProducts();
+    public boolean removeProduct(String cid);
+    public boolean updateProduct(Product product);
 }

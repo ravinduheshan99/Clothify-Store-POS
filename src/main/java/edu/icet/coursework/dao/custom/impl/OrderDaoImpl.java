@@ -3,6 +3,7 @@ package edu.icet.coursework.dao.custom.impl;
 import edu.icet.coursework.dao.custom.OrderDao;
 import edu.icet.coursework.dto.Order;
 import edu.icet.coursework.dto.Product;
+import edu.icet.coursework.dto.Supplier;
 import edu.icet.coursework.dto.User;
 import edu.icet.coursework.entity.OrderEntity;
 import edu.icet.coursework.util.HibernateUtil;
@@ -63,6 +64,31 @@ public class OrderDaoImpl implements OrderDao {
     @Override
     public ObservableList<User> searchUser() {
         return null;
+    }
+
+    @Override
+    public boolean removeProduct(String cid) {
+        return false;
+    }
+
+    @Override
+    public boolean updateProduct(OrderEntity entity) {
+        return false;
+    }
+
+    @Override
+    public Supplier searchSupplier(String sid) {
+        return null;
+    }
+
+    @Override
+    public boolean removeSupplier(String sid) {
+        return false;
+    }
+
+    @Override
+    public boolean updateSupplier(OrderEntity entity) {
+        return false;
     }
 
 

@@ -3,6 +3,7 @@ package edu.icet.coursework.dao.custom.impl;
 import edu.icet.coursework.dao.custom.ProductDao;
 import edu.icet.coursework.dto.Order;
 import edu.icet.coursework.dto.Product;
+import edu.icet.coursework.dto.Supplier;
 import edu.icet.coursework.dto.User;
 import edu.icet.coursework.entity.OrderEntity;
 import edu.icet.coursework.entity.ProductEntity;
@@ -93,6 +94,86 @@ public class ProductDaoImpl implements ProductDao {
         return null;
     }
 
+    @Override
+    public boolean removeProduct(String cid) {
+        Session session = null;
+        Transaction transaction = null;
+
+        try {
+            session = HibernateUtil.getSession();
+            transaction = session.beginTransaction();
+
+            ProductEntity productEntity = session.get(ProductEntity.class, cid);
+            if (productEntity == null) {
+                return false;  // No customer found with the given ID
+            }
+
+            session.delete(productEntity);
+
+            transaction.commit();
+            return true;
+
+        } catch (Exception e) {
+
+            if (transaction != null) {
+                transaction.rollback();
+            }
+            e.printStackTrace(); // or use a logger to log the exception
+            return false;
+
+        } finally {
+
+            if (session != null) {
+                session.close();
+            }
+
+        }
+    }
+
+    @Override
+    public boolean updateProduct(ProductEntity entity) {
+        Session session = null;
+        Transaction transaction = null;
+
+        try {
+
+            session = HibernateUtil.getSession();
+            transaction = session.beginTransaction();
+            session.merge(entity); // merge does not require entity.getId(), just the entity
+            transaction.commit();
+            return true;
+
+        } catch (Exception e) {
+
+            if (transaction != null) {
+                transaction.rollback();
+            }
+            e.printStackTrace(); // or use a logger to log the exception
+            return false;
+
+        } finally {
+
+            if (session != null) {
+                session.close();
+            }
+
+        }
+    }
+
+    @Override
+    public Supplier searchSupplier(String sid) {
+        return null;
+    }
+
+    @Override
+    public boolean removeSupplier(String sid) {
+        return false;
+    }
+
+    @Override
+    public boolean updateSupplier(ProductEntity entity) {
+        return false;
+    }
 
     @Override
     public Product searchProduct(String pid) {
