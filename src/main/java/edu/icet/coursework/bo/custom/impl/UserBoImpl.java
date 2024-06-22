@@ -23,4 +23,19 @@ public class UserBoImpl implements UserBo {
         return userDaoImpl.searchUser();
     }
 
+    @Override
+    public User searchUserById(String uid) {
+        return userDaoImpl.searchUserById(uid);
+    }
+
+    @Override
+    public boolean updateUser(User dto) {
+        return userDaoImpl.updateUser(new ModelMapper().map(dto, UserEntity.class));
+    }
+
+    @Override
+    public boolean removeUser(String uid) {
+        return userDaoImpl.removeUser(uid);
+    }
+
 }

@@ -91,5 +91,20 @@ public class OrderDaoImpl implements OrderDao {
         return false;
     }
 
+    @Override
+    public User searchUserById(String uid) {
+        return null;
+    }
+
+    @Override
+    public boolean updateUser(OrderEntity entity) {
+        return false;
+    }
+
+    @Override
+    public boolean removeUser(String uid) {
+        return false;
+    }
+
 
 }

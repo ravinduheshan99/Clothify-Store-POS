@@ -1,12 +1,9 @@
 package edu.icet.coursework.dao.custom.impl;
 
 import edu.icet.coursework.dao.custom.UserDao;
-import edu.icet.coursework.dto.Order;
 import edu.icet.coursework.dto.Product;
 import edu.icet.coursework.dto.Supplier;
 import edu.icet.coursework.dto.User;
-import edu.icet.coursework.entity.OrderEntity;
-import edu.icet.coursework.entity.ProductEntity;
 import edu.icet.coursework.entity.UserEntity;
 import edu.icet.coursework.util.HibernateUtil;
 import javafx.collections.FXCollections;
@@ -123,6 +120,103 @@ public class UserDaoImpl implements UserDao {
     @Override
     public boolean updateSupplier(UserEntity entity) {
         return false;
+    }
+
+    @Override
+    public User searchUserById(String uid) {
+        Session session = null;
+        Transaction transaction = null;
+
+        try {
+            session = HibernateUtil.getSession();
+            transaction = session.beginTransaction();
+
+            UserEntity userEntity = session.get(UserEntity.class,uid);
+            if (userEntity == null){
+                return null;
+            }
+
+            User user = new ModelMapper().map(userEntity,User.class);
+            transaction.commit();
+            return user;
+
+        }catch (Exception e){
+            if (transaction!=null){
+                transaction.rollback();
+            }
+            e.printStackTrace();
+            return null;
+
+        }finally {
+            if (session!=null){
+                session.close();
+            }
+        }
+    }
+
+    @Override
+    public boolean updateUser(UserEntity entity) {
+        Session session = null;
+        Transaction transaction = null;
+
+        try {
+            session = HibernateUtil.getSession();
+            transaction = session.beginTransaction();
+            session.merge(entity); // merge does not require entity.getId(), just the entity
+            transaction.commit();
+            return true;
+
+        } catch (Exception e) {
+
+            if (transaction != null) {
+                transaction.rollback();
+            }
+            e.printStackTrace(); // or use a logger to log the exception
+            return false;
+
+        } finally {
+
+            if (session != null) {
+                session.close();
+            }
+
+        }
+    }
+
+    @Override
+    public boolean removeUser(String uid) {
+        Session session = null;
+        Transaction transaction = null;
+
+        try {
+            session = HibernateUtil.getSession();
+            transaction = session.beginTransaction();
+
+            UserEntity userEntity = session.get(UserEntity.class, uid);
+            if (userEntity == null) {
+                return false;
+            }
+
+            session.delete(userEntity);
+
+            transaction.commit();
+            return true;
+
+        } catch (Exception e) {
+
+            if (transaction != null) {
+                transaction.rollback();
+            }
+            e.printStackTrace();
+            return false;
+
+        } finally {
+
+            if (session != null) {
+                session.close();
+            }
+
+        }
     }
 
 }

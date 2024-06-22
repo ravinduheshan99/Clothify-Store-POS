@@ -176,6 +176,21 @@ public class ProductDaoImpl implements ProductDao {
     }
 
     @Override
+    public User searchUserById(String uid) {
+        return null;
+    }
+
+    @Override
+    public boolean updateUser(ProductEntity entity) {
+        return false;
+    }
+
+    @Override
+    public boolean removeUser(String uid) {
+        return false;
+    }
+
+    @Override
     public Product searchProduct(String pid) {
         Session session = null;
         Transaction transaction = null;

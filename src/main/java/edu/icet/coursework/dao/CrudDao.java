@@ -20,5 +20,7 @@ public interface CrudDao <T> extends SuperDao{
     public Supplier searchSupplier(String sid);
     public boolean removeSupplier(String sid);
     public boolean updateSupplier(T entity);
-
+    public User searchUserById(String uid);
+    public boolean updateUser(T entity);
+    public boolean removeUser(String uid);
 }

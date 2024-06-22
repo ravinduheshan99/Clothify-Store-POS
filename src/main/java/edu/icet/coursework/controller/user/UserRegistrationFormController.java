@@ -6,6 +6,7 @@ import com.jfoenix.controls.JFXTextField;
 import edu.icet.coursework.bo.BoFactory;
 import edu.icet.coursework.bo.custom.UserBo;
 import edu.icet.coursework.db.DBConnection;
+import edu.icet.coursework.dto.Product;
 import edu.icet.coursework.dto.User;
 import edu.icet.coursework.util.BoType;
 import javafx.collections.FXCollections;
@@ -159,6 +160,14 @@ public class UserRegistrationFormController implements Initializable {
     }
 
     public void btnRemoveOnAction(ActionEvent actionEvent) {
+        boolean b = userBoImpl.removeUser(txtUid.getText());
+        if(b){
+            new Alert(Alert.AlertType.CONFIRMATION,"User Removed Successfully!").show();
+            clearText();
+        }else {
+            new Alert(Alert.AlertType.ERROR,"Operation Unsuccessfull!").show();
+            clearText();
+        }
     }
 
     public void btnBackOnAction(ActionEvent actionEvent) {
@@ -173,9 +182,42 @@ public class UserRegistrationFormController implements Initializable {
     }
 
     public void btnSearchOnAction(ActionEvent actionEvent) {
+        User user = userBoImpl.searchUserById(txtUid.getText());
+        if(user==null){
+            new Alert(Alert.AlertType.WARNING,"User Not Found!").show();
+            clearText();
+        }else {
+            cbxUserType.setValue(user.getUserType());
+            txtFname.setText(user.getFname());
+            txtLname.setText(user.getLname());
+            cbxGender.setValue(user.getGender());
+            DtpDob.setValue(user.getDob());
+            txtAddress.setText(user.getAddress());
+            txtContactNo.setText(user.getContactNo());
+            txtEmail.setText(user.getEmail());
+        }
     }
 
     public void btnUpdateOnAction(ActionEvent actionEvent) {
-
+        String pw = userBoImpl.searchUserById(txtUid.getText()).getPassword();
+        String pwCfrm = userBoImpl.searchUserById(txtUid.getText()).getPasswordConfirm();
+        User user = new User(txtUid.getText(),
+                cbxUserType.getValue().toString(),
+                txtFname.getText(),
+                txtLname.getText(),
+                DtpDob.getValue(),
+                cbxGender.getValue().toString(),
+                txtAddress.getText(),
+                txtContactNo.getText(),
+                txtEmail.getText(),
+                pw,
+                pwCfrm);
+        boolean b = userBoImpl.updateUser(user);
+        if(b){
+            clearText();
+            new Alert(Alert.AlertType.CONFIRMATION,"User Updated Successfully!").show();
+        }else {
+            new Alert(Alert.AlertType.ERROR,"Operation Unsuccessfull!").show();
+        }
     }
 }

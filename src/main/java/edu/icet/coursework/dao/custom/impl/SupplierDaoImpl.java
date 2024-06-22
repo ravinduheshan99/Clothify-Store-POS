@@ -177,5 +177,20 @@ public class SupplierDaoImpl implements SupplierDao {
         }
     }
 
+    @Override
+    public User searchUserById(String uid) {
+        return null;
+    }
+
+    @Override
+    public boolean updateUser(SupplierEntity entity) {
+        return false;
+    }
+
+    @Override
+    public boolean removeUser(String uid) {
+        return false;
+    }
+
 
 }
