@@ -105,3 +105,5 @@ p
 @src/main/java/edu/icet/coursework/entity/OrderDetailsEntity.java,8\e\8e8796c8889ae1c9ef7c44d4fad3e4471170b5b1
 r
 Bsrc/main/java/edu/icet/coursework/controller/user/UserSession.java,e\2\e26e69f0bd5cf479f697bd19855499a3b3c927c0
+`
+0src/main/java/edu/icet/coursework/util/Mail.java,5\4\543fca7bad057133f3dc5c266548e5e4e9a5d0e4
