@@ -1,5 +1,6 @@
 package edu.icet.coursework.controller.user;
 
+import com.jfoenix.controls.JFXPasswordField;
 import com.jfoenix.controls.JFXTextField;
 import edu.icet.coursework.bo.BoFactory;
 import edu.icet.coursework.bo.custom.UserBo;
@@ -19,9 +20,9 @@ import java.util.Optional;
 
 public class ResetPasswordFormController {
     public JFXTextField txtEmail;
-    public JFXTextField txtNewPw;
-    public JFXTextField txtNewPwConfirm;
     public AnchorPane adminpane;
+    public JFXPasswordField txtNewPw;
+    public JFXPasswordField txtNewPwConfirm;
 
     private UserBo userBoImpl = BoFactory.getInstance().getBo(BoType.USER);
 

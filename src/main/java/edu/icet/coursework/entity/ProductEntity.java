@@ -17,10 +17,11 @@ public class ProductEntity {
     @Id
     private String productId;
 
+    private String supplierId;
+    private String category;
     private String productName;
+    private String size;
     private Double unitPrice;
     private Integer qty;
     private String description;
-    private String size;
-    private String category;
 }

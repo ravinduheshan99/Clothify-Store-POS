@@ -9,10 +9,13 @@ import edu.icet.coursework.entity.OrderEntity;
 import edu.icet.coursework.entity.ProductEntity;
 import edu.icet.coursework.entity.SupplierEntity;
 import edu.icet.coursework.util.HibernateUtil;
+import javafx.collections.FXCollections;
 import javafx.collections.ObservableList;
 import org.hibernate.Session;
 import org.hibernate.Transaction;
 import org.modelmapper.ModelMapper;
+
+import java.util.List;
 
 public class SupplierDaoImpl implements SupplierDao {
     @Override
@@ -192,5 +195,36 @@ public class SupplierDaoImpl implements SupplierDao {
         return false;
     }
 
+    @Override
+    public ObservableList<Supplier> searchAllSuppliers() {
+        ObservableList<Supplier> allSuppliers = FXCollections.observableArrayList();
+        Session session = null;
+        Transaction transaction = null;
+
+        try {
+            session = HibernateUtil.getSession();
+            transaction = session.beginTransaction();
+
+            List<SupplierEntity> supplierEntities = session.createQuery("FROM SupplierEntity",SupplierEntity.class).list();
+            for (SupplierEntity entity: supplierEntities){
+                Supplier supplier = new ModelMapper().map(entity,Supplier.class);
+                allSuppliers.add(supplier);
+            }
+            transaction.commit();
+
+        }catch (Exception e){
+            if (transaction!=null){
+                transaction.rollback();
+            }
+            e.printStackTrace();
+            throw new RuntimeException("Failed To Find Suppliers",e);
+
+        }finally {
+            if (session!=null){
+                session.close();
+            }
+        }
+        return allSuppliers;
+    }
 
 }

@@ -25,8 +25,8 @@
             <Font size="20.0" />
          </font>
       </Label>
-      <JFXTextField fx:id="txtOid" focusColor="WHITE" layoutX="25.0" layoutY="165.0" prefHeight="25.0" prefWidth="170.0" style="-fx-background-color: ffffff;" unFocusColor="WHITE" />
-      <JFXTextField fx:id="txtCashierId" focusColor="WHITE" layoutX="26.0" layoutY="215.0" prefHeight="17.0" prefWidth="170.0" promptText="Cashier ID" style="-fx-background-color: ffffff;" unFocusColor="WHITE" />
+      <JFXTextField fx:id="txtOid" editable="false" focusColor="WHITE" layoutX="25.0" layoutY="165.0" prefHeight="25.0" prefWidth="170.0" style="-fx-background-color: ffffff;" unFocusColor="WHITE" />
+      <JFXTextField fx:id="txtCashierId" editable="false" focusColor="WHITE" layoutX="26.0" layoutY="215.0" prefHeight="17.0" prefWidth="170.0" promptText="Cashier ID" style="-fx-background-color: ffffff;" unFocusColor="WHITE" />
       <JFXTextField fx:id="txtAvailableQty" focusColor="WHITE" layoutX="25.0" layoutY="396.0" prefHeight="25.0" prefWidth="170.0" promptText="Available Quantity" style="-fx-background-color: ffffff;" unFocusColor="WHITE" />
       <Label layoutX="26.0" layoutY="142.0" prefHeight="17.0" prefWidth="49.0" text="Order ID" textFill="WHITE">
          <font>
@@ -67,7 +67,7 @@
             <Font size="15.0" />
          </font>
       </JFXButton>
-      <JFXButton layoutX="473.0" layoutY="485.0" onAction="#btnClearCartOnAction" prefHeight="31.0" prefWidth="98.0" style="-fx-background-color: #000000;" text="Clear Cart" textFill="WHITE">
+      <JFXButton layoutX="473.0" layoutY="485.0" onAction="#btnClearCartOnAction" prefHeight="31.0" prefWidth="98.0" style="-fx-background-color: #000000;" text="Clear" textFill="WHITE">
          <font>
             <Font size="15.0" />
          </font>
@@ -108,12 +108,12 @@
             <Font size="20.0" />
          </font>
       </Label>
-      <Label fx:id="lblUserId" layoutX="551.0" layoutY="22.0" text="U001-" textFill="WHITE">
+      <Label fx:id="lblUserId" layoutX="557.0" layoutY="22.0" text="U001" textFill="WHITE">
          <font>
             <Font name="Segoe UI" size="16.0" />
          </font>
       </Label>
-      <Label fx:id="lblUserType" layoutX="598.0" layoutY="22.0" text="Employee" textFill="WHITE">
+      <Label fx:id="lblUserType" layoutX="603.0" layoutY="22.0" text="Employee" textFill="WHITE">
          <font>
             <Font name="Segoe UI" size="16.0" />
          </font>

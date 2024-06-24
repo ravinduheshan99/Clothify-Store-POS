@@ -1,12 +1,11 @@
 package edu.icet.coursework.dao.custom.impl;
 
 import edu.icet.coursework.dao.custom.ProductDao;
-import edu.icet.coursework.dto.Order;
 import edu.icet.coursework.dto.Product;
 import edu.icet.coursework.dto.Supplier;
 import edu.icet.coursework.dto.User;
-import edu.icet.coursework.entity.OrderEntity;
 import edu.icet.coursework.entity.ProductEntity;
+import edu.icet.coursework.entity.SupplierEntity;
 import edu.icet.coursework.util.HibernateUtil;
 import javafx.collections.FXCollections;
 import javafx.collections.ObservableList;
@@ -188,6 +187,11 @@ public class ProductDaoImpl implements ProductDao {
     @Override
     public boolean removeUser(String uid) {
         return false;
+    }
+
+    @Override
+    public ObservableList<Supplier> searchAllSuppliers() {
+        return null;
     }
 
     @Override

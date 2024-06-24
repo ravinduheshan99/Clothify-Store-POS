@@ -25,13 +25,11 @@
       </Label>
       <TableView fx:id="tblOrders" layoutX="55.0" layoutY="153.0" prefHeight="338.0" prefWidth="648.0">
          <columns>
-            <TableColumn fx:id="colOid" prefWidth="84.0" text="Order ID" />
-            <TableColumn fx:id="colUid" prefWidth="84.0" text="Employee ID" />
-            <TableColumn fx:id="colPid" prefWidth="84.0" text="Product ID" />
-            <TableColumn fx:id="colProductName" prefWidth="100.0" text="Product Name" />
-            <TableColumn fx:id="colUnitPrice" prefWidth="90.0" text="Unit Price" />
-            <TableColumn fx:id="colQty" prefWidth="65.0" text="Quantity" />
-            <TableColumn fx:id="colTotal" prefWidth="140.0" text="Total" />
+            <TableColumn fx:id="colOid" prefWidth="96.0" text="Order ID" />
+            <TableColumn fx:id="colUid" prefWidth="103.0" text="Employee ID" />
+            <TableColumn fx:id="colTotal" prefWidth="181.0" text="Total Bill Amount" />
+            <TableColumn fx:id="colDiscount" prefWidth="95.0" text="Discount" />
+            <TableColumn fx:id="colFinalTotal" prefWidth="171.0" text="Final Bill Amount" />
          </columns>
       </TableView>
       <JFXButton layoutX="335.0" layoutY="503.0" onAction="#btnBackOnAction" prefHeight="31.0" prefWidth="88.0" style="-fx-background-color: #000000;" text="Back" textFill="WHITE">

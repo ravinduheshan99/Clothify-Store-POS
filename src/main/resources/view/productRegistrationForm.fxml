@@ -17,40 +17,42 @@
             <Image url="@../../../../assets/Background 2.jpg" />
          </image>
       </ImageView>
-      <Rectangle arcHeight="50.0" arcWidth="50.0" fill="#ffffff36" height="380.0" layoutX="84.0" layoutY="117.0" stroke="WHITE" strokeType="INSIDE" width="544.0" />
-      <Label layoutX="258.0" layoutY="137.0" onDragDetected="#lblOnActionRegistrationFormMainNav" text="Product Registration" textFill="WHITE">
+      <Rectangle arcHeight="50.0" arcWidth="50.0" fill="#ffffff36" height="391.0" layoutX="28.0" layoutY="112.0" stroke="WHITE" strokeType="INSIDE" width="656.0" />
+      <Label layoutX="276.0" layoutY="134.0" text="Product Registration" textFill="WHITE">
          <font>
             <Font size="20.0" />
          </font>
       </Label>
-      <JFXTextField fx:id="txtPid" focusColor="WHITE" layoutX="168.0" layoutY="204.0" prefHeight="25.0" prefWidth="170.0" style="-fx-background-color: ffffff;" unFocusColor="WHITE" />
-      <JFXTextField fx:id="txtProductName" focusColor="WHITE" layoutX="168.0" layoutY="255.0" prefHeight="17.0" prefWidth="170.0" promptText="Product Name" style="-fx-background-color: ffffff;" unFocusColor="WHITE" />
-      <JFXTextField fx:id="txtPrice" focusColor="WHITE" layoutX="375.0" layoutY="301.0" prefHeight="25.0" prefWidth="170.0" promptText="Price" style="-fx-background-color: ffffff;" unFocusColor="WHITE" />
-      <JFXComboBox fx:id="cbxCategory" focusColor="WHITE" layoutX="375.0" layoutY="255.0" prefHeight="30.0" prefWidth="170.0" promptText="Category" style="-fx-background-color: #ffffff;" unFocusColor="WHITE" />
-      <JFXTextField fx:id="txtProductDescription" focusColor="WHITE" layoutX="168.0" layoutY="389.0" prefHeight="17.0" prefWidth="377.0" promptText="Product Description" style="-fx-background-color: ffffff;" unFocusColor="WHITE" />
-      <Label layoutX="170.0" layoutY="181.0" prefHeight="17.0" prefWidth="58.0" text="Product ID" textFill="WHITE" />
-      <JFXComboBox fx:id="cbxSize" focusColor="WHITE" layoutX="168.0" layoutY="301.0" prefHeight="17.0" prefWidth="170.0" promptText="Size" style="-fx-background-color: #ffffff;" unFocusColor="WHITE" />
-      <JFXButton layoutX="120.0" layoutY="447.0" onAction="#btnAddOnAction" prefHeight="30.0" prefWidth="108.0" style="-fx-background-color: #000000;" text="Add Product" textFill="WHITE" />
-      <JFXButton layoutX="364.0" layoutY="447.0" onAction="#btnRemoveOnAction" prefHeight="30.0" prefWidth="108.0" style="-fx-background-color: #000000;" text="Remove Product" textFill="WHITE" />
-      <JFXButton layoutX="484.0" layoutY="447.0" onAction="#btnBackOnAction" prefHeight="30.0" prefWidth="108.0" style="-fx-background-color: #000000;" text="Back" textFill="WHITE" />
-      <JFXButton layoutX="375.0" layoutY="199.0" onAction="#btnSearchOnAction" prefHeight="36.0" prefWidth="170.0" style="-fx-background-color: #000000;" text="Search Product" textFill="WHITE" />
-      <JFXTextField fx:id="txtQty" focusColor="WHITE" layoutX="168.0" layoutY="343.0" prefHeight="25.0" prefWidth="377.0" promptText="Quantity" style="-fx-background-color: ffffff;" unFocusColor="WHITE" />
-      <JFXButton layoutX="243.0" layoutY="447.0" onAction="#btnUpdateOnAction" prefHeight="30.0" prefWidth="108.0" style="-fx-background-color: #000000;" text="Update Product" textFill="WHITE" />
+      <JFXTextField fx:id="txtPid" focusColor="WHITE" layoutX="66.0" layoutY="209.0" prefHeight="25.0" prefWidth="461.0" style="-fx-background-color: ffffff;" unFocusColor="WHITE" />
+      <JFXTextField fx:id="txtProductName" focusColor="WHITE" layoutX="66.0" layoutY="305.0" prefHeight="25.0" prefWidth="280.0" promptText="Product Name" style="-fx-background-color: ffffff;" unFocusColor="WHITE" />
+      <JFXTextField fx:id="txtPrice" focusColor="WHITE" layoutX="66.0" layoutY="349.0" prefHeight="25.0" prefWidth="280.0" promptText="Price" style="-fx-background-color: ffffff;" unFocusColor="WHITE" />
+      <JFXTextField fx:id="txtProductDescription" editable="false" focusColor="WHITE" layoutX="66.0" layoutY="393.0" prefHeight="25.0" prefWidth="579.0" promptText="Product Description" style="-fx-background-color: ffffff;" unFocusColor="WHITE" />
+      <Label layoutX="66.0" layoutY="186.0" prefHeight="17.0" prefWidth="58.0" text="Product ID" textFill="WHITE" />
+      <JFXComboBox fx:id="cbxSize" focusColor="WHITE" layoutX="366.0" layoutY="305.0" prefHeight="25.0" prefWidth="280.0" promptText="Size" style="-fx-background-color: #ffffff;" unFocusColor="WHITE" />
+      <JFXButton layoutX="66.0" layoutY="450.0" onAction="#btnAddOnAction" prefHeight="30.0" prefWidth="108.0" style="-fx-background-color: #000000;" text="Add Product" textFill="WHITE" />
+      <JFXButton layoutX="302.0" layoutY="450.0" onAction="#btnRemoveOnAction" prefHeight="30.0" prefWidth="108.0" style="-fx-background-color: #000000;" text="Remove Product" textFill="WHITE" />
+      <JFXButton layoutX="538.0" layoutY="450.0" onAction="#btnBackOnAction" prefHeight="30.0" prefWidth="108.0" style="-fx-background-color: #000000;" text="Back" textFill="WHITE" />
+      <JFXButton layoutX="536.0" layoutY="207.0" onAction="#btnSearchOnAction" prefHeight="30.0" prefWidth="108.0" style="-fx-background-color: #000000;" text="Search Product" textFill="WHITE" />
+      <JFXTextField fx:id="txtQty" focusColor="WHITE" layoutX="366.0" layoutY="349.0" prefHeight="25.0" prefWidth="280.0" promptText="Quantity" style="-fx-background-color: ffffff;" unFocusColor="WHITE" />
+      <JFXButton layoutX="184.0" layoutY="450.0" onAction="#btnUpdateOnAction" prefHeight="30.0" prefWidth="108.0" style="-fx-background-color: #000000;" text="Update Product" textFill="WHITE" />
       <Rectangle arcHeight="5.0" arcWidth="5.0" height="60.0" stroke="BLACK" strokeType="INSIDE" width="711.0" />
-      <ImageView fitHeight="49.0" fitWidth="50.0" layoutX="654.0" layoutY="6.0" pickOnBounds="true" preserveRatio="true">
+      <ImageView fitHeight="49.0" fitWidth="50.0" layoutX="661.0" layoutY="6.0" pickOnBounds="true" preserveRatio="true">
          <image>
             <Image url="@../../../../assets/Logo.jpg" />
          </image>
       </ImageView>
-      <Label fx:id="lblUserId" layoutX="536.0" layoutY="21.0" text="U001-" textFill="WHITE">
+      <Label fx:id="lblUserId" layoutX="541.0" layoutY="21.0" text="U001" textFill="WHITE">
          <font>
             <Font name="Segoe UI" size="16.0" />
          </font>
       </Label>
-      <Label fx:id="lblUserType" layoutX="583.0" layoutY="21.0" text="Employee" textFill="WHITE">
+      <Label fx:id="lblUserType" layoutX="586.0" layoutY="21.0" text="Employee" textFill="WHITE">
          <font>
             <Font name="Segoe UI" size="16.0" />
          </font>
       </Label>
+      <JFXTextField fx:id="txtProductCategory" editable="false" focusColor="WHITE" layoutX="364.0" layoutY="259.0" prefHeight="25.0" prefWidth="280.0" promptText="Product Category" style="-fx-background-color: ffffff;" unFocusColor="WHITE" />
+      <JFXComboBox fx:id="cbxSupplierId" focusColor="WHITE" layoutX="66.0" layoutY="259.0" prefHeight="25.0" prefWidth="280.0" promptText="Supplier Id" style="-fx-background-color: #ffffff;" unFocusColor="WHITE" />
+      <JFXButton layoutX="420.0" layoutY="450.0" onAction="#btnClearOnAction" prefHeight="30.0" prefWidth="108.0" style="-fx-background-color: #000000;" text="Clear Form" textFill="WHITE" />
    </children>
 </AnchorPane>

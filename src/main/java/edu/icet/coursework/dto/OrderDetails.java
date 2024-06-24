@@ -10,7 +10,6 @@ import lombok.ToString;
 @AllArgsConstructor
 @NoArgsConstructor
 public class OrderDetails {
-    private String orderId;
     private String productId;
     private Double unitPrice;
     private Integer qty;

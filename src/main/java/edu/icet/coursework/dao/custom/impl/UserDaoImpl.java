@@ -219,4 +219,9 @@ public class UserDaoImpl implements UserDao {
         }
     }
 
+    @Override
+    public ObservableList<Supplier> searchAllSuppliers() {
+        return null;
+    }
+
 }

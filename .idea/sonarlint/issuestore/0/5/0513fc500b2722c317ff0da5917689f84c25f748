@@ -1,6 +1,10 @@
 
-	java:S112M"FDefine and throw a dedicated exception instead of using a generic one.(„Úˆ´ûÿÿÿÿ8 ±·‚2J$1face826-dc71-4b35-9a41-5a3c90062cab
+	java:S112L"FDefine and throw a dedicated exception instead of using a generic one.(„Úˆ´ûÿÿÿÿ8 ±·‚2J$d47e322d-c2e5-436a-80da-b771e9898f8c
 n
-java:S1168^"+Return an empty collection instead of null.(¥¹ï8´Ã…ƒ2J$e6e32e4c-b084-4914-b03a-b279cced1beb
+java:S1168]"+Return an empty collection instead of null.(¥¹ï8ÑÙÜÍ„2J$dd951654-e617-4236-916e-2a26cf947a6e
 v
-java:S1874o".Remove this use of "delete"; it is deprecated.(´ê²×ÿÿÿÿÿ8“†Şƒ2J$747c25a5-3eee-4062-b9cd-afea72121ecb
+java:S1874n".Remove this use of "delete"; it is deprecated.(´ê²×ÿÿÿÿÿ8ÔÙÜÍ„2J$c26f32c4-c88c-44d4-bdf2-6ca2b56fd870
+o
+java:S1168Â"+Return an empty collection instead of null.(¥¹ï8‰¯…Î„2J$5e8624f3-4839-4428-ae70-9bfcff17c937
+‰
+java:S1128"FRemove this unused import 'edu.icet.coursework.entity.SupplierEntity'.(ÕåãŒ8Œ¯…Î„2J$cdd0d8d4-20ea-4a09-bc59-ba5f808bfd61

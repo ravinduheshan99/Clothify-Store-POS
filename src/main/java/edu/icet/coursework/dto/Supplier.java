@@ -15,9 +15,10 @@ public class Supplier {
     @Id
     private String supplierId;
 
-    private String productId;
-    private String productName;
     private String companyName;
+    private String productCategory;
+    private String companyContactNumber;
     private String companyEmail;
+    private String productDescription;
 
 }

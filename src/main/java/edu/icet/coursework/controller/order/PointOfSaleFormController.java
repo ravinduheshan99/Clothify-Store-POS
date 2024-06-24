@@ -12,6 +12,8 @@ import edu.icet.coursework.dto.OrderDetails;
 import edu.icet.coursework.dto.Product;
 import edu.icet.coursework.dto.User;
 import edu.icet.coursework.dto.tm.TableModelCart;
+import edu.icet.coursework.entity.OrderDetailsEntity;
+import edu.icet.coursework.entity.OrderEntity;
 import edu.icet.coursework.util.BoType;
 import javafx.animation.Animation;
 import javafx.animation.KeyFrame;
@@ -22,10 +24,7 @@ import javafx.event.ActionEvent;
 import javafx.fxml.FXMLLoader;
 import javafx.fxml.Initializable;
 import javafx.scene.Scene;
-import javafx.scene.control.Alert;
-import javafx.scene.control.Label;
-import javafx.scene.control.TableColumn;
-import javafx.scene.control.TableView;
+import javafx.scene.control.*;
 import javafx.scene.control.cell.PropertyValueFactory;
 import javafx.scene.layout.AnchorPane;
 import javafx.stage.Stage;
@@ -37,13 +36,10 @@ import java.sql.Connection;
 import java.sql.ResultSet;
 import java.sql.SQLException;
 import java.sql.Statement;
-import java.text.DateFormat;
-import java.text.ParseException;
 import java.text.SimpleDateFormat;
 import java.time.LocalDate;
 import java.time.LocalDateTime;
 import java.time.LocalTime;
-import java.time.format.DateTimeFormatter;
 import java.util.*;
 import java.util.regex.Matcher;
 import java.util.regex.Pattern;
@@ -75,10 +71,13 @@ public class PointOfSaleFormController implements Initializable {
     private OrderBo orderBo = BoFactory.getInstance().getBo(BoType.ORDER);
     private ObservableList<TableModelCart> cartList = FXCollections.observableArrayList();
 
+    double discount = 0.0;
+    double totalBillAmount = 0.0;
+
     @Override
     public void initialize(URL url, ResourceBundle resourceBundle) {
         User currentUser = UserSession.getInstance().getCurrentSession();
-        lblUserId.setText(currentUser.getUserId()+"-");
+        lblUserId.setText(currentUser.getUserId());
         lblUserType.setText(currentUser.getUserType());
 
         colProductId.setCellValueFactory(new PropertyValueFactory<>("productId"));
@@ -89,12 +88,50 @@ public class PointOfSaleFormController implements Initializable {
 
         loadDateAndTime();
         loadProductIds();
+        generateOrderId();
+        txtCashierId.setText(lblUserId.getText());
 
         cbxProductId.getSelectionModel().selectedItemProperty().addListener((observable, oldValue, newValue) -> {
             if (newValue != null) {
                 setProductData((String) newValue);
             }
         });
+    }
+
+    private void generateOrderId() {
+        try{
+            Connection connection = DBConnection.getInstance().getConnection();
+            Statement statement = connection.createStatement();
+            ResultSet resultset = statement.executeQuery("SELECT COUNT(*) FROM orderentity");
+            Integer count = 0;
+            while (resultset.next()){
+                count=resultset.getInt(1);
+                System.out.println(count + " count ");
+            }
+            if (count==0){
+                txtOid.setText("O001");
+            }
+            String lastOid = "";
+            ResultSet resultSet1 = connection.createStatement().executeQuery("SELECT orderId\n" +
+                    "From orderentity\n" +
+                    "ORDER BY orderId DESC\n" +
+                    "LIMIT 1;");
+            if(resultSet1.next()){
+                lastOid = resultSet1.getString(1);
+                Pattern pattern = Pattern.compile("[A-Za-z](\\d+)");
+                Matcher matcher = pattern.matcher(lastOid);
+                if (matcher.find()){
+                    int number = Integer.parseInt(matcher.group(1));
+                    number++;
+                    txtOid.setText(String.format("O%03d",number));
+                }else {
+                    new Alert(Alert.AlertType.WARNING, "Warning").show();
+                }
+            }
+
+        }catch (SQLException | ClassNotFoundException e){
+            throw  new RuntimeException();
+        }
     }
 
     private void loadDateAndTime() {
@@ -127,6 +164,7 @@ public class PointOfSaleFormController implements Initializable {
             txtAvailableQty.setText(String.valueOf(product.getQty()));
         }
     }
+
 
     public void btnAddToCartOnAction(ActionEvent actionEvent) {
         try {
@@ -192,74 +230,145 @@ public class PointOfSaleFormController implements Initializable {
         }
     }
 
-    private void calcNetTotal() {
-        double netTot = cartList.stream().mapToDouble(TableModelCart::getTotal).sum();
-        lblTotalBillAmount.setText("Total Amount : " + String.format("%.2f", netTot) + " LKR");
-    }
-
-    private void clearProductDetails() {
-        cbxProductId.setValue(null);
-        txtProductName.clear();
-        txtUnitPrice.clear();
-        txtAvailableQty.clear();
-        txtQtyNeed.clear();
-    }
-
     public void btnCheckoutOnAction(ActionEvent actionEvent) {
         try {
-            // Ensure order ID is manually set
+            // Extract data from UI components
             String oid = txtOid.getText();
-            if (oid == null || oid.trim().isEmpty()) {
-                new Alert(Alert.AlertType.ERROR, "Order ID is required!").show();
-                return;
-            }
-
             String uid = txtCashierId.getText();
             LocalDate orderDate = LocalDate.now();
             LocalDateTime orderTime = LocalDateTime.now();
-
-            double discount = 0.0;
             String cmail = txtCustomerEmail.getText();
-            double totalBillAmount = Double.parseDouble(extractBillAmount(lblTotalBillAmount.getText()));
 
-            if (totalBillAmount > 10000) {
-                discount = 0.15;
-                totalBillAmount = totalBillAmount - (totalBillAmount * discount);
-            }
 
+            // Create a list to hold OrderDetails
             List<OrderDetails> orderDetailList = new ArrayList<>();
+
+            // Populate OrderDetails from cartList
             for (TableModelCart cartItem : cartList) {
-                OrderDetails orderDetails = new OrderDetails(oid, cartItem.getProductId(), cartItem.getUnitPrice(), cartItem.getQty(), cartItem.getTotal(), discount, cmail);
+                double total = cartItem.getTotal() - (cartItem.getTotal() * discount);
+                OrderDetails orderDetails = new OrderDetails(cartItem.getProductId(), cartItem.getUnitPrice(), cartItem.getQty(), total, discount, cmail);
                 orderDetailList.add(orderDetails);
             }
 
+            // Create Order DTO
             Order order = new Order(oid, uid, orderDate, orderTime, orderDetailList, totalBillAmount);
-            boolean success = orderBo.addOrder(order);
+
+            // Create OrderEntity and map from Order DTO
+            OrderEntity orderEntity = new OrderEntity();
+            orderEntity.setOrderId(order.getOrderId());
+            orderEntity.setUserId(order.getUserId());
+            orderEntity.setOrderDate(order.getOrderDate());
+            orderEntity.setOrderTime(order.getOrderTime());
+            orderEntity.setTotalBillAmount(order.getTotalBillAmount());
+
+            // Create OrderDetailsEntity list and map from OrderDetails DTOs
+            List<OrderDetailsEntity> orderDetailsEntities = new ArrayList<>();
+            for (OrderDetails orderDetails : order.getOrderDetailsList()) {
+                OrderDetailsEntity orderDetailsEntity = new OrderDetailsEntity();
+                orderDetailsEntity.setProductId(orderDetails.getProductId());
+                orderDetailsEntity.setUnitPrice(orderDetails.getUnitPrice());
+                orderDetailsEntity.setQty(orderDetails.getQty());
+                orderDetailsEntity.setTotal(orderDetails.getTotal());
+                orderDetailsEntity.setDiscount(orderDetails.getDiscount());
+                orderDetailsEntity.setCustomerEmail(orderDetails.getCustomerEmail());
+                orderDetailsEntity.setOrder(orderEntity); // Set the association to OrderEntity
+                orderDetailsEntities.add(orderDetailsEntity);
+            }
+
+            // Set the list of OrderDetailsEntity in OrderEntity
+            orderEntity.setOrderDetailsList(orderDetailsEntities);
+
+            // Persist the OrderEntity using your business object (orderBo)
+            boolean success = orderBo.addOrder(orderEntity);
+
+            // Handle success or failure
             if (success) {
                 new Alert(Alert.AlertType.CONFIRMATION, "Order Placed Successfully!").show();
+                for(TableModelCart cartItem: cartList){
+                    Product product = productBoImpl.searchProduct(cartItem.getProductId());
+                    product.setQty((product.getQty()-cartItem.getQty()));
+                    productBoImpl.updateProduct(product);
+                }
                 clearForm();
             } else {
                 new Alert(Alert.AlertType.ERROR, "Operation Unsuccessful!").show();
             }
         } catch (Exception e) {
-            new Alert(Alert.AlertType.ERROR, "Error placing order: " + e.getMessage()).show();
+            new Alert(Alert.AlertType.ERROR, "Error during checkout: " + e.getMessage()).show();
         }
     }
 
-    private void clearForm() {
-        txtOid.clear();
-        txtCashierId.clear();
-        cbxProductId.setValue(null);
-        txtProductName.clear();
-        txtUnitPrice.clear();
-        txtAvailableQty.clear();
-        txtQtyNeed.clear();
-        txtDiscount.clear();
-        txtCustomerEmail.clear();
-        lblTotalBillAmount.setText("Total Amount : 0.00 LKR");
-        cartList.clear();
-        tblProductCart.setItems(cartList);
-        calcNetTotal();
+    public void btnClearCartOnAction(ActionEvent actionEvent) {
+        clearForm();
+    }
+
+    public void btnCheckDiscountOnAction(ActionEvent actionEvent) {
+
+        Alert alert = new Alert(Alert.AlertType.CONFIRMATION, "Do you want to check available discounts?");
+        Optional<ButtonType> result = alert.showAndWait();
+
+        if (result.isPresent() && result.get() == ButtonType.OK) {
+            try {
+                if (Double.parseDouble(extractBillAmount(lblTotalBillAmount.getText()))>10000){
+                    txtDiscount.setText("20%");
+                    discount = Double.parseDouble(txtDiscount.getText().replace("%", "")) / 100;
+                    totalBillAmount=totalBillAmount-(totalBillAmount*discount);
+                    lblTotalBillAmount.setText("Total Amount : "+totalBillAmount+"0 LKR");
+                } else if (Double.parseDouble(extractBillAmount(lblTotalBillAmount.getText()))>5000) {
+                    txtDiscount.setText("15%");
+                    discount = Double.parseDouble(txtDiscount.getText().replace("%", "")) / 100;
+                    totalBillAmount=totalBillAmount-(totalBillAmount*discount);
+                    lblTotalBillAmount.setText("Total Amount : "+totalBillAmount+"0 LKR");
+                }else {
+                    txtDiscount.setText("0%");
+                    discount = Double.parseDouble(txtDiscount.getText().replace("%", "")) / 100;
+                    totalBillAmount=totalBillAmount-(totalBillAmount*discount);
+                    lblTotalBillAmount.setText("Total Amount : "+totalBillAmount+"0 LKR");
+                }
+            } catch (Exception e) {
+                throw new RuntimeException(e);
+            }
+        }
+    }
+
+    public void btnViewOrdersOnAction(ActionEvent actionEvent) {
+        Stage stage = (Stage) adminpane.getScene().getWindow();
+        try {
+            stage.setScene(new Scene(FXMLLoader.load(getClass().getResource("/view/viewOrdersForm.fxml"))));
+        } catch (IOException e) {
+            throw new RuntimeException(e);
+        }
+        stage.show();
+        ((Stage) adminpane.getScene().getWindow()).close();
+    }
+
+    public void btnBackOnAction(ActionEvent actionEvent) {
+        User currentUser = UserSession.getInstance().getCurrentSession();
+        if (currentUser.getUserType().equals("Admin")) {
+            Stage stage = (Stage) adminpane.getScene().getWindow();
+            try {
+                stage.setScene(new Scene(FXMLLoader.load(getClass().getResource("/view/adminDashboardForm.fxml"))));
+            } catch (IOException e) {
+                throw new RuntimeException(e);
+            }
+            stage.show();
+            ((Stage) adminpane.getScene().getWindow()).close();
+        }
+        Stage stage = (Stage) adminpane.getScene().getWindow();
+        try {
+            stage.setScene(new Scene(FXMLLoader.load(getClass().getResource("/view/employeeDashboardForm.fxml"))));
+        } catch (IOException e) {
+            throw new RuntimeException(e);
+        }
+        stage.show();
+        ((Stage) adminpane.getScene().getWindow()).close();
+    }
+
+
+    private void calcNetTotal() {
+        double netTot = cartList.stream().mapToDouble(TableModelCart::getTotal).sum();
+        totalBillAmount=netTot;
+        lblTotalBillAmount.setText("Total Amount : " + String.format("%.2f", netTot) + " LKR");
     }
 
     private String extractBillAmount(String text) {
@@ -272,52 +381,25 @@ public class PointOfSaleFormController implements Initializable {
         }
     }
 
-    public void btnClearCartOnAction(ActionEvent actionEvent) {
+    private void clearProductDetails() {
+        cbxProductId.setValue(null);
+        txtProductName.clear();
+        txtUnitPrice.clear();
+        txtAvailableQty.clear();
+        txtQtyNeed.clear();
+    }
+
+    private void clearForm() {
+        cbxProductId.setValue(null);
+        txtProductName.clear();
+        txtUnitPrice.clear();
+        txtAvailableQty.clear();
+        txtQtyNeed.clear();
+        txtDiscount.clear();
+        txtCustomerEmail.clear();
+        lblTotalBillAmount.setText("Total Amount : 0.00 LKR");
         cartList.clear();
         tblProductCart.setItems(cartList);
         calcNetTotal();
-    }
-
-    public void btnCheckDiscountOnAction(ActionEvent actionEvent) {
-        if (Double.parseDouble(extractBillAmount(lblTotalBillAmount.getText())) > 10000) {
-            txtDiscount.setText("15%");
-            new Alert(Alert.AlertType.INFORMATION, "Discount Added Successfully").show();
-        } else {
-            new Alert(Alert.AlertType.INFORMATION, "No Discount Available For This Product").show();
-            txtDiscount.setText("0%");
-        }
-    }
-
-    public void btnViewOrdersOnAction(ActionEvent actionEvent) {
-        Stage stage=(Stage) adminpane.getScene().getWindow();
-        try {
-            stage.setScene(new Scene(FXMLLoader.load(getClass().getResource("/view/viewOrdersForm.fxml"))));
-        } catch (IOException e) {
-            throw new RuntimeException(e);
-        }
-        stage.show();
-        ((Stage) adminpane.getScene().getWindow()).close();
-    }
-
-    public void btnBackOnAction(ActionEvent actionEvent) {
-        User currentUser = UserSession.getInstance().getCurrentSession();
-        if (currentUser.getUserType().equals("Admin")){
-            Stage stage=(Stage) adminpane.getScene().getWindow();
-            try {
-                stage.setScene(new Scene(FXMLLoader.load(getClass().getResource("/view/adminDashboardForm.fxml"))));
-            } catch (IOException e) {
-                throw new RuntimeException(e);
-            }
-            stage.show();
-            ((Stage) adminpane.getScene().getWindow()).close();
-        }
-        Stage stage=(Stage) adminpane.getScene().getWindow();
-        try {
-            stage.setScene(new Scene(FXMLLoader.load(getClass().getResource("/view/employeeDashboardForm.fxml"))));
-        } catch (IOException e) {
-            throw new RuntimeException(e);
-        }
-        stage.show();
-        ((Stage) adminpane.getScene().getWindow()).close();
     }
 }

@@ -1,37 +1,42 @@
 
-	java:S112S"FDefine and throw a dedicated exception instead of using a generic one.(¯åÕøÿÿÿÿ8ºÛ©üƒ2J$67ee466d-75ed-40fb-89e9-564ef4612ece
-	java:S112¡"FDefine and throw a dedicated exception instead of using a generic one.(Ò‚Òéüÿÿÿÿ8ƒñ¼üƒ2J$264a62ee-5beb-42f4-94bb-7ae96223b143
-	java:S112ª"FDefine and throw a dedicated exception instead of using a generic one.(Ò‚Òéüÿÿÿÿ8„ñ¼üƒ2J$63775f98-205a-4d58-ba33-77c411f9c68c
+	java:S112f"FDefine and throw a dedicated exception instead of using a generic one.(¯åÕøÿÿÿÿ8ÚÁÊË„2J$9394b0d7-a141-4385-9b3a-ce06c9cbceb3
+	java:S112¹"FDefine and throw a dedicated exception instead of using a generic one.(Ò‚Òéüÿÿÿÿ8èÎ–Ì„2J$557f06ac-ff02-4d18-aaf1-f3fec9c2a85f
+	java:S112É"FDefine and throw a dedicated exception instead of using a generic one.(Ò‚Òéüÿÿÿÿ8øÎ–Ì„2J$401b448a-9cf6-4d75-89d2-e21c1a73eafd
+	java:S112Ò"FDefine and throw a dedicated exception instead of using a generic one.(Ò‚Òéüÿÿÿÿ8óéÀÌ„2J$8993989d-9dde-4d0a-bf9c-806d1d5d8994
+w
+java:S3740,"/Provide the parametrized type for this generic.(àıöşıÿÿÿÿ8©ŞÆË„2J$61258a43-6743-4c1a-996d-0f7b180061bb
 •
-java:S1104!"RMake txtSid a static final constant or non-public and provide accessors if needed.(·•»¦8¾Û©üƒ2J$5b41bb51-d4a9-4ebf-bafa-2d584cc6019c
-š
-java:S1104""RMake txtPid a static final constant or non-public and provide accessors if needed.(¸¯…Ùÿÿÿÿÿ8¾Û©üƒ2J$cfa0f07c-b1b9-4e5c-b19e-3d54e64b5ec6
-
-java:S1104#"ZMake txtProductName a static final constant or non-public and provide accessors if needed.(•Ôò8¾Û©üƒ2J$da0e0737-3d39-4384-a3c6-e8b582649caf
+java:S1104$"RMake txtSid a static final constant or non-public and provide accessors if needed.(·•»¦8«ŞÆË„2J$655bc269-6f63-468a-b784-17d9c53cc570
 
-java:S1104$"[Make txtCompanyEmail a static final constant or non-public and provide accessors if needed.(™ª€8¾Û©üƒ2J$cfcc2643-8d48-4b44-9a05-1f897609854e
+java:S1104%"[Make txtCompanyEmail a static final constant or non-public and provide accessors if needed.(™ª€8«ŞÆË„2J$18fe92dc-be1b-4926-a7ff-254b1c619253
 
-java:S1104%"ZMake txtCompanyName a static final constant or non-public and provide accessors if needed.(‚¶ÉÇ8¾Û©üƒ2J$82918905-9b18-4498-b2a1-c58b583014f5
+java:S1104&"ZMake txtCompanyName a static final constant or non-public and provide accessors if needed.(‚¶ÉÇ8«ŞÆË„2J$22f8e58e-ad27-476a-8869-e59ce3484a0c
 
-java:S1104&"UMake adminpane a static final constant or non-public and provide accessors if needed.(ˆ×£ÿÿÿÿÿ8¾Û©üƒ2J$0bfe730b-9446-41bd-b9e8-045bbaa7413e
+java:S1104'"UMake adminpane a static final constant or non-public and provide accessors if needed.(ˆ×£ÿÿÿÿÿ8«ŞÆË„2J$56d2ff2c-60b6-4425-b43a-42141318698a
 ˜
-java:S1104'"UMake lblUserId a static final constant or non-public and provide accessors if needed.(«†´±8¾Û©üƒ2J$e27d02a4-aa70-4b64-a6f3-470179ab0dfd
+java:S1104("UMake lblUserId a static final constant or non-public and provide accessors if needed.(«†´±8«ŞÆË„2J$cac98807-eac7-481c-af87-b051c2daf924
 š
-java:S1104("WMake lblUserType a static final constant or non-public and provide accessors if needed.(Œø±8¾Û©üƒ2J$51ee0f32-7a29-4311-a7bc-49a7c08367bb
+java:S1104)"WMake lblUserType a static final constant or non-public and provide accessors if needed.(Œø±8«ŞÆË„2J$9df75218-df0b-433e-b89b-ae4a7036d376
+©
+java:S1104*"aMake txtProductDescription a static final constant or non-public and provide accessors if needed.(ÓÉÙ™ùÿÿÿÿ8«ŞÆË„2J$03b389ed-7f3f-4c9e-8015-1664ccb84f74
+«
+java:S1104+"cMake txtCompanyContactNumber a static final constant or non-public and provide accessors if needed.(Ì±Ãÿÿÿÿÿ8«ŞÆË„2J$1fb8ca40-b2b0-40f7-86e8-7e2c49e81106
+Ÿ
+java:S1104,"WMake cbxCategory a static final constant or non-public and provide accessors if needed.(àıöşıÿÿÿÿ8«ŞÆË„2J$20324337-e230-46ea-8147-4af4bdc7648c
 
-java:S2095A"GUse try-with-resources or close this "Statement" in a "finally" clause.(›ï¢Üùÿÿÿÿ8¼Ü©üƒ2J$94a5e246-4a47-40a0-a200-7ecccb7e30a6
+java:S2095I"GUse try-with-resources or close this "Statement" in a "finally" clause.(é°Áµşÿÿÿÿ8ÂÚËË„2J$1f945bb5-d795-455a-beea-96709da8d2a5
 
-java:S20956"GUse try-with-resources or close this "Statement" in a "finally" clause.(é°Áµşÿÿÿÿ8¼Ü©üƒ2J$1fe72843-c846-4d23-aa2c-598142dedaa2
-Ä
-java:S1186a"€Add a nested comment explaining why this method is empty, throw an UnsupportedOperationException or complete the implementation.(ˆ„ä…8½Ü©üƒ2J$c13801e1-fbd2-4899-b646-6a97d3b9b707
-m	java:S106;"+Replace this use of System.out by a logger.(ŠÔö·8ÊÜ©üƒ2J$2ef2bc61-665c-4db6-9dc0-54e3809a12a9
-u
-java:S1172d"2Remove this unused method parameter "actionEvent".(áÄ´ü8ÕÜ©üƒ2J$c68adf9d-f825-49f9-80ff-f0011a82269a
+java:S2095T"GUse try-with-resources or close this "Statement" in a "finally" clause.(›ï¢Üùÿÿÿÿ8ÂÚËË„2J$1d9094f1-88ff-4d02-b650-90748bd330d9
+m	java:S106N"+Replace this use of System.out by a logger.(ŠÔö·8ĞÚËË„2J$1ac005ee-d633-476f-8e13-9a37ec7bc9de
 z
-java:S1172q"2Remove this unused method parameter "actionEvent".(»…ä«ùÿÿÿÿ8ÛÜ©üƒ2J$051c9afd-4fc2-49d6-844e-724c6a929223
+java:S1172w"2Remove this unused method parameter "actionEvent".(»…ä«ùÿÿÿÿ8ÄàÆË„2J$950b12d3-a1bf-400b-884c-1257c19e7936
 {
-java:S1172€"2Remove this unused method parameter "actionEvent".(¿˜å•øÿÿÿÿ8àÜ©üƒ2J$d421e177-7e76-452b-91e2-ce9068f1e1c7
+java:S1172‰"2Remove this unused method parameter "actionEvent".(¿˜å•øÿÿÿÿ8ÈàÆË„2J$7747e6eb-25f3-4fa8-a471-e58f9d627d5d
 v
-java:S1172"2Remove this unused method parameter "actionEvent".(¶ú‡ó8úñ¼üƒ2J$de85ea51-0300-4181-af99-0d90ba669213
+java:S1172›"2Remove this unused method parameter "actionEvent".(áÄ´ü8í—ÊË„2J$4fab93ea-a99e-4877-960b-d9c467cdeb15
+v
+java:S1172©"2Remove this unused method parameter "actionEvent".(¶ú‡ó8ÜÂÊË„2J$8e2b5f73-ee6f-42e6-add7-d0e3bac94f79
+v
+java:S1172¾"2Remove this unused method parameter "actionEvent".(ŠÜÎ£8¼á•Ì„2J$8942db8b-c9a5-41d9-a228-0ab913af83cb
 {
-java:S1172š"2Remove this unused method parameter "actionEvent".(†ùàıÿÿÿÿ8‡»Õüƒ2J$310ff6ef-845f-4844-9512-db402d25178d
+java:S1172Â"2Remove this unused method parameter "actionEvent".(†ùàıÿÿÿÿ8ÅĞ–Ì„2J$2a11e2c4-2e82-487d-ac4f-231113bef562

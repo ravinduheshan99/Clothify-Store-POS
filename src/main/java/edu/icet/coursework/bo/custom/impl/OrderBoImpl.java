@@ -13,7 +13,7 @@ public class OrderBoImpl implements OrderBo {
     private OrderDao orderDao = DaoFactory.getInstance().getDao(DaoType.ORDER);
 
     @Override
-    public boolean addOrder(Order dto) {
-        return orderDao.addOrder(new ModelMapper().map(dto, OrderEntity.class));
+    public boolean addOrder(OrderEntity entity) {
+        return orderDao.addOrder(entity);
     }
 }

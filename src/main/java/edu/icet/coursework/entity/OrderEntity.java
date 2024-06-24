@@ -8,7 +8,6 @@ import lombok.ToString;
 
 import java.time.LocalDate;
 import java.time.LocalDateTime;
-import java.util.Date;
 import java.util.List;
 
 @Data
@@ -18,9 +17,9 @@ import java.util.List;
 @Entity
 @Table(name = "OrderEntity")
 public class OrderEntity {
+
     @Id
-    @Column(name = "orderId1", nullable = false, length = 255)
-    private String orderId1;
+    private String orderId;
 
     private String userId;
     private LocalDate orderDate;

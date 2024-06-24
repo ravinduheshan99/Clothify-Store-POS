@@ -6,25 +6,37 @@ import lombok.Data;
 import lombok.NoArgsConstructor;
 import lombok.ToString;
 
+import java.io.Serializable;
+
 @Data
 @ToString
 @AllArgsConstructor
 @NoArgsConstructor
 @Entity
 @Table(name = "OrderDetailsEntity")
+@IdClass(OrderDetailsEntity.OrderDetailsEntityId.class)
 public class OrderDetailsEntity {
-    @Id
-    @Column(name = "orderId2", nullable = false, length = 255)
-    private String orderId2;
 
+    @Id
     private String productId;
+
+    @Id
+    @ManyToOne
+    @JoinColumn(name = "order_orderId")
+    private OrderEntity order;
+
     private Double unitPrice;
     private Integer qty;
     private Double total;
     private Double discount;
     private String customerEmail;
 
-    @ManyToOne
-    @JoinColumn(name = "orderId1", nullable = false)
-    private OrderEntity order;
+    // Inner class for composite primary key
+    @Data
+    @AllArgsConstructor
+    @NoArgsConstructor
+    public static class OrderDetailsEntityId implements Serializable {
+        private String productId;
+        private String order;
+    }
 }

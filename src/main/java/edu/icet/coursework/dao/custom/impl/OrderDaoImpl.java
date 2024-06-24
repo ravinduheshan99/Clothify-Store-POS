@@ -106,5 +106,10 @@ public class OrderDaoImpl implements OrderDao {
         return false;
     }
 
+    @Override
+    public ObservableList<Supplier> searchAllSuppliers() {
+        return null;
+    }
+
 
 }

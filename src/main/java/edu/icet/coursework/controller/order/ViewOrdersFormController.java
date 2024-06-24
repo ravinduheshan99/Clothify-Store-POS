@@ -9,6 +9,7 @@ import javafx.scene.Scene;
 import javafx.scene.control.Label;
 import javafx.scene.control.TableColumn;
 import javafx.scene.control.TableView;
+import javafx.scene.control.cell.PropertyValueFactory;
 import javafx.scene.input.MouseEvent;
 import javafx.scene.layout.AnchorPane;
 import javafx.stage.Stage;
@@ -22,20 +23,22 @@ public class ViewOrdersFormController implements Initializable {
     public TableView tblOrders;
     public TableColumn colOid;
     public TableColumn colUid;
-    public TableColumn colPid;
-    public TableColumn colProductName;
-    public TableColumn colUnitPrice;
-    public TableColumn colQty;
     public TableColumn colTotal;
     public AnchorPane adminpane;
     public Label lblUserId;
     public Label lblUserType;
+    public TableColumn colDiscount;
+    public TableColumn colFinalTotal;
 
     @Override
     public void initialize(URL url, ResourceBundle resourceBundle) {
         User currentUser = UserSession.getInstance().getCurrentSession();
         lblUserId.setText(currentUser.getUserId()+"-");
         lblUserType.setText(currentUser.getUserType());
+
+        //colOid.setCellValueFactory(new PropertyValueFactory<>("orderId"));
+        //colUid.setCellValueFactory(new PropertyValueFactory<>("userId"));
+        //colTotal.setCellValueFactory(new PropertyValueFactory<>(""));
     }
 
     public void btnBackOnAction(ActionEvent actionEvent) {

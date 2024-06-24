@@ -1,13 +1,12 @@
 package edu.icet.coursework.bo.custom.impl;
 
-import edu.icet.coursework.bo.SuperBo;
 import edu.icet.coursework.bo.custom.SupplierBo;
 import edu.icet.coursework.dao.DaoFactory;
 import edu.icet.coursework.dao.custom.SupplierDao;
-import edu.icet.coursework.dto.Product;
 import edu.icet.coursework.dto.Supplier;
 import edu.icet.coursework.entity.SupplierEntity;
 import edu.icet.coursework.util.DaoType;
+import javafx.collections.ObservableList;
 import org.modelmapper.ModelMapper;
 
 public class SupplierBoImpl implements  SupplierBo{
@@ -33,4 +32,10 @@ public class SupplierBoImpl implements  SupplierBo{
     public boolean updateSupplier(Supplier dto) {
         return supplierDao.updateSupplier(new ModelMapper().map(dto,SupplierEntity.class));
     }
+
+    @Override
+    public ObservableList<Supplier> searchAllSuppliers() {
+        return supplierDao.searchAllSuppliers();
+    }
+
 }
