@@ -18,30 +18,30 @@
                 <Image url="@../../../../assets/Background 2.jpg" />
             </image>
         </ImageView>
-        <Rectangle arcHeight="100.0" arcWidth="100.0" fill="#ffffff36" height="442.0" layoutX="223.0" layoutY="97.0" stroke="WHITE" strokeType="INSIDE" width="315.0" />
-        <ImageView fitHeight="188.0" fitWidth="188.0" layoutX="287.0" layoutY="117.0" pickOnBounds="true" preserveRatio="true">
+        <Rectangle arcHeight="100.0" arcWidth="100.0" fill="#ffffff36" height="413.0" layoutX="224.0" layoutY="111.0" stroke="WHITE" strokeType="INSIDE" width="315.0" />
+        <ImageView fitHeight="188.0" fitWidth="188.0" layoutX="285.0" layoutY="131.0" pickOnBounds="true" preserveRatio="true">
             <image>
                 <Image url="@../../../../assets/Logo.jpg" />
             </image>
         </ImageView>
-        <JFXTextField fx:id="txtEmail" focusColor="WHITE" layoutX="271.0" layoutY="349.0" prefHeight="25.0" prefWidth="221.0" promptText="Email" style="-fx-background-color: #ffffff;" unFocusColor="WHITE">
+        <JFXTextField fx:id="txtEmail" focusColor="WHITE" layoutX="269.0" layoutY="363.0" prefHeight="25.0" prefWidth="221.0" promptText="Email" style="-fx-background-color: #ffffff;" unFocusColor="WHITE">
          <font>
             <Font name="Segoe UI Italic" size="12.0" />
          </font></JFXTextField>
-        <Label layoutX="354.0" layoutY="306.0" text="Login">
+        <Label layoutX="354.0" layoutY="327.0" text="Login" textFill="WHITE">
             <font>
-                <Font name="Segoe UI Bold Italic" size="20.0" />
+                <Font name="Segoe UI" size="20.0" />
             </font>
         </Label>
-        <CheckBox fx:id="checkBoxShowPw" layoutX="270.0" layoutY="428.0" mnemonicParsing="false" text="Show Password" textFill="WHITE">
+        <CheckBox fx:id="checkBoxShowPw" layoutX="268.0" layoutY="442.0" mnemonicParsing="false" text="Show Password" textFill="WHITE">
          <font>
             <Font name="Segoe UI" size="12.0" />
          </font></CheckBox>
-        <Label layoutX="403.0" layoutY="428.0" onMouseClicked="#lblForgetPasswordOnAction" text="Forget Password" textFill="WHITE" underline="true">
+        <Label layoutX="401.0" layoutY="442.0" onMouseClicked="#lblForgetPasswordOnAction" text="Forget Password" textFill="WHITE" underline="true">
          <font>
             <Font name="Segoe UI" size="12.0" />
          </font></Label>
-      <JFXButton layoutX="337.0" layoutY="459.0" onAction="#btnLoginOnAction" prefHeight="31.0" prefWidth="88.0" style="-fx-background-color: #000000;" text="Login" textFill="WHITE">
+      <JFXButton layoutX="335.0" layoutY="473.0" onAction="#btnLoginOnAction" prefHeight="31.0" prefWidth="88.0" style="-fx-background-color: #000000;" text="Login" textFill="WHITE">
          <font>
             <Font size="15.0" />
          </font>
@@ -52,12 +52,12 @@
             <Image url="@../../../../assets/Logo.jpg" />
          </image>
       </ImageView>
-      <JFXTextField fx:id="txtPwShow" focusColor="WHITE" layoutX="271.0" layoutY="387.0" prefHeight="25.0" prefWidth="221.0" style="-fx-background-color: #ffffff;" unFocusColor="WHITE" visible="false">
+      <JFXTextField fx:id="txtPwShow" focusColor="WHITE" layoutX="269.0" layoutY="403.0" prefHeight="25.0" prefWidth="221.0" style="-fx-background-color: #ffffff;" unFocusColor="WHITE">
          <font>
             <Font name="Segoe UI Italic" size="12.0" />
          </font>
       </JFXTextField>
-      <JFXPasswordField fx:id="txtPw" focusColor="BLACK" layoutX="271.0" layoutY="387.0" prefHeight="25.0" prefWidth="221.0" promptText="Password" style="-fx-background-color: #ffffff;" unFocusColor="WHITE">
+      <JFXPasswordField fx:id="txtPw" focusColor="BLACK" layoutX="270.0" layoutY="403.0" prefHeight="25.0" prefWidth="221.0" promptText="Password" style="-fx-background-color: #ffffff;" unFocusColor="WHITE">
          <font>
             <Font name="Segoe UI Italic" size="12.0" />
          </font>

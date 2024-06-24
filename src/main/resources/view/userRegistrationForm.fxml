@@ -63,12 +63,12 @@
          <font>
             <Font name="Segoe UI Bold" size="12.0" />
          </font></JFXButton>
-      <Label fx:id="lblUserId" layoutX="576.0" layoutY="20.0" text="U001- " textFill="WHITE">
+      <Label fx:id="lblUserId" layoutX="577.0" layoutY="20.0" text="U001 " textFill="WHITE">
          <font>
             <Font name="Segoe UI" size="16.0" />
          </font>
       </Label>
-      <Label fx:id="lblUserType" layoutX="622.0" layoutY="20.0" text="Admin" textFill="WHITE">
+      <Label fx:id="lblUserType" layoutX="627.0" layoutY="20.0" text="Admin" textFill="WHITE">
          <font>
             <Font name="Segoe UI" size="16.0" />
          </font>

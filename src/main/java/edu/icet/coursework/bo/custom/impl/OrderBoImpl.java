@@ -6,6 +6,7 @@ import edu.icet.coursework.dao.custom.OrderDao;
 import edu.icet.coursework.dto.Order;
 import edu.icet.coursework.entity.OrderEntity;
 import edu.icet.coursework.util.DaoType;
+import javafx.collections.ObservableList;
 import org.modelmapper.ModelMapper;
 
 public class OrderBoImpl implements OrderBo {
@@ -15,5 +16,10 @@ public class OrderBoImpl implements OrderBo {
     @Override
     public boolean addOrder(OrderEntity entity) {
         return orderDao.addOrder(entity);
+    }
+
+    @Override
+    public ObservableList<Order> searchAllOrders() {
+        return orderDao.searchAllOrders();
     }
 }

@@ -99,16 +99,16 @@ public class PointOfSaleFormController implements Initializable {
     }
 
     private void generateOrderId() {
-        try{
+        try {
             Connection connection = DBConnection.getInstance().getConnection();
             Statement statement = connection.createStatement();
             ResultSet resultset = statement.executeQuery("SELECT COUNT(*) FROM orderentity");
             Integer count = 0;
-            while (resultset.next()){
-                count=resultset.getInt(1);
+            while (resultset.next()) {
+                count = resultset.getInt(1);
                 System.out.println(count + " count ");
             }
-            if (count==0){
+            if (count == 0) {
                 txtOid.setText("O001");
             }
             String lastOid = "";
@@ -116,21 +116,21 @@ public class PointOfSaleFormController implements Initializable {
                     "From orderentity\n" +
                     "ORDER BY orderId DESC\n" +
                     "LIMIT 1;");
-            if(resultSet1.next()){
+            if (resultSet1.next()) {
                 lastOid = resultSet1.getString(1);
                 Pattern pattern = Pattern.compile("[A-Za-z](\\d+)");
                 Matcher matcher = pattern.matcher(lastOid);
-                if (matcher.find()){
+                if (matcher.find()) {
                     int number = Integer.parseInt(matcher.group(1));
                     number++;
-                    txtOid.setText(String.format("O%03d",number));
-                }else {
+                    txtOid.setText(String.format("O%03d", number));
+                } else {
                     new Alert(Alert.AlertType.WARNING, "Warning").show();
                 }
             }
 
-        }catch (SQLException | ClassNotFoundException e){
-            throw  new RuntimeException();
+        } catch (SQLException | ClassNotFoundException e) {
+            throw new RuntimeException();
         }
     }
 
@@ -230,6 +230,35 @@ public class PointOfSaleFormController implements Initializable {
         }
     }
 
+    public void btnCheckDiscountOnAction(ActionEvent actionEvent) {
+
+        Alert alert = new Alert(Alert.AlertType.CONFIRMATION, "Do you want to check available discounts?");
+        Optional<ButtonType> result = alert.showAndWait();
+
+        if (result.isPresent() && result.get() == ButtonType.OK) {
+            try {
+                if (Double.parseDouble(extractBillAmount(lblTotalBillAmount.getText())) > 10000) {
+                    txtDiscount.setText("20%");
+                    discount = Double.parseDouble(txtDiscount.getText().replace("%", "")) / 100;
+                    totalBillAmount = totalBillAmount - (totalBillAmount * discount);
+                    lblTotalBillAmount.setText("Total Amount : " + totalBillAmount + "0 LKR");
+                } else if (Double.parseDouble(extractBillAmount(lblTotalBillAmount.getText())) > 5000) {
+                    txtDiscount.setText("15%");
+                    discount = Double.parseDouble(txtDiscount.getText().replace("%", "")) / 100;
+                    totalBillAmount = totalBillAmount - (totalBillAmount * discount);
+                    lblTotalBillAmount.setText("Total Amount : " + totalBillAmount + "0 LKR");
+                } else {
+                    txtDiscount.setText("0%");
+                    discount = Double.parseDouble(txtDiscount.getText().replace("%", "")) / 100;
+                    totalBillAmount = totalBillAmount - (totalBillAmount * discount);
+                    lblTotalBillAmount.setText("Total Amount : " + totalBillAmount + "0 LKR");
+                }
+            } catch (Exception e) {
+                throw new RuntimeException(e);
+            }
+        }
+    }
+
     public void btnCheckoutOnAction(ActionEvent actionEvent) {
         try {
             // Extract data from UI components
@@ -245,13 +274,13 @@ public class PointOfSaleFormController implements Initializable {
 
             // Populate OrderDetails from cartList
             for (TableModelCart cartItem : cartList) {
-                double total = cartItem.getTotal() - (cartItem.getTotal() * discount);
-                OrderDetails orderDetails = new OrderDetails(cartItem.getProductId(), cartItem.getUnitPrice(), cartItem.getQty(), total, discount, cmail);
+                double total = cartItem.getTotal();
+                OrderDetails orderDetails = new OrderDetails(cartItem.getProductId(), cartItem.getUnitPrice(), cartItem.getQty(), total, cmail);
                 orderDetailList.add(orderDetails);
             }
 
             // Create Order DTO
-            Order order = new Order(oid, uid, orderDate, orderTime, orderDetailList, totalBillAmount);
+            Order order = new Order(oid, uid, orderDate, orderTime, orderDetailList, discount, totalBillAmount);
 
             // Create OrderEntity and map from Order DTO
             OrderEntity orderEntity = new OrderEntity();
@@ -259,6 +288,7 @@ public class PointOfSaleFormController implements Initializable {
             orderEntity.setUserId(order.getUserId());
             orderEntity.setOrderDate(order.getOrderDate());
             orderEntity.setOrderTime(order.getOrderTime());
+            orderEntity.setDiscount(order.getDiscount());
             orderEntity.setTotalBillAmount(order.getTotalBillAmount());
 
             // Create OrderDetailsEntity list and map from OrderDetails DTOs
@@ -269,7 +299,6 @@ public class PointOfSaleFormController implements Initializable {
                 orderDetailsEntity.setUnitPrice(orderDetails.getUnitPrice());
                 orderDetailsEntity.setQty(orderDetails.getQty());
                 orderDetailsEntity.setTotal(orderDetails.getTotal());
-                orderDetailsEntity.setDiscount(orderDetails.getDiscount());
                 orderDetailsEntity.setCustomerEmail(orderDetails.getCustomerEmail());
                 orderDetailsEntity.setOrder(orderEntity); // Set the association to OrderEntity
                 orderDetailsEntities.add(orderDetailsEntity);
@@ -284,50 +313,18 @@ public class PointOfSaleFormController implements Initializable {
             // Handle success or failure
             if (success) {
                 new Alert(Alert.AlertType.CONFIRMATION, "Order Placed Successfully!").show();
-                for(TableModelCart cartItem: cartList){
+                for (TableModelCart cartItem : cartList) {
                     Product product = productBoImpl.searchProduct(cartItem.getProductId());
-                    product.setQty((product.getQty()-cartItem.getQty()));
+                    product.setQty((product.getQty() - cartItem.getQty()));
                     productBoImpl.updateProduct(product);
                 }
                 clearForm();
+                generateOrderId();
             } else {
                 new Alert(Alert.AlertType.ERROR, "Operation Unsuccessful!").show();
             }
         } catch (Exception e) {
             new Alert(Alert.AlertType.ERROR, "Error during checkout: " + e.getMessage()).show();
-        }
-    }
-
-    public void btnClearCartOnAction(ActionEvent actionEvent) {
-        clearForm();
-    }
-
-    public void btnCheckDiscountOnAction(ActionEvent actionEvent) {
-
-        Alert alert = new Alert(Alert.AlertType.CONFIRMATION, "Do you want to check available discounts?");
-        Optional<ButtonType> result = alert.showAndWait();
-
-        if (result.isPresent() && result.get() == ButtonType.OK) {
-            try {
-                if (Double.parseDouble(extractBillAmount(lblTotalBillAmount.getText()))>10000){
-                    txtDiscount.setText("20%");
-                    discount = Double.parseDouble(txtDiscount.getText().replace("%", "")) / 100;
-                    totalBillAmount=totalBillAmount-(totalBillAmount*discount);
-                    lblTotalBillAmount.setText("Total Amount : "+totalBillAmount+"0 LKR");
-                } else if (Double.parseDouble(extractBillAmount(lblTotalBillAmount.getText()))>5000) {
-                    txtDiscount.setText("15%");
-                    discount = Double.parseDouble(txtDiscount.getText().replace("%", "")) / 100;
-                    totalBillAmount=totalBillAmount-(totalBillAmount*discount);
-                    lblTotalBillAmount.setText("Total Amount : "+totalBillAmount+"0 LKR");
-                }else {
-                    txtDiscount.setText("0%");
-                    discount = Double.parseDouble(txtDiscount.getText().replace("%", "")) / 100;
-                    totalBillAmount=totalBillAmount-(totalBillAmount*discount);
-                    lblTotalBillAmount.setText("Total Amount : "+totalBillAmount+"0 LKR");
-                }
-            } catch (Exception e) {
-                throw new RuntimeException(e);
-            }
         }
     }
 
@@ -340,6 +337,10 @@ public class PointOfSaleFormController implements Initializable {
         }
         stage.show();
         ((Stage) adminpane.getScene().getWindow()).close();
+    }
+
+    public void btnClearCartOnAction(ActionEvent actionEvent) {
+        clearForm();
     }
 
     public void btnBackOnAction(ActionEvent actionEvent) {
@@ -367,7 +368,7 @@ public class PointOfSaleFormController implements Initializable {
 
     private void calcNetTotal() {
         double netTot = cartList.stream().mapToDouble(TableModelCart::getTotal).sum();
-        totalBillAmount=netTot;
+        totalBillAmount = netTot;
         lblTotalBillAmount.setText("Total Amount : " + String.format("%.2f", netTot) + " LKR");
     }
 

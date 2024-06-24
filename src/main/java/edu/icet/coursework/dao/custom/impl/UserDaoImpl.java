@@ -1,6 +1,7 @@
 package edu.icet.coursework.dao.custom.impl;
 
 import edu.icet.coursework.dao.custom.UserDao;
+import edu.icet.coursework.dto.Order;
 import edu.icet.coursework.dto.Product;
 import edu.icet.coursework.dto.Supplier;
 import edu.icet.coursework.dto.User;
@@ -221,6 +222,11 @@ public class UserDaoImpl implements UserDao {
 
     @Override
     public ObservableList<Supplier> searchAllSuppliers() {
+        return null;
+    }
+
+    @Override
+    public ObservableList<Order> searchAllOrders() {
         return null;
     }
 

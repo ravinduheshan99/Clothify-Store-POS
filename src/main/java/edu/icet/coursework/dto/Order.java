@@ -18,5 +18,6 @@ public class Order {
     private LocalDate orderDate;
     private LocalDateTime orderTime;
     private List<OrderDetails> orderDetailsList;
+    private Double discount;
     private Double totalBillAmount;
 }

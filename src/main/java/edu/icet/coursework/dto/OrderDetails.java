@@ -14,6 +14,5 @@ public class OrderDetails {
     private Double unitPrice;
     private Integer qty;
     private Double total;
-    private Double discount;
     private String customerEmail;
 }

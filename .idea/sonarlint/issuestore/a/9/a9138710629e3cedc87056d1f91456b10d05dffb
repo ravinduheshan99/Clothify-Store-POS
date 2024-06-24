@@ -1,14 +1,10 @@
 
-	java:S112Ü"FDefine and throw a dedicated exception instead of using a generic one.(†Šúàıÿÿÿÿ8ÖÎ†Î„2J$7d5a9c35-ab39-46f2-929f-0911faa8a80b
+	java:S112Ü"FDefine and throw a dedicated exception instead of using a generic one.(†Šúàıÿÿÿÿ8ÖÎ†Î„2J$b873789d-6042-48da-a48e-cb31b8b06d2f
 n
-java:S1168>"+Return an empty collection instead of null.(¥¹ï8ÿ¹»¥‚2J$73a3cbf0-a394-410b-819e-fb28bad1367e
+java:S1168>"+Return an empty collection instead of null.(¥¹ï8ÿ¹»¥‚2J$e921f3ed-1016-4c49-b519-04e36da80ebe
 n
-java:S1168H"+Return an empty collection instead of null.(¥¹ï8©ñ…ƒ2J$dc914ea5-4090-4890-bb3a-0231cb61ebde
+java:S1168H"+Return an empty collection instead of null.(¥¹ï8©ñ…ƒ2J$7af41921-5df6-4f66-897f-5587ff4b6ea0
 w
-java:S1874ƒ".Remove this use of "delete"; it is deprecated.(®İ†ıÿÿÿÿ8¸“ßüƒ2J$a692f358-4938-433d-9181-6156ed8aebab
-}
-java:S1128":Remove this unused import 'edu.icet.coursework.dto.Order'.(ë¡à‘8ˆ®‚Î„2J$3dc7b0de-5a85-4793-a939-aa3e8a5f830d
-†
-java:S1128"CRemove this unused import 'edu.icet.coursework.entity.OrderEntity'.(…‰‡¯8‰®‚Î„2J$8a5f72b2-d1d5-4081-b332-b10105d2103e
-ˆ
-java:S1128	"ERemove this unused import 'edu.icet.coursework.entity.ProductEntity'.(ÆÁşò8Š®‚Î„2J$180ff951-805f-454b-ac86-a202c5b8587e
+java:S1874ƒ".Remove this use of "delete"; it is deprecated.(®İ†ıÿÿÿÿ8¸“ßüƒ2J$e92e4c15-062e-4c28-bd9f-0e1b1a995fb5
+o
+java:S1168è"+Return an empty collection instead of null.(¥¹ï8Øà²Ö„2J$e1d4fa66-d7aa-44c9-a10f-e7b6382930c7

@@ -11,7 +11,7 @@
 <AnchorPane fx:id="adminpane" prefHeight="535.0" prefWidth="711.0" xmlns="http://javafx.com/javafx/21" xmlns:fx="http://javafx.com/fxml/1" fx:controller="edu.icet.coursework.controller.user.EmployeeDashboardFormController">
    <children>
       <Rectangle arcHeight="5.0" arcWidth="5.0" height="59.0" stroke="BLACK" strokeType="INSIDE" width="711.0" />
-      <Label fx:id="lblUserId" layoutX="545.0" layoutY="20.0" text="U001-" textFill="WHITE">
+      <Label fx:id="lblUserId" layoutX="545.0" layoutY="20.0" text="U001" textFill="WHITE">
          <font>
             <Font name="Segoe UI" size="16.0" />
          </font>
@@ -39,9 +39,9 @@
                   <Image url="@../../../../assets/Point Of Sale.png" />
                </image></ImageView>
          </graphic></JFXButton>
-      <Label layoutX="190.0" layoutY="267.0" style="-fx-background-color: #000000;" text="POINT OF SALE" textFill="WHITE">
+      <Label alignment="CENTER" layoutX="172.0" layoutY="267.0" prefHeight="15.0" prefWidth="123.0" style="-fx-background-color: #000000;" text="POINT OF SALE" textFill="WHITE">
          <font>
-            <Font name="Segoe UI Bold" size="12.0" />
+            <Font name="Segoe UI" size="12.0" />
          </font>
       </Label>
       <JFXButton contentDisplay="GRAPHIC_ONLY" layoutX="416.0" layoutY="152.0" onAction="#btnItemsOnAction" prefHeight="75.0" prefWidth="118.0" style="-fx-background-color: #000000; -fx-border-color: #ffffff; -fx-border-width: 2;">
@@ -53,9 +53,9 @@
             </ImageView>
          </graphic>
       </JFXButton>
-      <Label layoutX="460.0" layoutY="267.0" style="-fx-background-color: #000000;" text="ITEMS" textFill="WHITE">
+      <Label alignment="CENTER" layoutX="416.0" layoutY="267.0" prefHeight="15.0" prefWidth="123.0" style="-fx-background-color: #000000;" text="ITEMS" textFill="WHITE">
          <font>
-            <Font name="Segoe UI Bold" size="12.0" />
+            <Font name="Segoe UI" size="12.0" />
          </font>
       </Label>
       <JFXButton contentDisplay="GRAPHIC_ONLY" layoutX="173.0" layoutY="314.0" onAction="#btnSuppliersOnAction" prefHeight="75.0" prefWidth="118.0" style="-fx-background-color: #000000; -fx-border-color: #ffffff; -fx-border-width: 2;">
@@ -67,9 +67,9 @@
             </ImageView>
          </graphic>
       </JFXButton>
-      <Label layoutX="203.0" layoutY="429.0" style="-fx-background-color: #000000;" text="SUPPLIERS" textFill="WHITE">
+      <Label alignment="CENTER" layoutX="173.0" layoutY="429.0" prefHeight="15.0" prefWidth="123.0" style="-fx-background-color: #000000;" text="SUPPLIERS" textFill="WHITE">
          <font>
-            <Font name="Segoe UI Bold" size="12.0" />
+            <Font name="Segoe UI" size="12.0" />
          </font>
       </Label>
       <JFXButton contentDisplay="GRAPHIC_ONLY" layoutX="417.0" layoutY="314.0" onAction="#btnReportsOnAction" prefHeight="75.0" prefWidth="118.0" style="-fx-background-color: #000000; -fx-border-color: #ffffff; -fx-border-width: 2;">
@@ -81,20 +81,25 @@
             </ImageView>
          </graphic>
       </JFXButton>
-      <Label layoutX="451.0" layoutY="429.0" style="-fx-background-color: #000000;" text="REPORTS" textFill="WHITE">
+      <Label alignment="CENTER" layoutX="416.0" layoutY="429.0" prefHeight="15.0" prefWidth="123.0" style="-fx-background-color: #000000;" text="REPORTS" textFill="WHITE">
          <font>
-            <Font name="Segoe UI Bold" size="12.0" />
+            <Font name="Segoe UI" size="12.0" />
          </font>
       </Label>
-      <Label fx:id="lblUserType" layoutX="592.0" layoutY="20.0" text="Employee" textFill="WHITE">
+      <Label fx:id="lblUserType" layoutX="589.0" layoutY="20.0" text="Employee" textFill="WHITE">
          <font>
             <Font name="Segoe UI" size="16.0" />
          </font>
       </Label>
-      <JFXButton layoutX="589.0" layoutY="466.0" onAction="#btnLogOutOnAction" style="-fx-background-color: #ffffff;" text="Logout">
+      <Label layoutX="267.0" layoutY="488.0" text="Do you want to signout?" textFill="WHITE">
          <font>
-            <Font name="Segoe UI" size="15.0" />
+            <Font name="Segoe UI" size="12.0" />
          </font>
-      </JFXButton>
+      </Label>
+      <Label layoutX="400.0" layoutY="488.0" onMouseClicked="#lblLoginFormNavOnAction" text="Signout" textFill="WHITE" underline="true">
+         <font>
+            <Font name="Segoe UI Bold" size="12.0" />
+         </font>
+      </Label>
    </children>
 </AnchorPane>

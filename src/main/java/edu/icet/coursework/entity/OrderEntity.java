@@ -28,5 +28,6 @@ public class OrderEntity {
     @OneToMany(mappedBy = "order", cascade = CascadeType.ALL, orphanRemoval = true)
     private List<OrderDetailsEntity> orderDetailsList;
 
+    private Double discount;
     private Double totalBillAmount;
 }

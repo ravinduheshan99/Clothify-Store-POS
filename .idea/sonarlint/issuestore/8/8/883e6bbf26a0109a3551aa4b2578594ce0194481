@@ -1,7 +1,8 @@
 
+‰	java:S112"FDefine and throw a dedicated exception instead of using a generic one.(ÆÃ¸Æ8æû·Ö„2J$12f90261-cf71-4e1b-b73c-4421952f0e5f
 n
-java:S1168%"+Return an empty collection instead of null.(¥¹ï8Íñ‚2J$6ce4cd3d-6ca2-48fb-9566-e1e7ff9340da
+java:S1168*"+Return an empty collection instead of null.(¥¹ï8Íñ‚2J$e53cef78-483f-4072-a6fc-8908dea90891
 n
-java:S1168B"+Return an empty collection instead of null.(¥¹ï8£Ë„ƒ2J$02f91fa3-9308-425f-9326-c23de68c5483
-H
-java:S1168o"+Return an empty collection instead of null.(¥¹ï8şªÍÍ„2
+java:S1168G"+Return an empty collection instead of null.(¥¹ï8£Ë„ƒ2J$fb6d0408-0e9a-4811-bdbb-952d50d9d04d
+n
+java:S1168t"+Return an empty collection instead of null.(¥¹ï8şªÍÍ„2J$b5ca99ae-d675-49f7-b5be-eff14ac7258f

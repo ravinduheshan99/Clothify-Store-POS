@@ -227,4 +227,9 @@ public class SupplierDaoImpl implements SupplierDao {
         return allSuppliers;
     }
 
+    @Override
+    public ObservableList<Order> searchAllOrders() {
+        return null;
+    }
+
 }

@@ -1,7 +1,14 @@
 package edu.icet.coursework.controller.order;
 
+import edu.icet.coursework.bo.BoFactory;
+import edu.icet.coursework.bo.custom.OrderBo;
 import edu.icet.coursework.controller.user.UserSession;
+import edu.icet.coursework.dto.Order;
 import edu.icet.coursework.dto.User;
+import edu.icet.coursework.entity.OrderEntity;
+import edu.icet.coursework.util.BoType;
+import javafx.collections.FXCollections;
+import javafx.collections.ObservableList;
 import javafx.event.ActionEvent;
 import javafx.fxml.FXMLLoader;
 import javafx.fxml.Initializable;
@@ -10,12 +17,12 @@ import javafx.scene.control.Label;
 import javafx.scene.control.TableColumn;
 import javafx.scene.control.TableView;
 import javafx.scene.control.cell.PropertyValueFactory;
-import javafx.scene.input.MouseEvent;
 import javafx.scene.layout.AnchorPane;
 import javafx.stage.Stage;
 
 import java.io.IOException;
 import java.net.URL;
+import java.util.List;
 import java.util.ResourceBundle;
 
 public class ViewOrdersFormController implements Initializable {
@@ -28,7 +35,6 @@ public class ViewOrdersFormController implements Initializable {
     public Label lblUserId;
     public Label lblUserType;
     public TableColumn colDiscount;
-    public TableColumn colFinalTotal;
 
     @Override
     public void initialize(URL url, ResourceBundle resourceBundle) {
@@ -36,9 +42,20 @@ public class ViewOrdersFormController implements Initializable {
         lblUserId.setText(currentUser.getUserId()+"-");
         lblUserType.setText(currentUser.getUserType());
 
-        //colOid.setCellValueFactory(new PropertyValueFactory<>("orderId"));
-        //colUid.setCellValueFactory(new PropertyValueFactory<>("userId"));
-        //colTotal.setCellValueFactory(new PropertyValueFactory<>(""));
+        colOid.setCellValueFactory(new PropertyValueFactory<>("orderId"));
+        colUid.setCellValueFactory(new PropertyValueFactory<>("userId"));
+        colDiscount.setCellValueFactory(new PropertyValueFactory<>("discount"));
+        colTotal.setCellValueFactory(new PropertyValueFactory<>("totalBillAmount"));
+
+        loadOrders();
+    }
+
+    private OrderBo orderBoImpl = BoFactory.getInstance().getBo(BoType.ORDER);
+
+    private void loadOrders() {
+        List<Order> ordersObjects = orderBoImpl.searchAllOrders();
+        ObservableList<Order> orders = FXCollections.observableArrayList(ordersObjects);
+        tblOrders.setItems(orders);
     }
 
     public void btnBackOnAction(ActionEvent actionEvent) {

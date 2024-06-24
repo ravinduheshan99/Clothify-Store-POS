@@ -1,39 +1,30 @@
 
-	java:S1121"FDefine and throw a dedicated exception instead of using a generic one.(Ò‚Òéüÿÿÿÿ8µØõÅ„2J$e6988828-5e3d-42a7-9608-32620cce29cc
+	java:S112B"FDefine and throw a dedicated exception instead of using a generic one.(Ò‚Òéüÿÿÿÿ8èÖ¿Ö„2J$f057fa91-8bd9-4a0e-86a9-505e593e30e3
 w
-java:S3740"/Provide the parametrized type for this generic.(–¤³Òşÿÿÿÿ8¶ØõÅ„2J$cf9f77fa-f277-4692-81c1-a0a064de9cce
+java:S3740"/Provide the parametrized type for this generic.(–¤³Òşÿÿÿÿ8êÖ¿Ö„2J$27908591-05cf-45e0-8b43-a49bc261dceb
 w
-java:S3740"/Provide the parametrized type for this generic.(§Û¾‡üÿÿÿÿ8¶ØõÅ„2J$e773cd3d-7c62-41bc-90e6-a61a27302783
+java:S3740"/Provide the parametrized type for this generic.(§Û¾‡üÿÿÿÿ8êÖ¿Ö„2J$cf7696a5-7e29-47d5-8ae7-e85cc214e8f1
 r
-java:S3740"/Provide the parametrized type for this generic.(¦¢éÑ8¶ØõÅ„2J$7d29c8a1-c85b-4f4f-849c-6fa433830054
+java:S3740 "/Provide the parametrized type for this generic.(¦¢éÑ8êÖ¿Ö„2J$afb1ad7f-4466-498b-9621-6e670429b3e6
 r
-java:S3740"/Provide the parametrized type for this generic.(¨­Ì˜8¶ØõÅ„2J$fab65d74-0f4c-44ab-bd91-0de098a09ab0
+java:S3740!"/Provide the parametrized type for this generic.(¨­Ì˜8êÖ¿Ö„2J$178b65ea-8341-49ad-be26-41619e31ccd2
 r
-java:S3740"/Provide the parametrized type for this generic.(ÁÊšÖ8¶ØõÅ„2J$6345658d-dd7e-4908-9737-8e32010f3f60
-w
-java:S3740"/Provide the parametrized type for this generic.(’ïÌõûÿÿÿÿ8¶ØõÅ„2J$1f2fb396-adc3-4bfd-9651-0fe9300b6c89
+java:S3740%"/Provide the parametrized type for this generic.(ÁÊšÖ8êÖ¿Ö„2J$a4ebb791-2ba5-43f6-8ed8-a87d05b6f8a1
 
-java:S1104"UMake tblOrders a static final constant or non-public and provide accessors if needed.(–¤³Òşÿÿÿÿ8·ØõÅ„2J$e6ce43b8-d0cd-423b-8125-b55134afa7ed
+java:S1104"UMake tblOrders a static final constant or non-public and provide accessors if needed.(–¤³Òşÿÿÿÿ8ìÖ¿Ö„2J$b6fcdc48-c958-452f-9235-522382d8910d
 š
-java:S1104"RMake colOid a static final constant or non-public and provide accessors if needed.(§Û¾‡üÿÿÿÿ8·ØõÅ„2J$299db3a3-cb10-4611-bad7-2933b062a94e
+java:S1104"RMake colOid a static final constant or non-public and provide accessors if needed.(§Û¾‡üÿÿÿÿ8ìÖ¿Ö„2J$1e0781fe-e7e2-481b-8ddf-aad1dd3085e3
 •
-java:S1104"RMake colUid a static final constant or non-public and provide accessors if needed.(¦¢éÑ8·ØõÅ„2J$c2d0a4b4-73be-419f-becc-833d25728e8a
+java:S1104 "RMake colUid a static final constant or non-public and provide accessors if needed.(¦¢éÑ8ìÖ¿Ö„2J$0f527bde-d9d6-4ad2-84b1-085c7ca9d43b
 —
-java:S1104"TMake colTotal a static final constant or non-public and provide accessors if needed.(¨­Ì˜8·ØõÅ„2J$edd029ec-fc8c-4027-9ff2-0e3a8386dc77
+java:S1104!"TMake colTotal a static final constant or non-public and provide accessors if needed.(¨­Ì˜8ìÖ¿Ö„2J$e6cca621-c76c-4077-aaf5-71494ca4bf56
 
-java:S1104"UMake adminpane a static final constant or non-public and provide accessors if needed.(ˆ×£ÿÿÿÿÿ8·ØõÅ„2J$72fbb687-ae27-4e1a-a5bc-6a39f5a6723e
+java:S1104""UMake adminpane a static final constant or non-public and provide accessors if needed.(ˆ×£ÿÿÿÿÿ8ìÖ¿Ö„2J$927c5a64-dae7-439d-ad8d-b808be6b8b18
 ˜
-java:S1104"UMake lblUserId a static final constant or non-public and provide accessors if needed.(«†´±8·ØõÅ„2J$3dca79f7-e8d6-49bf-91a2-3501d8c5e8e2
+java:S1104#"UMake lblUserId a static final constant or non-public and provide accessors if needed.(«†´±8ìÖ¿Ö„2J$a04df718-25dd-43ca-9b50-b4ba0dcf796d
 š
-java:S1104"WMake lblUserType a static final constant or non-public and provide accessors if needed.(Œø±8·ØõÅ„2J$f426f05e-60a2-4795-92e5-66bc4682888f
+java:S1104$"WMake lblUserType a static final constant or non-public and provide accessors if needed.(Œø±8íÖ¿Ö„2J$e44af4f8-329b-49c0-b015-1df698a14a6f
 š
-java:S1104"WMake colDiscount a static final constant or non-public and provide accessors if needed.(ÁÊšÖ8·ØõÅ„2J$7e9526de-134e-4429-a666-b93f51a63d9e
-¡
-java:S1104"YMake colFinalTotal a static final constant or non-public and provide accessors if needed.(’ïÌõûÿÿÿÿ8¹ØõÅ„2J$1a358cbf-d97c-4802-9709-46969a718262
-]	java:S125'"<This block of commented-out lines of code should be removed.(äªÁŞøÿÿÿÿ8İ‡’È„2
+java:S1104%"WMake colDiscount a static final constant or non-public and provide accessors if needed.(ÁÊšÖ8îÖ¿Ö„2J$fc3691a7-f523-4c95-a445-8e777e95a612
 z
-java:S1172,"2Remove this unused method parameter "actionEvent".(†ùàıÿÿÿÿ8ëØõÅ„2J$7077e38d-c4d0-4320-98b6-23e425b2ac17
-h
-java:S1128"KRemove this unused import 'javafx.scene.control.cell.PropertyValueFactory'.(àÎ¬õ8µˆ’È„2
-‚
-java:S1128":Remove this unused import 'javafx.scene.input.MouseEvent'.(˜¬‹æÿÿÿÿÿ8Š…Æ„2J$dcef8d99-1f2a-4d42-96ab-1c170af87e75
+java:S1172="2Remove this unused method parameter "actionEvent".(†ùàıÿÿÿÿ8©Ø¿Ö„2J$492b69cb-b88e-47fc-a5f9-59b5e13471aa

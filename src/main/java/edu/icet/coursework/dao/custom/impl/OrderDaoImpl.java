@@ -6,10 +6,15 @@ import edu.icet.coursework.dto.Product;
 import edu.icet.coursework.dto.Supplier;
 import edu.icet.coursework.dto.User;
 import edu.icet.coursework.entity.OrderEntity;
+import edu.icet.coursework.entity.SupplierEntity;
 import edu.icet.coursework.util.HibernateUtil;
+import javafx.collections.FXCollections;
 import javafx.collections.ObservableList;
 import org.hibernate.Session;
 import org.hibernate.Transaction;
+import org.modelmapper.ModelMapper;
+
+import java.util.List;
 
 public class OrderDaoImpl implements OrderDao {
     @Override
@@ -111,5 +116,36 @@ public class OrderDaoImpl implements OrderDao {
         return null;
     }
 
+    @Override
+    public ObservableList<Order> searchAllOrders() {
+        ObservableList<Order> allOrders = FXCollections.observableArrayList();
+        Session session = null;
+        Transaction transaction = null;
+
+        try {
+            session = HibernateUtil.getSession();
+            transaction = session.beginTransaction();
+
+            List<OrderEntity> orderEntities = session.createQuery("FROM OrderEntity",OrderEntity.class).list();
+            for (OrderEntity entity: orderEntities){
+                Order order = new ModelMapper().map(entity,Order.class);
+                allOrders.add(order);
+            }
+            transaction.commit();
+
+        }catch (Exception e){
+            if (transaction!=null){
+                transaction.rollback();
+            }
+            e.printStackTrace();
+            throw new RuntimeException("Failed To Find Orders",e);
+
+        }finally {
+            if (session!=null){
+                session.close();
+            }
+        }
+        return allOrders;
+    }
 
 }

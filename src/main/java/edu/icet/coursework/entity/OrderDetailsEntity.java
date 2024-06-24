@@ -28,7 +28,6 @@ public class OrderDetailsEntity {
     private Double unitPrice;
     private Integer qty;
     private Double total;
-    private Double discount;
     private String customerEmail;
 
     // Inner class for composite primary key

@@ -108,12 +108,12 @@
             <Font size="20.0" />
          </font>
       </Label>
-      <Label fx:id="lblUserId" layoutX="557.0" layoutY="22.0" text="U001" textFill="WHITE">
+      <Label fx:id="lblUserId" layoutX="560.0" layoutY="22.0" text="U001" textFill="WHITE">
          <font>
             <Font name="Segoe UI" size="16.0" />
          </font>
       </Label>
-      <Label fx:id="lblUserType" layoutX="603.0" layoutY="22.0" text="Employee" textFill="WHITE">
+      <Label fx:id="lblUserType" layoutX="606.0" layoutY="22.0" text="Employee" textFill="WHITE">
          <font>
             <Font name="Segoe UI" size="16.0" />
          </font>
