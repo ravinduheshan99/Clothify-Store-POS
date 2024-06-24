@@ -1,10 +1,16 @@
 
-	java:S112Ü"FDefine and throw a dedicated exception instead of using a generic one.(†Šúàıÿÿÿÿ8ÖÎ†Î„2J$b873789d-6042-48da-a48e-cb31b8b06d2f
+	java:S112Ü"FDefine and throw a dedicated exception instead of using a generic one.(†Šúàıÿÿÿÿ8ÖÎ†Î„2J$60443da4-ff2b-4279-bc79-8c636e52b3ce
 n
-java:S1168>"+Return an empty collection instead of null.(¥¹ï8ÿ¹»¥‚2J$e921f3ed-1016-4c49-b519-04e36da80ebe
+java:S1168>"+Return an empty collection instead of null.(¥¹ï8ÿ¹»¥‚2J$f3b3b4a4-9245-419d-8656-02e310e543cb
 n
-java:S1168H"+Return an empty collection instead of null.(¥¹ï8©ñ…ƒ2J$7af41921-5df6-4f66-897f-5587ff4b6ea0
+java:S1168H"+Return an empty collection instead of null.(¥¹ï8©ñ…ƒ2J$de31efb6-0079-4a63-a39e-bbc431d78588
 w
-java:S1874ƒ".Remove this use of "delete"; it is deprecated.(®İ†ıÿÿÿÿ8¸“ßüƒ2J$e92e4c15-062e-4c28-bd9f-0e1b1a995fb5
+java:S1874ƒ".Remove this use of "delete"; it is deprecated.(®İ†ıÿÿÿÿ8¸“ßüƒ2J$fde7ea0c-cca2-4ac4-bad9-48088ea030fc
 o
-java:S1168è"+Return an empty collection instead of null.(¥¹ï8Øà²Ö„2J$e1d4fa66-d7aa-44c9-a10f-e7b6382930c7
+java:S1168è"+Return an empty collection instead of null.(¥¹ï8Øà²Ö„2J$12ea3798-f16b-4bc9-86bb-e01f2f1054f9
+o
+java:S1168ï"+Return an empty collection instead of null.(¥¹ï8ßÙÛ„2J$b4a77a42-f38e-48eb-8a79-26b7d8afc0f8
+`
+java:S1128"CRemove this unused import 'edu.icet.coursework.entity.OrderEntity'.(…‰‡¯8ñ‘·Ü„2
+b
+java:S1128	"ERemove this unused import 'edu.icet.coursework.entity.ProductEntity'.(ÆÁşò8ñ‘·Ü„2

@@ -230,4 +230,9 @@ public class UserDaoImpl implements UserDao {
         return null;
     }
 
+    @Override
+    public ObservableList<Product> searchAllProducts() {
+        return null;
+    }
+
 }

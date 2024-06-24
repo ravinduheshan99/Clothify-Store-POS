@@ -232,4 +232,9 @@ public class SupplierDaoImpl implements SupplierDao {
         return null;
     }
 
+    @Override
+    public ObservableList<Product> searchAllProducts() {
+        return null;
+    }
+
 }

@@ -34,6 +34,11 @@ public class ProductBoImpl implements ProductBo {
     }
 
     @Override
+    public ObservableList<Product> searchAllProducts() {
+        return productDaoImpl.searchAllProducts();
+    }
+
+    @Override
     public Product searchProduct(String pid) {
         return productDaoImpl.searchProduct(pid);
     }

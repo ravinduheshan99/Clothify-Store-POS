@@ -148,4 +148,9 @@ public class OrderDaoImpl implements OrderDao {
         return allOrders;
     }
 
+    @Override
+    public ObservableList<Product> searchAllProducts() {
+        return null;
+    }
+
 }

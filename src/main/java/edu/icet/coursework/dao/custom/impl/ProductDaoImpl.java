@@ -201,6 +201,38 @@ public class ProductDaoImpl implements ProductDao {
     }
 
     @Override
+    public ObservableList<Product> searchAllProducts() {
+        ObservableList<Product> allProducts = FXCollections.observableArrayList();
+        Session session = null;
+        Transaction transaction = null;
+
+        try {
+            session = HibernateUtil.getSession();
+            transaction = session.beginTransaction();
+
+            List<ProductEntity> productEntities = session.createQuery("FROM ProductEntity",ProductEntity.class).list();
+            for (ProductEntity entity: productEntities){
+                Product product = new ModelMapper().map(entity,Product.class);
+                allProducts.add(product);
+            }
+            transaction.commit();
+
+        }catch (Exception e){
+            if (transaction!=null){
+                transaction.rollback();
+            }
+            e.printStackTrace();
+            throw new RuntimeException("Failed To Find Products",e);
+
+        }finally {
+            if (session!=null){
+                session.close();
+            }
+        }
+        return allProducts;
+    }
+
+    @Override
     public Product searchProduct(String pid) {
         Session session = null;
         Transaction transaction = null;

@@ -1,19 +1,26 @@
 
-	java:S112/"FDefine and throw a dedicated exception instead of using a generic one.(Ò‚Òéüÿÿÿÿ8¹‚©ƒ2J$ccbd886b-943e-492d-8e83-d7d4ed98647f
-	java:S1128"FDefine and throw a dedicated exception instead of using a generic one.(Ò‚Òéüÿÿÿÿ8’¹‚©ƒ2J$1aff2b85-9b5c-4394-bcea-bcaa78b488c1
+	java:S112d"FDefine and throw a dedicated exception instead of using a generic one.(Ò‚Òéüÿÿÿÿ8Êà¦Ü„2J$ae33a753-745b-4647-a36a-d03cd7cb02a4
+	java:S112x"FDefine and throw a dedicated exception instead of using a generic one.(Ò‚Òéüÿÿÿÿ8…ªÜ„2J$785b0fec-96f4-4efd-ae7a-b02c0f000868
+	java:S112"FDefine and throw a dedicated exception instead of using a generic one.(Ò‚Òéüÿÿÿÿ8Ô˜ßÜ„2J$6729cbc7-135c-4166-9cc8-99ce0066ff57
+
+java:S1192F"FDefine a constant instead of duplicating this literal "Error" 3 times.(ü¹ñÍüÿÿÿÿ8Šøàİ„2J$98930a7c-4ff2-4823-9040-13dfab10a44a
 
-java:S1104"UMake adminpane a static final constant or non-public and provide accessors if needed.(ˆ×£ÿÿÿÿÿ8Ï©ö¨ƒ2J$e2d33e82-abea-4d03-a604-41af34f7fdfc
+java:S1104"UMake adminpane a static final constant or non-public and provide accessors if needed.(ˆ×£ÿÿÿÿÿ8Íà¦Ü„2J$f0d0b5d2-1797-4c6b-93e5-899b0c7e5c5b
 ˜
-java:S1104"UMake lblUserId a static final constant or non-public and provide accessors if needed.(«†´±8„Ìö¨ƒ2J$e29e2c19-b6fe-41ea-990a-8b24164d8a88
+java:S1104"UMake lblUserId a static final constant or non-public and provide accessors if needed.(«†´±8Íà¦Ü„2J$50d467ff-745f-47cb-9921-e903bc50dee0
 š
-java:S1104"WMake lblUserType a static final constant or non-public and provide accessors if needed.(Œø±8™ìö¨ƒ2J$4b914dbb-39a5-42af-88c1-aa9686098ac9
+java:S1104"WMake lblUserType a static final constant or non-public and provide accessors if needed.(Œø±8Íà¦Ü„2J$403bacba-87d3-4228-8740-7f93d6e8189a
 Ä
-java:S1186"€Add a nested comment explaining why this method is empty, throw an UnsupportedOperationException or complete the implementation.(Ã¦¿ó8â ü¨ƒ2J$7805b414-e183-4db5-91ca-d6feb77c0bea
-Ä
-java:S1186"€Add a nested comment explaining why this method is empty, throw an UnsupportedOperationException or complete the implementation.(ò÷³Ù8ã ü¨ƒ2J$d8004a05-33a3-40ec-8d46-1a0f71588340
+java:S1186h"€Add a nested comment explaining why this method is empty, throw an UnsupportedOperationException or complete the implementation.(ò÷³Ù8€•áÜ„2J$04690a6c-2509-46f6-9607-1d005dee1a53
 É
-java:S1186""€Add a nested comment explaining why this method is empty, throw an UnsupportedOperationException or complete the implementation.(ï«¡«ÿÿÿÿÿ8ã ü¨ƒ2J$3f206d08-0e6e-4278-bf52-b118d428d628
+java:S1186k"€Add a nested comment explaining why this method is empty, throw an UnsupportedOperationException or complete the implementation.(ï«¡«ÿÿÿÿÿ8•áÜ„2J$806c8ab5-7874-4f1f-bb38-8621afcf7e01
 É
-java:S1186%"€Add a nested comment explaining why this method is empty, throw an UnsupportedOperationException or complete the implementation.(ÚÃ¾úÿÿÿÿ8ã ü¨ƒ2J$b0a5ef32-f7fa-460d-80a3-48d14a67b42c
+java:S1186n"€Add a nested comment explaining why this method is empty, throw an UnsupportedOperationException or complete the implementation.(ÚÃ¾úÿÿÿÿ8•áÜ„2J$3cd41a31-d648-48d2-bab5-ec6fdb6b6d98
+„
+java:S1075-"ARefactor your code to get this URI from a customizable parameter.(ó’¯À8åúàİ„2J$228bb69c-9910-4b9f-b816-be0df24573e2
+ƒ
+java:S10752"ARefactor your code to get this URI from a customizable parameter.(°¸ë^8‚ûàİ„2J$8cfdaeee-279b-405a-a595-18f095320c2b
+u
+java:S1172^"2Remove this unused method parameter "actionEvent".(Ã¦¿ó8¨•áÜ„2J$36fc94c4-24c7-41b5-969e-69b3508f700b
 z
-java:S1172("2Remove this unused method parameter "actionEvent".(†ùàıÿÿÿÿ8˜º‚©ƒ2J$fd0c6eb2-cd3d-4c9c-83fc-af2e393c5e18
+java:S1172q"2Remove this unused method parameter "actionEvent".(†ùàıÿÿÿÿ8¯•áÜ„2J$7c21f8de-5c7a-4e90-b0af-6e8c88fb6621

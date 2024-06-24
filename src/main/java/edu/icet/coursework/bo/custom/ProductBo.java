@@ -11,4 +11,5 @@ public interface ProductBo extends SuperBo {
     public Product searchProduct(String pid);
     public boolean removeProduct(String cid);
     public boolean updateProduct(Product product);
+    public ObservableList<Product> searchAllProducts();
 }
