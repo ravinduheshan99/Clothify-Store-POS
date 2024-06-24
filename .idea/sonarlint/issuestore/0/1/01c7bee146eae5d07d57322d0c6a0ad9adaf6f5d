@@ -37,9 +37,9 @@ java:S11040"QMake txtPw a static final constant or non-public and provide acces
  
 java:S11041"XMake txtPwConfirm a static final constant or non-public and provide accessors if needed.(ãóî•üÿÿÿÿ8Ä‹šƒ„2J$a5586b62-120d-495c-b616-c844f539481b
 
-java:S2095["GUse try-with-resources or close this "Statement" in a "finally" clause.(ããûÎıÿÿÿÿ8´Œšƒ„2J$17dca156-88ce-47a1-9a47-fc2f8123533f
-
 java:S2095P"GUse try-with-resources or close this "Statement" in a "finally" clause.(é°Áµşÿÿÿÿ8´Œšƒ„2J$6557a142-9edc-47fc-886d-f76b71a4fcf9
+
+java:S2095["GUse try-with-resources or close this "Statement" in a "finally" clause.(ããûÎıÿÿÿÿ8´Œšƒ„2J$17dca156-88ce-47a1-9a47-fc2f8123533f
 “	java:S116,"QRename this field "DtpDob" to match the regular expression '^[a-z][a-zA-Z0-9]*$'.(¾–¦’8¶Œšƒ„2J$4ab24ae7-3dfb-4af3-a7c4-53cd9184a64e
 m	java:S106U"+Replace this use of System.out by a logger.(ŠÔö·8ÂŒšƒ„2J$0d2b5da6-92d1-4bf1-ab33-4e8d5926978b
 {
@@ -54,3 +54,5 @@ v
 java:S1172¸"2Remove this unused method parameter "actionEvent".(áÄ´ü8ãŒšƒ„2J$d7902e1e-7e4b-4e39-b3fb-3f92f728d814
 {
 java:S1172É"2Remove this unused method parameter "actionEvent".(¿˜å•øÿÿÿÿ8Ùù¾ƒ„2J$8b71c181-447e-4f3f-bc9f-085eb78b2e54
+^
+java:S1128	"<Remove this unused import 'edu.icet.coursework.dto.Product'.( ²‡™ıÿÿÿÿ8¢ŞÃ«„2

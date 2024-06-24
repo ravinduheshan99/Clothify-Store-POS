@@ -1,16 +1,16 @@
 
+	java:S112Z"FDefine and throw a dedicated exception instead of using a generic one.(Ò‚Òéüÿÿÿÿ8˜æì«„2J$5656970e-0d11-4ab3-a543-91c1fc8fc519
 œ
-java:S1104"TMake txtEmail a static final constant or non-public and provide accessors if needed.(Ø¦½üÿÿÿÿ8êõõÿ1J$1282d484-410f-4edc-8927-aa760788ab62
+java:S1104"TMake txtEmail a static final constant or non-public and provide accessors if needed.(Ø¦½üÿÿÿÿ8›æì«„2J$ca9d6721-0473-4821-8635-c98bc36fd658
 œ
-java:S1104	"TMake txtNewPw a static final constant or non-public and provide accessors if needed.(£…ä€ûÿÿÿÿ8Ë…öõÿ1J$605f8125-e4b2-4d8c-a40b-aa42c0979923
+java:S1104"TMake txtNewPw a static final constant or non-public and provide accessors if needed.(£…ä€ûÿÿÿÿ8›æì«„2J$87c1ea09-777e-432b-91ce-1dc0c8e9bbe7
 £
-java:S1104
-"[Make txtNewPwConfirm a static final constant or non-public and provide accessors if needed.(ÕËÙÿÿÿÿÿ8æöõÿ1J$54af011c-2860-460e-9004-7455dc9e4160
-Ä
-java:S1186"€Add a nested comment explaining why this method is empty, throw an UnsupportedOperationException or complete the implementation.(•»Š8´Àôõÿ1J$9433bca5-946d-4c98-8946-57085c82d49d
-Ä
-java:S1186"€Add a nested comment explaining why this method is empty, throw an UnsupportedOperationException or complete the implementation.(ŠÜÎ£8ôİôõÿ1J$d136be47-c305-46e9-b2b3-c459fcc2654f
-Ã
-java:S1186"€Add a nested comment explaining why this method is empty, throw an UnsupportedOperationException or complete the implementation.(õİŞ78×öõÿ1J$0b9bf8e6-d86b-4b9e-940d-ea6b227a823c
-É
-java:S1186"€Add a nested comment explaining why this method is empty, throw an UnsupportedOperationException or complete the implementation.(†ùàıÿÿÿÿ8î„÷õÿ1J$44812542-d898-4263-b8ac-ec3e74dda564
+java:S1104"[Make txtNewPwConfirm a static final constant or non-public and provide accessors if needed.(ÕËÙÿÿÿÿÿ8›æì«„2J$bfdee1af-41ef-47b6-b238-b4a9136bcc92
+
+java:S1104"UMake adminpane a static final constant or non-public and provide accessors if needed.(ˆ×£ÿÿÿÿÿ8›æì«„2J$e9f04f85-a408-410b-be6a-4b4ed6e3f95d
+u
+java:S1172"2Remove this unused method parameter "actionEvent".(ŠÜÎ£8½çì«„2J$9bdc0ef5-274a-42bb-8dec-d6869c9e1ee9
+t
+java:S1172""2Remove this unused method parameter "actionEvent".(õİŞ78Ççì«„2J$d9ad1398-3821-4d55-8e61-670f90e4be95
+z
+java:S1172P"2Remove this unused method parameter "actionEvent".(†ùàıÿÿÿÿ8Ìõ«„2J$4f48a07f-04f9-4734-b21f-f65097ef5f76

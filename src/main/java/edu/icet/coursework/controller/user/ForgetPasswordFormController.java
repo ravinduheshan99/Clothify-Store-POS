@@ -10,6 +10,7 @@ import javafx.scene.control.Alert;
 import javafx.scene.input.MouseEvent;
 import javafx.scene.layout.AnchorPane;
 import javafx.stage.Stage;
+
 import java.io.IOException;
 import java.util.Random;
 
@@ -18,13 +19,32 @@ public class ForgetPasswordFormController {
     public JFXTextField txtEmail;
     public JFXTextField txtOtp;
 
+    private int otp = 0;
+
     public void btnRequestOtpOnAction(ActionEvent actionEvent) {
         sendEmailNotification(txtEmail.getText());
     }
 
     public void btnEnterOnAction(ActionEvent actionEvent) {
-        // Handle OTP verification
+        try {
+            if (otp == Integer.parseInt(txtOtp.getText())) {
+                Stage stage = (Stage) adminpane.getScene().getWindow();
+                stage.setScene(new Scene(FXMLLoader.load(getClass().getResource("/view/resetPasswordForm.fxml"))));
+                stage.show();
+            } else {
+                Alert alert = new Alert(Alert.AlertType.ERROR, "Incorrect OTP. Please Try Again");
+                alert.showAndWait();
+                txtOtp.setText(null);
+            }
+        } catch (NumberFormatException e) {
+            Alert alert = new Alert(Alert.AlertType.ERROR, "Invalid OTP format. Please enter a valid number.");
+            alert.showAndWait();
+            txtOtp.setText(null);
+        } catch (IOException e) {
+            throw new RuntimeException(e);
+        }
     }
+
 
     public void lblLoginFormNavOnAction(MouseEvent mouseEvent) {
         Stage stage = (Stage) adminpane.getScene().getWindow();
@@ -39,16 +59,15 @@ public class ForgetPasswordFormController {
 
     private void sendEmailNotification(String email) {
         Mail mail = new Mail();
-        int otp = generateOTP();
+        otp = generateOTP();
         mail.setMsg("Your OTP for Reset Password is: " + otp + "\nThank You,\nClothify Store Support Team");
-        mail.setMsg("");
         mail.setTo(email);
         mail.setSubject("Clothify Store Password Reset OTP");
 
         Thread thread = new Thread(mail);
         thread.start();
 
-        showNotification("OTP Sent", "OTP sent to your Email! " + java.time.LocalTime.now() + " Thank you.");
+        showNotification("OTP Sent", "OTP sent to your Email Thank you.");
     }
 
     private void showNotification(String title, String message) {

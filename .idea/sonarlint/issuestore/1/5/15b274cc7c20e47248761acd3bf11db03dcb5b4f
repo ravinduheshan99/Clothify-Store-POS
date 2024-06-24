@@ -1,15 +1,18 @@
 
-	java:S112""FDefine and throw a dedicated exception instead of using a generic one.(Ò‚Òéüÿÿÿÿ8ƒÛ˜„2J$3660a61a-56d5-4ef1-84a6-0f216173a18e
+	java:S112,"FDefine and throw a dedicated exception instead of using a generic one.(Ò‚Òéüÿÿÿÿ8Õëˆ«„2J$0275e908-f32f-4edd-aab2-63aaac891109
+	java:S1126"FDefine and throw a dedicated exception instead of using a generic one.(Ò‚Òéüÿÿÿÿ8±”«„2J$13431dc1-f778-4a45-ba39-c53785c98da8
 
-java:S1104"UMake adminpane a static final constant or non-public and provide accessors if needed.(ˆ×£ÿÿÿÿÿ8¡ƒÛ˜„2J$ec3bf687-ed38-41e6-b4a0-238e6efe9d75
+java:S1104"UMake adminpane a static final constant or non-public and provide accessors if needed.(ˆ×£ÿÿÿÿÿ8¼ñÏª„2J$05bba1e1-3fa0-49fc-80d7-23145006671e
 œ
-java:S1104"TMake txtEmail a static final constant or non-public and provide accessors if needed.(Ø¦½üÿÿÿÿ8£ƒÛ˜„2J$6dfa9a98-4650-46d2-badd-c379f69a870a
+java:S1104"TMake txtEmail a static final constant or non-public and provide accessors if needed.(Ø¦½üÿÿÿÿ8½ñÏª„2J$eda7d18f-55b7-4a0e-b0c5-18dcbf1cd9e8
 •
-java:S1104"RMake txtOtp a static final constant or non-public and provide accessors if needed.(¢ãƒ„8¥ƒÛ˜„2J$4558d72c-6454-4cde-ba77-4ef9491f9407
+java:S1104"RMake txtOtp a static final constant or non-public and provide accessors if needed.(¢ãƒ„8½ñÏª„2J$656153b9-0f6d-4f13-9452-34dfc286b326
 u
-java:S1172"2Remove this unused method parameter "actionEvent".(Õ¤ƒÂ8Á„Û˜„2J$7dd630e3-6dc7-4098-baa7-272e1fb5aca5
+java:S1172"2Remove this unused method parameter "actionEvent".(Õ¤ƒÂ8›òÏª„2J$18b4fd59-c647-430d-9008-6c60d22baff0
+z
+java:S1172"2Remove this unused method parameter "actionEvent".(á‚î¸øÿÿÿÿ8¡òÏª„2J$e1d61bfe-19bd-4e41-9147-935a7a33609c
 t
-java:S1172"1Remove this unused method parameter "mouseEvent".(–›Æı8Ç„Û˜„2J$8872f0ea-1d46-4651-b8df-a0625d0c7615
+java:S11721"1Remove this unused method parameter "mouseEvent".(–›Æı8çòÏª„2J$fc374ff0-24ea-4bae-84d0-24230e30a5c9
 `
-java:S2119A"Save and re-use this "Random".(¼İÅf8¬…Û˜„2J$f7772198-80fd-4bc7-9e51-4a6119e12452
-r	java:S106C"+Replace this use of System.out by a logger.(—•À‘ÿÿÿÿÿ8®…Û˜„2J$6823149a-d43b-4ea6-886f-de01cbe862e6
+java:S2119T"Save and re-use this "Random".(¼İÅf8¯óÏª„2J$c4b89931-677d-421f-b156-950ce5dda7eb
+r	java:S106V"+Replace this use of System.out by a logger.(—•À‘ÿÿÿÿÿ8³óÏª„2J$6dc8d0a5-323a-42dd-8644-12a5b48b65b1
