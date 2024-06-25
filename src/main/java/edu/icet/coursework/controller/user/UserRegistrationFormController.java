@@ -60,6 +60,7 @@ public class UserRegistrationFormController implements Initializable {
         generateUserId();
     }
 
+
     private void loadUserTypesMenu(){
         ObservableList<Object> userTypes = FXCollections.observableArrayList();
         userTypes.add("Admin");
@@ -124,7 +125,9 @@ public class UserRegistrationFormController implements Initializable {
         txtPw.setText(null);
     }
 
+
     private UserBo userBoImpl = BoFactory.getInstance().getBo(BoType.USER);
+
 
     public void btnRegisterOnAction(ActionEvent actionEvent) {
         User user = new User(txtUid.getText(),
@@ -141,60 +144,11 @@ public class UserRegistrationFormController implements Initializable {
 
         boolean b = userBoImpl.addUser(user);
         if(b){
-            clearText();
             new Alert(Alert.AlertType.CONFIRMATION,"User Added Successfully!").show();
+            clearText();
+            generateUserId();
         }else {
             new Alert(Alert.AlertType.ERROR,"Operation Unsuccessfull!").show();
-        }
-    }
-
-    public void lblLoginFormNavOnAction(MouseEvent mouseEvent) {
-        Stage stage=(Stage) adminpane.getScene().getWindow();
-        try {
-            stage.setScene(new Scene(FXMLLoader.load(getClass().getResource("/view/userLoginForm.fxml"))));
-        } catch (IOException e) {
-            throw new RuntimeException(e);
-        }
-        stage.show();
-        ((Stage) adminpane.getScene().getWindow()).close();
-    }
-
-    public void btnRemoveOnAction(ActionEvent actionEvent) {
-        boolean b = userBoImpl.removeUser(txtUid.getText());
-        if(b){
-            new Alert(Alert.AlertType.CONFIRMATION,"User Removed Successfully!").show();
-            clearText();
-        }else {
-            new Alert(Alert.AlertType.ERROR,"Operation Unsuccessfull!").show();
-            clearText();
-        }
-    }
-
-    public void btnBackOnAction(ActionEvent actionEvent) {
-        Stage stage=(Stage) adminpane.getScene().getWindow();
-        try {
-            stage.setScene(new Scene(FXMLLoader.load(getClass().getResource("/view/adminDashboardForm.fxml"))));
-        } catch (IOException e) {
-            throw new RuntimeException(e);
-        }
-        stage.show();
-        ((Stage) adminpane.getScene().getWindow()).close();
-    }
-
-    public void btnSearchOnAction(ActionEvent actionEvent) {
-        User user = userBoImpl.searchUserById(txtUid.getText());
-        if(user==null){
-            new Alert(Alert.AlertType.WARNING,"User Not Found!").show();
-            clearText();
-        }else {
-            cbxUserType.setValue(user.getUserType());
-            txtFname.setText(user.getFname());
-            txtLname.setText(user.getLname());
-            cbxGender.setValue(user.getGender());
-            DtpDob.setValue(user.getDob());
-            txtAddress.setText(user.getAddress());
-            txtContactNo.setText(user.getContactNo());
-            txtEmail.setText(user.getEmail());
         }
     }
 
@@ -214,10 +168,53 @@ public class UserRegistrationFormController implements Initializable {
                 pwCfrm);
         boolean b = userBoImpl.updateUser(user);
         if(b){
-            clearText();
             new Alert(Alert.AlertType.CONFIRMATION,"User Updated Successfully!").show();
+            clearText();
+            generateUserId();
         }else {
             new Alert(Alert.AlertType.ERROR,"Operation Unsuccessfull!").show();
         }
     }
+
+    public void btnSearchOnAction(ActionEvent actionEvent) {
+        User user = userBoImpl.searchUserById(txtUid.getText());
+        if(user==null){
+            new Alert(Alert.AlertType.WARNING,"User Not Found!").show();
+            clearText();
+        }else {
+            cbxUserType.setValue(user.getUserType());
+            txtFname.setText(user.getFname());
+            txtLname.setText(user.getLname());
+            cbxGender.setValue(user.getGender());
+            DtpDob.setValue(user.getDob());
+            txtAddress.setText(user.getAddress());
+            txtContactNo.setText(user.getContactNo());
+            txtEmail.setText(user.getEmail());
+        }
+    }
+
+    public void btnRemoveOnAction(ActionEvent actionEvent) {
+        boolean b = userBoImpl.removeUser(txtUid.getText());
+        if(b){
+            new Alert(Alert.AlertType.CONFIRMATION,"User Removed Successfully!").show();
+            clearText();
+            generateUserId();
+        }else {
+            new Alert(Alert.AlertType.ERROR,"Operation Unsuccessfull!").show();
+            clearText();
+            generateUserId();
+        }
+    }
+
+    public void btnBackOnAction(ActionEvent actionEvent) {
+        Stage stage=(Stage) adminpane.getScene().getWindow();
+        try {
+            stage.setScene(new Scene(FXMLLoader.load(getClass().getResource("/view/adminDashboardForm.fxml"))));
+        } catch (IOException e) {
+            throw new RuntimeException(e);
+        }
+        stage.show();
+        ((Stage) adminpane.getScene().getWindow()).close();
+    }
+
 }

@@ -1,26 +1,51 @@
 
-	java:S112d"FDefine and throw a dedicated exception instead of using a generic one.(Ò‚Òéüÿÿÿÿ8Êà¦Ü„2J$ae33a753-745b-4647-a36a-d03cd7cb02a4
-	java:S112x"FDefine and throw a dedicated exception instead of using a generic one.(Ò‚Òéüÿÿÿÿ8…ªÜ„2J$785b0fec-96f4-4efd-ae7a-b02c0f000868
-	java:S112"FDefine and throw a dedicated exception instead of using a generic one.(Ò‚Òéüÿÿÿÿ8Ô˜ßÜ„2J$6729cbc7-135c-4166-9cc8-99ce0066ff57
-
-java:S1192F"FDefine a constant instead of duplicating this literal "Error" 3 times.(ü¹ñÍüÿÿÿÿ8Šøàİ„2J$98930a7c-4ff2-4823-9040-13dfab10a44a
+	java:S112ë"FDefine and throw a dedicated exception instead of using a generic one.(Ò‚Òéüÿÿÿÿ8…şéî„2J$16128335-b219-4ea1-8516-1dbe37a91845
+	java:S112õ"FDefine and throw a dedicated exception instead of using a generic one.(Ò‚Òéüÿÿÿÿ8…şéî„2J$f3dc46c9-a3f5-4f0c-b3ac-3984d9456704
+	java:S112ÿ"FDefine and throw a dedicated exception instead of using a generic one.(Ò‚Òéüÿÿÿÿ8…şéî„2J$920234a7-396c-4d31-87c2-44a5b237b441
+	java:S112‰"FDefine and throw a dedicated exception instead of using a generic one.(Ò‚Òéüÿÿÿÿ8…şéî„2J$ee2c9cbc-6452-47cd-9495-c38780118027
+	java:S112”"FDefine and throw a dedicated exception instead of using a generic one.(Ò‚Òéüÿÿÿÿ8†şéî„2J$d650edf8-571f-4d02-94b6-7734121e80eb
+	java:S112"FDefine and throw a dedicated exception instead of using a generic one.(Ò‚Òéüÿÿÿÿ8†şéî„2J$b03abb9c-36e5-4a01-b6e4-e3face72696b
+
+java:S1192S"HDefine a constant instead of duplicating this literal "Success" 4 times.(°›ø§ûÿÿÿÿ8‡şéî„2J$b62e2c5b-33b6-4bc9-896f-6f9f9232d15d
+æ
+java:S11925"¢Define a constant instead of duplicating this literal "D:\\Documents\\Career\\My Projects\\Clothify Store POS JavaFX\\clothify-store-pos-javafx\\reports" 4 times.(ó’¯À8ˆşéî„2J$b6684ddb-3557-495c-b5d1-c73a96c41feb
+
+java:S1192N"GDefine a constant instead of duplicating this literal "Error" 12 times.(ü¹ñÍüÿÿÿÿ8ˆşéî„2J$4989751f-0c08-4b08-97e4-ca104acd6f45
+—
+java:S1192B"ODefine a constant instead of duplicating this literal "Clothify Store" 4 times.(Òü†³ûÿÿÿÿ8ˆşéî„2J$7c820094-f118-4d81-b452-4ffbfa81db7c
+¢
+java:S1192N"ZDefine a constant instead of duplicating this literal "Unsupported Report Format" 4 times.(ü¹ñÍüÿÿÿÿ8ˆşéî„2J$6b28e11c-1a90-43db-b132-a90d3187a06f
+“
+java:S1192B"KDefine a constant instead of duplicating this literal "Created By" 4 times.(Òü†³ûÿÿÿÿ8ˆşéî„2J$85459fdb-2e53-4562-ba6d-ec3531b83edb
 
-java:S1104"UMake adminpane a static final constant or non-public and provide accessors if needed.(ˆ×£ÿÿÿÿÿ8Íà¦Ü„2J$f0d0b5d2-1797-4c6b-93e5-899b0c7e5c5b
+java:S1104""UMake adminpane a static final constant or non-public and provide accessors if needed.(ˆ×£ÿÿÿÿÿ8Šşéî„2J$b043d520-6e06-48fa-b74e-b58af4bcdc4a
 ˜
-java:S1104"UMake lblUserId a static final constant or non-public and provide accessors if needed.(«†´±8Íà¦Ü„2J$50d467ff-745f-47cb-9921-e903bc50dee0
+java:S1104#"UMake lblUserId a static final constant or non-public and provide accessors if needed.(«†´±8‹şéî„2J$cefdd627-c790-4ef8-bc26-06cd6aa27766
 š
-java:S1104"WMake lblUserType a static final constant or non-public and provide accessors if needed.(Œø±8Íà¦Ü„2J$403bacba-87d3-4228-8740-7f93d6e8189a
-Ä
-java:S1186h"€Add a nested comment explaining why this method is empty, throw an UnsupportedOperationException or complete the implementation.(ò÷³Ù8€•áÜ„2J$04690a6c-2509-46f6-9607-1d005dee1a53
-É
-java:S1186k"€Add a nested comment explaining why this method is empty, throw an UnsupportedOperationException or complete the implementation.(ï«¡«ÿÿÿÿÿ8•áÜ„2J$806c8ab5-7874-4f1f-bb38-8621afcf7e01
-É
-java:S1186n"€Add a nested comment explaining why this method is empty, throw an UnsupportedOperationException or complete the implementation.(ÚÃ¾úÿÿÿÿ8•áÜ„2J$3cd41a31-d648-48d2-bab5-ec6fdb6b6d98
+java:S1104$"WMake lblUserType a static final constant or non-public and provide accessors if needed.(Œø±8‹şéî„2J$10630e7e-d484-4dfe-a33e-c0825c7b866b
 „
-java:S1075-"ARefactor your code to get this URI from a customizable parameter.(ó’¯À8åúàİ„2J$228bb69c-9910-4b9f-b816-be0df24573e2
+java:S10755"ARefactor your code to get this URI from a customizable parameter.(ó’¯À8áşéî„2J$a3b40a36-88d9-4e62-917e-b6b8622198ab
 ƒ
-java:S10752"ARefactor your code to get this URI from a customizable parameter.(°¸ë^8‚ûàİ„2J$8cfdaeee-279b-405a-a595-18f095320c2b
-u
-java:S1172^"2Remove this unused method parameter "actionEvent".(Ã¦¿ó8¨•áÜ„2J$36fc94c4-24c7-41b5-969e-69b3508f700b
-z
-java:S1172q"2Remove this unused method parameter "actionEvent".(†ùàıÿÿÿÿ8¯•áÜ„2J$7c21f8de-5c7a-4e90-b0af-6e8c88fb6621
+java:S1075:"ARefactor your code to get this URI from a customizable parameter.(°¸ë^8ãşéî„2J$4044b305-546e-446b-92a5-6e0f90d44a44
+„
+java:S1075_"ARefactor your code to get this URI from a customizable parameter.(ó’¯À8éşéî„2J$96bb5be3-3313-4dbe-8e8a-ae3b1aa44932
+ƒ
+java:S1075d"ARefactor your code to get this URI from a customizable parameter.(¢ŸøA8êşéî„2J$2e421b58-2ef9-4dc4-afd4-7edc7b15057f
+…
+java:S1075‰"ARefactor your code to get this URI from a customizable parameter.(ó’¯À8îşéî„2J$96a9c0a0-93dd-485c-988e-8b64c6a4bde3
+Š
+java:S1075"ARefactor your code to get this URI from a customizable parameter.(ä‹²¿ùÿÿÿÿ8ïşéî„2J$68289426-9f45-4666-a61d-702903179daf
+…
+java:S1075³"ARefactor your code to get this URI from a customizable parameter.(ó’¯À8óşéî„2J$6e3a5b89-ded4-405b-aaea-835aaa7ef496
+Š
+java:S1075¸"ARefactor your code to get this URI from a customizable parameter.(éı¸¼ùÿÿÿÿ8öşéî„2J$8bb6b901-d1ab-4d9c-a7b2-b3b7f6fb4594
+v
+java:S1172å"2Remove this unused method parameter "actionEvent".(Ã¦¿ó8ışéî„2J$56d48e76-2216-41dd-9135-403fb49674fa
+v
+java:S1172ï"2Remove this unused method parameter "actionEvent".(ò÷³Ù8€ÿéî„2J$797b71bb-8895-4a96-b7e7-f12358a9276b
+{
+java:S1172ù"2Remove this unused method parameter "actionEvent".(ï«¡«ÿÿÿÿÿ8ƒÿéî„2J$0ee21e05-7c87-4046-98df-d9ce06e77d7c
+{
+java:S1172ƒ"2Remove this unused method parameter "actionEvent".(ÚÃ¾úÿÿÿÿ8…ÿéî„2J$a7f0ae13-6a60-4a07-87c0-156a22f6e3ba
+{
+java:S1172"2Remove this unused method parameter "actionEvent".(†ùàıÿÿÿÿ8ˆÿéî„2J$0aa45268-0535-42b1-b19c-98da0cad001f

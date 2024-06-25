@@ -25,41 +25,41 @@
                 <Image url="@../../../../assets/Logo.jpg" />
             </image>
         </ImageView>
-        <Rectangle arcHeight="50.0" arcWidth="50.0" fill="#ffffff36" height="452.0" layoutX="39.0" layoutY="87.0" stroke="WHITE" strokeType="INSIDE" width="656.0" />
-        <Label layoutX="298.0" layoutY="105.0" text="User Registration" textFill="WHITE">
+        <Rectangle arcHeight="50.0" arcWidth="50.0" fill="#ffffff36" height="433.0" layoutX="39.0" layoutY="97.0" stroke="WHITE" strokeType="INSIDE" width="656.0" />
+        <Label layoutX="298.0" layoutY="120.0" text="User Registration" textFill="WHITE">
             <font>
                 <Font name="Segoe UI" size="20.0" />
             </font>
         </Label>
-        <JFXTextField fx:id="txtUid" focusColor="WHITE" layoutX="116.0" layoutY="159.0" prefHeight="25.0" prefWidth="349.0" style="-fx-background-color: ffffff;" unFocusColor="WHITE" />
-        <JFXTextField fx:id="txtFname" focusColor="WHITE" layoutX="117.0" layoutY="248.0" prefHeight="23.0" prefWidth="238.0" promptText="First Name" style="-fx-background-color: ffffff;" unFocusColor="WHITE">
+        <JFXTextField fx:id="txtUid" focusColor="WHITE" layoutX="116.0" layoutY="174.0" prefHeight="25.0" prefWidth="349.0" style="-fx-background-color: ffffff;" unFocusColor="WHITE" />
+        <JFXTextField fx:id="txtFname" focusColor="WHITE" layoutX="117.0" layoutY="263.0" prefHeight="23.0" prefWidth="238.0" promptText="First Name" style="-fx-background-color: ffffff;" unFocusColor="WHITE">
          <font>
             <Font name="Segoe UI Bold" size="12.0" />
          </font></JFXTextField>
-        <JFXTextField fx:id="txtLname" focusColor="WHITE" layoutX="377.0" layoutY="248.0" prefHeight="23.0" prefWidth="238.0" promptText="Last Name" style="-fx-background-color: ffffff;" unFocusColor="WHITE">
+        <JFXTextField fx:id="txtLname" focusColor="WHITE" layoutX="377.0" layoutY="263.0" prefHeight="23.0" prefWidth="238.0" promptText="Last Name" style="-fx-background-color: ffffff;" unFocusColor="WHITE">
          <font>
             <Font name="Segoe UI Bold" size="12.0" />
          </font></JFXTextField>
-        <JFXComboBox fx:id="cbxUserType" focusColor="WHITE" layoutX="117.0" layoutY="199.0" prefHeight="25.0" prefWidth="500.0" promptText="User Type" style="-fx-background-color: #ffffff;" unFocusColor="WHITE" />
-        <JFXTextField fx:id="txtAddress" focusColor="WHITE" layoutX="119.0" layoutY="334.0" prefHeight="23.0" prefWidth="494.0" promptText="Address" style="-fx-background-color: ffffff;" unFocusColor="WHITE">
+        <JFXComboBox fx:id="cbxUserType" focusColor="WHITE" layoutX="117.0" layoutY="214.0" prefHeight="25.0" prefWidth="500.0" promptText="User Type" style="-fx-background-color: #ffffff;" unFocusColor="WHITE" />
+        <JFXTextField fx:id="txtAddress" focusColor="WHITE" layoutX="119.0" layoutY="349.0" prefHeight="23.0" prefWidth="494.0" promptText="Address" style="-fx-background-color: ffffff;" unFocusColor="WHITE">
          <font>
             <Font name="Segoe UI Bold" size="12.0" />
          </font></JFXTextField>
-        <JFXTextField fx:id="txtContactNo" focusColor="WHITE" layoutX="119.0" layoutY="370.0" prefHeight="25.0" prefWidth="238.0" promptText="Contact Number" style="-fx-background-color: ffffff;" unFocusColor="WHITE">
+        <JFXTextField fx:id="txtContactNo" focusColor="WHITE" layoutX="119.0" layoutY="385.0" prefHeight="25.0" prefWidth="238.0" promptText="Contact Number" style="-fx-background-color: ffffff;" unFocusColor="WHITE">
          <font>
             <Font name="Segoe UI Bold" size="12.0" />
          </font></JFXTextField>
-        <JFXTextField fx:id="txtEmail" focusColor="WHITE" layoutX="375.0" layoutY="371.0" prefHeight="23.0" prefWidth="238.0" promptText="Email" style="-fx-background-color: ffffff;" unFocusColor="WHITE">
+        <JFXTextField fx:id="txtEmail" focusColor="WHITE" layoutX="375.0" layoutY="386.0" prefHeight="23.0" prefWidth="238.0" promptText="Email" style="-fx-background-color: ffffff;" unFocusColor="WHITE">
          <font>
             <Font name="Segoe UI Bold" size="12.0" />
          </font></JFXTextField>
-        <Label layoutX="119.0" layoutY="139.0" prefHeight="17.0" prefWidth="49.0" text="User ID" textFill="WHITE">
+        <Label layoutX="119.0" layoutY="154.0" prefHeight="17.0" prefWidth="49.0" text="User ID" textFill="WHITE">
          <font>
             <Font name="Segoe UI Bold" size="12.0" />
          </font></Label>
-        <JFXComboBox fx:id="cbxGender" focusColor="WHITE" layoutX="117.0" layoutY="289.0" prefHeight="15.0" prefWidth="238.0" promptText="Gender" style="-fx-background-color: #ffffff;" unFocusColor="WHITE" />
-        <DatePicker fx:id="DtpDob" layoutX="376.0" layoutY="289.0" prefHeight="25.0" prefWidth="238.0" promptText="Date of Birth" />
-        <JFXButton layoutX="216.0" layoutY="463.0" onAction="#btnUpdateOnAction" prefHeight="30.0" prefWidth="144.0" style="-fx-background-color: #000000;" text="Update" textFill="WHITE">
+        <JFXComboBox fx:id="cbxGender" focusColor="WHITE" layoutX="117.0" layoutY="304.0" prefHeight="15.0" prefWidth="238.0" promptText="Gender" style="-fx-background-color: #ffffff;" unFocusColor="WHITE" />
+        <DatePicker fx:id="DtpDob" layoutX="376.0" layoutY="304.0" prefHeight="25.0" prefWidth="238.0" promptText="Date of Birth" />
+        <JFXButton layoutX="216.0" layoutY="478.0" onAction="#btnUpdateOnAction" prefHeight="30.0" prefWidth="144.0" style="-fx-background-color: #000000;" text="Update" textFill="WHITE">
          <font>
             <Font name="Segoe UI Bold" size="12.0" />
          </font></JFXButton>
@@ -73,42 +73,32 @@
             <Font name="Segoe UI" size="16.0" />
          </font>
       </Label>
-      <Label layoutX="283.0" layoutY="508.0" text="Do you want to signout?" textFill="WHITE">
-         <font>
-            <Font name="Segoe UI" size="12.0" />
-         </font>
-      </Label>
-      <Label layoutX="416.0" layoutY="508.0" onMouseClicked="#lblLoginFormNavOnAction" text="Signout" textFill="WHITE" underline="true">
-         <font>
-            <Font name="Segoe UI Bold" size="12.0" />
-         </font>
-      </Label>
-      <JFXPasswordField fx:id="txtPw" focusColor="BLACK" layoutX="119.0" layoutY="412.0" prefHeight="25.0" prefWidth="238.0" promptText="Password" style="-fx-background-color: #ffffff;" unFocusColor="WHITE">
+      <JFXPasswordField fx:id="txtPw" focusColor="BLACK" layoutX="119.0" layoutY="427.0" prefHeight="25.0" prefWidth="238.0" promptText="Password" style="-fx-background-color: #ffffff;" unFocusColor="WHITE">
          <font>
             <Font name="Segoe UI Bold" size="12.0" />
          </font>
       </JFXPasswordField>
-      <JFXPasswordField fx:id="txtPwConfirm" focusColor="BLACK" layoutX="374.0" layoutY="412.0" prefHeight="25.0" prefWidth="238.0" promptText="Confirm Password" style="-fx-background-color: #ffffff;" unFocusColor="WHITE">
+      <JFXPasswordField fx:id="txtPwConfirm" focusColor="BLACK" layoutX="374.0" layoutY="427.0" prefHeight="25.0" prefWidth="238.0" promptText="Confirm Password" style="-fx-background-color: #ffffff;" unFocusColor="WHITE">
          <font>
             <Font name="Segoe UI Bold" size="12.0" />
          </font>
       </JFXPasswordField>
-      <JFXButton layoutX="470.0" layoutY="157.0" onAction="#btnSearchOnAction" prefHeight="30.0" prefWidth="144.0" style="-fx-background-color: #000000;" text="Search" textFill="WHITE">
+      <JFXButton layoutX="470.0" layoutY="172.0" onAction="#btnSearchOnAction" prefHeight="30.0" prefWidth="144.0" style="-fx-background-color: #000000;" text="Search" textFill="WHITE">
          <font>
             <Font name="Segoe UI Bold" size="12.0" />
          </font>
       </JFXButton>
-      <JFXButton layoutX="58.0" layoutY="463.0" onAction="#btnRegisterOnAction" prefHeight="30.0" prefWidth="144.0" style="-fx-background-color: #000000;" text="Register" textFill="WHITE">
+      <JFXButton layoutX="58.0" layoutY="478.0" onAction="#btnRegisterOnAction" prefHeight="30.0" prefWidth="144.0" style="-fx-background-color: #000000;" text="Register" textFill="WHITE">
          <font>
             <Font name="Segoe UI Bold" size="12.0" />
          </font>
       </JFXButton>
-      <JFXButton layoutX="374.0" layoutY="463.0" onAction="#btnRemoveOnAction" prefHeight="30.0" prefWidth="144.0" style="-fx-background-color: #000000;" text="Remove" textFill="WHITE">
+      <JFXButton layoutX="374.0" layoutY="478.0" onAction="#btnRemoveOnAction" prefHeight="30.0" prefWidth="144.0" style="-fx-background-color: #000000;" text="Remove" textFill="WHITE">
          <font>
             <Font name="Segoe UI Bold" size="12.0" />
          </font>
       </JFXButton>
-      <JFXButton layoutX="532.0" layoutY="463.0" onAction="#btnBackOnAction" prefHeight="30.0" prefWidth="144.0" style="-fx-background-color: #000000;" text="Back" textFill="WHITE">
+      <JFXButton layoutX="532.0" layoutY="478.0" onAction="#btnBackOnAction" prefHeight="30.0" prefWidth="144.0" style="-fx-background-color: #000000;" text="Back" textFill="WHITE">
          <font>
             <Font name="Segoe UI Bold" size="12.0" />
          </font>

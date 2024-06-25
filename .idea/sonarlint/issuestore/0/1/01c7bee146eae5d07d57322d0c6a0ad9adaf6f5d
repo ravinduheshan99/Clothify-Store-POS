@@ -1,58 +1,57 @@
 
-	java:S112m"FDefine and throw a dedicated exception instead of using a generic one.(¯åÕøÿÿÿÿ8À‹šƒ„2J$3733947f-31d3-4aa3-babd-c3f4b3f9368e
-	java:S112œ"FDefine and throw a dedicated exception instead of using a generic one.(Ò‚Òéüÿÿÿÿ8À‹šƒ„2J$c897e7a5-fbdc-4fc9-8eaa-700264aababd
-	java:S112²"FDefine and throw a dedicated exception instead of using a generic one.(Ò‚Òéüÿÿÿÿ8À‹šƒ„2J$8139fdc8-0db8-4972-8e9f-e2d1e6aefab9
+	java:S112n"FDefine and throw a dedicated exception instead of using a generic one.(¯åÕøÿÿÿÿ8À‹šƒ„2J$4420691a-ef90-4fc9-adef-8c0c002a9be3
+	java:S112Ö"FDefine and throw a dedicated exception instead of using a generic one.(Ò‚Òéüÿÿÿÿ8À‹šƒ„2J$4ccc927e-ff7c-4e5c-8fd3-cc4d770e1cff
 w
-java:S3740'"/Provide the parametrized type for this generic.(èÖğ£üÿÿÿÿ8Â‹šƒ„2J$e3b22e5f-cefe-4995-a26d-28caa202a205
+java:S3740'"/Provide the parametrized type for this generic.(èÖğ£üÿÿÿÿ8Â‹šƒ„2J$6af247be-943e-4f95-8364-382e7294d5e4
 r
-java:S3740+"/Provide the parametrized type for this generic.(•Œ¯©8Â‹šƒ„2J$1bd726b5-4939-4aa2-a7d5-b8770854cd05
+java:S3740+"/Provide the parametrized type for this generic.(•Œ¯©8Â‹šƒ„2J$bca0d420-1265-4581-a0b4-dd8982f74452
 ¢
-java:S1192“"YDefine a constant instead of duplicating this literal "Operation Unsuccessfull!" 3 times.(¢š™ıÿÿÿÿ8Ûö¾ƒ„2J$c7760100-bc3c-4197-9476-5d0a75f6bb6f
+java:S1192—"YDefine a constant instead of duplicating this literal "Operation Unsuccessfull!" 3 times.(¢š™ıÿÿÿÿ8³ÿàì„2J$54d2d7e7-6e31-4aa6-a145-19a29a3afcd2
 š
-java:S1104$"RMake txtUid a static final constant or non-public and provide accessors if needed.(¤¸¡šüÿÿÿÿ8Ã‹šƒ„2J$7f33d227-987c-4e76-b0a8-4a73cc2c5a0b
+java:S1104$"RMake txtUid a static final constant or non-public and provide accessors if needed.(¤¸¡šüÿÿÿÿ8Ã‹šƒ„2J$64cc3b80-5c65-4eed-8414-89eb05f3cd78
 œ
-java:S1104%"TMake txtFname a static final constant or non-public and provide accessors if needed.(à³Ä›úÿÿÿÿ8Ã‹šƒ„2J$d65251ed-8083-4f07-985d-7c4b4668c611
+java:S1104%"TMake txtFname a static final constant or non-public and provide accessors if needed.(à³Ä›úÿÿÿÿ8Ã‹šƒ„2J$6b4cc345-95b7-4f3e-9b25-7dd1dc266760
 œ
-java:S1104&"TMake txtLname a static final constant or non-public and provide accessors if needed.(®ªŸùÿÿÿÿ8Ã‹šƒ„2J$55fba833-c239-4777-940b-62988d7406f6
+java:S1104&"TMake txtLname a static final constant or non-public and provide accessors if needed.(®ªŸùÿÿÿÿ8Ã‹šƒ„2J$7b5cb310-842b-4d03-80ce-3254bf0f7f70
 Ÿ
-java:S1104'"WMake cbxUserType a static final constant or non-public and provide accessors if needed.(èÖğ£üÿÿÿÿ8Ã‹šƒ„2J$4d736f41-5d86-402c-b639-e50f71fc247e
+java:S1104'"WMake cbxUserType a static final constant or non-public and provide accessors if needed.(èÖğ£üÿÿÿÿ8Ã‹šƒ„2J$e7cb05c1-7f2c-495c-a8e0-26f30dbc27af
 
-java:S1104("VMake txtAddress a static final constant or non-public and provide accessors if needed.(©ûîùıÿÿÿÿ8Ã‹šƒ„2J$aa329ad7-1bb2-4d20-bb68-cc825532998f
+java:S1104("VMake txtAddress a static final constant or non-public and provide accessors if needed.(©ûîùıÿÿÿÿ8Ã‹šƒ„2J$b7e50c4b-aef1-4e7d-8fcc-7322e654face
  
-java:S1104)"XMake txtContactNo a static final constant or non-public and provide accessors if needed.(¤«Î£ıÿÿÿÿ8Ã‹šƒ„2J$c156e20c-cc55-4f63-a840-fc0c99bd216d
+java:S1104)"XMake txtContactNo a static final constant or non-public and provide accessors if needed.(¤«Î£ıÿÿÿÿ8Ã‹šƒ„2J$13c3058e-c60e-4f69-8bf6-a6faff1fb902
 œ
-java:S1104*"TMake txtEmail a static final constant or non-public and provide accessors if needed.(Ø¦½üÿÿÿÿ8Ã‹šƒ„2J$04b52768-91c0-43fc-84c8-4c132694831c
+java:S1104*"TMake txtEmail a static final constant or non-public and provide accessors if needed.(Ø¦½üÿÿÿÿ8Ã‹šƒ„2J$08016a21-c029-456b-862e-c321a472d9fe
 ˜
-java:S1104+"UMake cbxGender a static final constant or non-public and provide accessors if needed.(•Œ¯©8Ã‹šƒ„2J$b251bbfe-e70b-4329-abc1-191bd44c7d22
+java:S1104+"UMake cbxGender a static final constant or non-public and provide accessors if needed.(•Œ¯©8Ã‹šƒ„2J$98a32371-e095-47e3-84d9-3719216cb710
 •
-java:S1104,"RMake DtpDob a static final constant or non-public and provide accessors if needed.(¾–¦’8Ä‹šƒ„2J$4d2a54f2-144e-48f8-b0b2-2f6751731173
+java:S1104,"RMake DtpDob a static final constant or non-public and provide accessors if needed.(¾–¦’8Ä‹šƒ„2J$053f1a70-2c15-412f-9f27-0cc9f98fdb24
 
-java:S1104-"UMake adminpane a static final constant or non-public and provide accessors if needed.(ˆ×£ÿÿÿÿÿ8Ä‹šƒ„2J$ae64f483-a272-41a5-bdac-ec688571fa70
+java:S1104-"UMake adminpane a static final constant or non-public and provide accessors if needed.(ˆ×£ÿÿÿÿÿ8Ä‹šƒ„2J$55d5b9cb-0f40-409f-9597-8995e77d92c1
 ˜
-java:S1104."UMake lblUserId a static final constant or non-public and provide accessors if needed.(«†´±8Ä‹šƒ„2J$32529237-2cf2-42fa-9ccc-2f991c2bc2fd
+java:S1104."UMake lblUserId a static final constant or non-public and provide accessors if needed.(«†´±8Ä‹šƒ„2J$5a550cc1-b5f6-49bb-9c67-efbe8d29a8a3
 š
-java:S1104/"WMake lblUserType a static final constant or non-public and provide accessors if needed.(Œø±8Ä‹šƒ„2J$cc38734e-459d-40a3-be84-dbee18e4f136
+java:S1104/"WMake lblUserType a static final constant or non-public and provide accessors if needed.(Œø±8Ä‹šƒ„2J$05104d00-fcab-44d7-a140-e8d71557bf12
 ™
-java:S11040"QMake txtPw a static final constant or non-public and provide accessors if needed.(óºñêıÿÿÿÿ8Ä‹šƒ„2J$9450d4e4-1547-4eb4-8d90-5dbd208342ad
+java:S11040"QMake txtPw a static final constant or non-public and provide accessors if needed.(óºñêıÿÿÿÿ8Ä‹šƒ„2J$657f0ae9-b8f7-437d-b500-a4649431bb52
  
-java:S11041"XMake txtPwConfirm a static final constant or non-public and provide accessors if needed.(ãóî•üÿÿÿÿ8Ä‹šƒ„2J$a5586b62-120d-495c-b616-c844f539481b
+java:S11041"XMake txtPwConfirm a static final constant or non-public and provide accessors if needed.(ãóî•üÿÿÿÿ8Ä‹šƒ„2J$93f15fb9-88b4-49a4-8fc8-33208851cd80
 
-java:S2095P"GUse try-with-resources or close this "Statement" in a "finally" clause.(é°Áµşÿÿÿÿ8´Œšƒ„2J$6557a142-9edc-47fc-886d-f76b71a4fcf9
+java:S2095\"GUse try-with-resources or close this "Statement" in a "finally" clause.(ããûÎıÿÿÿÿ8´Œšƒ„2J$a1ed8dde-962f-4989-be82-cce99be56699
 
-java:S2095["GUse try-with-resources or close this "Statement" in a "finally" clause.(ããûÎıÿÿÿÿ8´Œšƒ„2J$17dca156-88ce-47a1-9a47-fc2f8123533f
-“	java:S116,"QRename this field "DtpDob" to match the regular expression '^[a-z][a-zA-Z0-9]*$'.(¾–¦’8¶Œšƒ„2J$4ab24ae7-3dfb-4af3-a7c4-53cd9184a64e
-m	java:S106U"+Replace this use of System.out by a logger.(ŠÔö·8ÂŒšƒ„2J$0d2b5da6-92d1-4bf1-ab33-4e8d5926978b
+java:S2095Q"GUse try-with-resources or close this "Statement" in a "finally" clause.(é°Áµşÿÿÿÿ8´Œšƒ„2J$ac81cfbc-84d7-4ddd-bf2e-6f8e8593169d
+“	java:S116,"QRename this field "DtpDob" to match the regular expression '^[a-z][a-zA-Z0-9]*$'.(¾–¦’8¶Œšƒ„2J$76b85a12-f57e-4a89-9225-c0dfc8666341
+m	java:S106V"+Replace this use of System.out by a logger.(ŠÔö·8ÂŒšƒ„2J$e8bf1c6d-d63c-4cf4-a9d0-a57c6eb13958
 {
-java:S1172"2Remove this unused method parameter "actionEvent".(Úó¥üøÿÿÿÿ8ËŒšƒ„2J$c9b7d094-dd8e-46b1-9600-57ecb0cfb047
-u
-java:S1172—"1Remove this unused method parameter "mouseEvent".(–›Æı8ÑŒšƒ„2J$df5dd29f-4e27-4d05-beaa-96df4a979d96
+java:S1172„"2Remove this unused method parameter "actionEvent".(Úó¥üøÿÿÿÿ8ËŒšƒ„2J$625eda9c-b722-415e-8a13-6b2dd23c0b0f
+{
+java:S1172›"2Remove this unused method parameter "actionEvent".(¿˜å•øÿÿÿÿ8úÕàì„2J$5e6c53c0-d764-48a4-ba9c-3d927de1d339
 v
-java:S1172¢"2Remove this unused method parameter "actionEvent".(¶ú‡ó8ÚŒšƒ„2J$4a919664-70da-4223-a3e6-d1c019ea190e
-{
-java:S1172­"2Remove this unused method parameter "actionEvent".(†ùàıÿÿÿÿ8ŞŒšƒ„2J$87e321aa-9d60-45e7-b1c6-e639e9ed76c4
+java:S1172³"2Remove this unused method parameter "actionEvent".(áÄ´ü8Ô€áì„2J$677c5420-c5aa-43fc-b160-587120454b9c
 v
-java:S1172¸"2Remove this unused method parameter "actionEvent".(áÄ´ü8ãŒšƒ„2J$d7902e1e-7e4b-4e39-b3fb-3f92f728d814
+java:S1172Ä"2Remove this unused method parameter "actionEvent".(¶ú‡ó8Ù€áì„2J$1dcb7e4a-e237-458a-8502-a0c147977248
 {
-java:S1172É"2Remove this unused method parameter "actionEvent".(¿˜å•øÿÿÿÿ8Ùù¾ƒ„2J$8b71c181-447e-4f3f-bc9f-085eb78b2e54
-^
-java:S1128	"<Remove this unused import 'edu.icet.coursework.dto.Product'.( ²‡™ıÿÿÿÿ8¢ŞÃ«„2
+java:S1172Ñ"2Remove this unused method parameter "actionEvent".(†ùàıÿÿÿÿ8Ü€áì„2J$535469ea-d6b2-48e5-bec8-51c2a7d5ec75
+„
+java:S1128	"<Remove this unused import 'edu.icet.coursework.dto.Product'.( ²‡™ıÿÿÿÿ8¢ŞÃ«„2J$7a83c9c0-7a46-42d2-9339-de5ffbe4f3d8
+‚
+java:S1128":Remove this unused import 'javafx.scene.input.MouseEvent'.(˜¬‹æÿÿÿÿÿ8½ÛÜì„2J$0597f71c-1369-4fb0-89ed-03c5f21b2f2f

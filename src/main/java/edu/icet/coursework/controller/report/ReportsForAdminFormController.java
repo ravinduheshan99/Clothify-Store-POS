@@ -1,9 +1,14 @@
 package edu.icet.coursework.controller.report;
 
 import edu.icet.coursework.bo.BoFactory;
+import edu.icet.coursework.bo.custom.OrderBo;
 import edu.icet.coursework.bo.custom.ProductBo;
+import edu.icet.coursework.bo.custom.SupplierBo;
+import edu.icet.coursework.bo.custom.UserBo;
 import edu.icet.coursework.controller.user.UserSession;
+import edu.icet.coursework.dto.Order;
 import edu.icet.coursework.dto.Product;
+import edu.icet.coursework.dto.Supplier;
 import edu.icet.coursework.dto.User;
 import edu.icet.coursework.util.BoType;
 import javafx.event.ActionEvent;
@@ -39,6 +44,9 @@ public class ReportsForAdminFormController implements Initializable {
 
 
     ProductBo productBoImpl = BoFactory.getInstance().getBo(BoType.PRODUCT);
+    SupplierBo supplierBoImpl = BoFactory.getInstance().getBo(BoType.SUPPLIER);
+    OrderBo orderBoImpl = BoFactory.getInstance().getBo(BoType.ORDER);
+    UserBo userBoImpl = BoFactory.getInstance().getBo(BoType.USER);
 
 
     public boolean exportInventoryReport(String reportFormat) {
@@ -83,6 +91,133 @@ public class ReportsForAdminFormController implements Initializable {
         }
     }
 
+    private boolean exportSupplierReport(String reportFormat) {
+        String path = "D:\\Documents\\Career\\My Projects\\Clothify Store POS JavaFX\\clothify-store-pos-javafx\\reports";
+        List<Supplier> suppliers = supplierBoImpl.searchAllSuppliers();
+
+        try {
+            // Load JRXML file
+            File file = new File("D:\\Documents\\Career\\My Projects\\Clothify Store POS JavaFX\\clothify-store-pos-javafx\\src\\main\\resources\\view\\supplierReport.jrxml");
+            JasperReport jasperReport = JasperCompileManager.compileReport(file.getAbsolutePath());
+
+            // Create data source
+            JRBeanCollectionDataSource dataSource = new JRBeanCollectionDataSource(suppliers);
+
+            // Set parameters
+            Map<String, Object> parameters = new HashMap<>();
+            parameters.put("Created By", "Clothify Store");
+
+            // Fill report
+            JasperPrint jasperPrint = JasperFillManager.fillReport(jasperReport, parameters, dataSource);
+
+            // Export report based on format
+            if ("html".equalsIgnoreCase(reportFormat)) {
+                JasperExportManager.exportReportToHtmlFile(jasperPrint, path + "\\SupplierReport.html");
+            } else if ("pdf".equalsIgnoreCase(reportFormat)) {
+                JasperExportManager.exportReportToPdfFile(jasperPrint, path + "\\SupplierReport.pdf");
+            } else {
+                // Invalid format
+                showAlert("Error", "Unsupported Report Format", Alert.AlertType.ERROR);
+                return false;
+            }
+
+            // Success message
+            showAlert("Success", "Supplier Report Generated Successfully", Alert.AlertType.INFORMATION);
+            return true;
+
+        } catch (JRException e) {
+            // Exception occurred
+            showAlert("Error", "Failed To Generate Supplier Report:\n" + e.getMessage(), Alert.AlertType.ERROR);
+            e.printStackTrace();
+            return false;
+        }
+    }
+
+    private boolean exportSalesReport(String reportFormat) {
+        String path = "D:\\Documents\\Career\\My Projects\\Clothify Store POS JavaFX\\clothify-store-pos-javafx\\reports";
+        List<Order> orders = orderBoImpl.searchAllOrders();
+
+        try {
+            // Load JRXML file
+            File file = new File("D:\\Documents\\Career\\My Projects\\Clothify Store POS JavaFX\\clothify-store-pos-javafx\\src\\main\\resources\\view\\salesReport.jrxml");
+            JasperReport jasperReport = JasperCompileManager.compileReport(file.getAbsolutePath());
+
+            // Create data source
+            JRBeanCollectionDataSource dataSource = new JRBeanCollectionDataSource(orders);
+
+            // Set parameters
+            Map<String, Object> parameters = new HashMap<>();
+            parameters.put("Created By", "Clothify Store");
+
+            // Fill report
+            JasperPrint jasperPrint = JasperFillManager.fillReport(jasperReport, parameters, dataSource);
+
+            // Export report based on format
+            if ("html".equalsIgnoreCase(reportFormat)) {
+                JasperExportManager.exportReportToHtmlFile(jasperPrint, path + "\\SalesReport.html");
+            } else if ("pdf".equalsIgnoreCase(reportFormat)) {
+                JasperExportManager.exportReportToPdfFile(jasperPrint, path + "\\SalesReport.pdf");
+            } else {
+                // Invalid format
+                showAlert("Error", "Unsupported Report Format", Alert.AlertType.ERROR);
+                return false;
+            }
+
+            // Success message
+            showAlert("Success", "Sales Report Generated Successfully", Alert.AlertType.INFORMATION);
+            return true;
+
+        } catch (JRException e) {
+            // Exception occurred
+            showAlert("Error", "Failed To Generate Sales Report:\n" + e.getMessage(), Alert.AlertType.ERROR);
+            e.printStackTrace();
+            return false;
+        }
+    }
+
+    private boolean exportEmployeeReport(String reportFormat) {
+        String path = "D:\\Documents\\Career\\My Projects\\Clothify Store POS JavaFX\\clothify-store-pos-javafx\\reports";
+        List<User> users = userBoImpl.searchUser();
+
+        try {
+            // Load JRXML file
+            File file = new File("D:\\Documents\\Career\\My Projects\\Clothify Store POS JavaFX\\clothify-store-pos-javafx\\src\\main\\resources\\view\\employeeReport.jrxml");
+            JasperReport jasperReport = JasperCompileManager.compileReport(file.getAbsolutePath());
+
+            // Create data source
+            JRBeanCollectionDataSource dataSource = new JRBeanCollectionDataSource(users);
+
+            // Set parameters
+            Map<String, Object> parameters = new HashMap<>();
+            parameters.put("Created By", "Clothify Store");
+
+            // Fill report
+            JasperPrint jasperPrint = JasperFillManager.fillReport(jasperReport, parameters, dataSource);
+
+            // Export report based on format
+            if ("html".equalsIgnoreCase(reportFormat)) {
+                JasperExportManager.exportReportToHtmlFile(jasperPrint, path + "\\EmployeeReport.html");
+            } else if ("pdf".equalsIgnoreCase(reportFormat)) {
+                JasperExportManager.exportReportToPdfFile(jasperPrint, path + "\\EmployeeReport.pdf");
+            } else {
+                // Invalid format
+                showAlert("Error", "Unsupported Report Format", Alert.AlertType.ERROR);
+                return false;
+            }
+
+            // Success message
+            showAlert("Success", "Employee Report Generated Successfully", Alert.AlertType.INFORMATION);
+            return true;
+
+        } catch (JRException e) {
+            // Exception occurred
+            showAlert("Error", "Failed To Generate Employee Report:\n" + e.getMessage(), Alert.AlertType.ERROR);
+            e.printStackTrace();
+            return false;
+        }
+    }
+
+
     private void showAlert(String title, String message, Alert.AlertType alertType) {
         Alert alert = new Alert(alertType);
         alert.setTitle(title);
@@ -102,12 +237,33 @@ public class ReportsForAdminFormController implements Initializable {
     }
 
     public void btnSupplierReportOnAction(ActionEvent actionEvent) {
+        try {
+            if (!exportSupplierReport("pdf")) {
+                showAlert("Error", "Failed To Generate Supplier Report", Alert.AlertType.ERROR);
+            }
+        } catch (Exception e) {
+            throw new RuntimeException(e);
+        }
     }
 
     public void btnSalesReportOnAction(ActionEvent actionEvent) {
+        try {
+            if (!exportSalesReport("pdf")) {
+                showAlert("Error", "Failed To Generate Sales Report", Alert.AlertType.ERROR);
+            }
+        } catch (Exception e) {
+            throw new RuntimeException(e);
+        }
     }
 
     public void btnEmployeeReportOnAction(ActionEvent actionEvent) {
+        try {
+            if (!exportEmployeeReport("pdf")) {
+                showAlert("Error", "Failed To Generate Employee Report", Alert.AlertType.ERROR);
+            }
+        } catch (Exception e) {
+            throw new RuntimeException(e);
+        }
     }
 
     public void btnBackOnAction(ActionEvent actionEvent) {
