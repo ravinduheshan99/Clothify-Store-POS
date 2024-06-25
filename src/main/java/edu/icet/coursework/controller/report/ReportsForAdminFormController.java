@@ -34,12 +34,14 @@ public class ReportsForAdminFormController implements Initializable {
     public AnchorPane adminpane;
     public Label lblUserId;
     public Label lblUserType;
+    public Label lblUserName;
 
     @Override
     public void initialize(URL url, ResourceBundle resourceBundle) {
         User currentUser = UserSession.getInstance().getCurrentSession();
         lblUserId.setText(currentUser.getUserId());
         lblUserType.setText(currentUser.getUserType());
+        lblUserName.setText(currentUser.getFname());
     }
 
 

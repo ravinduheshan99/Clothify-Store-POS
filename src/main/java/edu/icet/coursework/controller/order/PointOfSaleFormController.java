@@ -31,7 +31,6 @@ import javafx.scene.control.cell.PropertyValueFactory;
 import javafx.scene.layout.AnchorPane;
 import javafx.stage.Stage;
 import javafx.util.Duration;
-
 import java.io.IOException;
 import java.net.URL;
 import java.sql.Connection;
@@ -45,6 +44,7 @@ import java.time.LocalTime;
 import java.util.*;
 import java.util.regex.Matcher;
 import java.util.regex.Pattern;
+
 
 public class PointOfSaleFormController implements Initializable {
     public JFXTextField txtOid;
@@ -68,6 +68,7 @@ public class PointOfSaleFormController implements Initializable {
     public AnchorPane adminpane;
     public Label lblUserId;
     public Label lblUserType;
+    public Label lblUserName;
 
     private ProductBo productBoImpl = BoFactory.getInstance().getBo(BoType.PRODUCT);
     private OrderBo orderBo = BoFactory.getInstance().getBo(BoType.ORDER);
@@ -81,6 +82,7 @@ public class PointOfSaleFormController implements Initializable {
         User currentUser = UserSession.getInstance().getCurrentSession();
         lblUserId.setText(currentUser.getUserId());
         lblUserType.setText(currentUser.getUserType());
+        lblUserName.setText(currentUser.getFname());
 
         colProductId.setCellValueFactory(new PropertyValueFactory<>("productId"));
         colProductName.setCellValueFactory(new PropertyValueFactory<>("productName"));

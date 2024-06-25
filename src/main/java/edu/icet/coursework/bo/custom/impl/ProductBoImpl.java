@@ -9,6 +9,7 @@ import edu.icet.coursework.util.DaoType;
 import javafx.collections.ObservableList;
 import org.modelmapper.ModelMapper;
 
+
 public class ProductBoImpl implements ProductBo {
 
     ProductDao productDaoImpl = DaoFactory.getInstance().getDao(DaoType.PRODUCT);

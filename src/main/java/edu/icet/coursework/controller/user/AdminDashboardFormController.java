@@ -16,17 +16,20 @@ import java.net.URL;
 import java.util.Optional;
 import java.util.ResourceBundle;
 
+
 public class AdminDashboardFormController implements Initializable {
 
     public AnchorPane adminpane;
     public Label lblUserId;
     public Label lblUserType;
+    public Label lblUserName;
 
     @Override
     public void initialize(URL url, ResourceBundle resourceBundle) {
         User currentUser = UserSession.getInstance().getCurrentSession();
         lblUserId.setText(currentUser.getUserId());
         lblUserType.setText(currentUser.getUserType());
+        lblUserName.setText(currentUser.getFname());
     }
 
     public void btnPointOfSaleOnAction(ActionEvent actionEvent) {
@@ -99,4 +102,5 @@ public class AdminDashboardFormController implements Initializable {
             ((Stage) adminpane.getScene().getWindow()).close();
         }
     }
+
 }

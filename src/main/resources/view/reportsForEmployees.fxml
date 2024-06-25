@@ -16,7 +16,7 @@
          </image>
       </ImageView>
       <Rectangle arcHeight="5.0" arcWidth="5.0" height="59.0" stroke="WHITE" strokeType="INSIDE" width="755.0" />
-      <ImageView fitHeight="49.0" fitWidth="50.0" layoutX="694.0" layoutY="5.0" pickOnBounds="true" preserveRatio="true">
+      <ImageView fitHeight="49.0" fitWidth="50.0" layoutX="705.0" layoutY="5.0" pickOnBounds="true" preserveRatio="true">
          <image>
             <Image url="@../../../../assets/Logo.jpg" />
          </image>
@@ -47,12 +47,17 @@
             <Font size="15.0" />
          </font>
       </JFXButton>
-      <Label fx:id="lblUserId" layoutX="594.0" layoutY="20.0" text="U001- " textFill="WHITE">
+      <Label fx:id="lblUserId" layoutX="601.0" layoutY="21.0" text="U001" textFill="WHITE">
          <font>
-            <Font name="Segoe UI" size="16.0" />
+            <Font name="Segoe UI" size="12.0" />
          </font>
       </Label>
-      <Label fx:id="lblUserType" layoutX="640.0" layoutY="20.0" text="Admin" textFill="WHITE">
+      <Label fx:id="lblUserName" layoutX="637.0" layoutY="21.0" text="Username" textFill="WHITE">
+         <font>
+            <Font name="Segoe UI" size="12.0" />
+         </font>
+      </Label>
+      <Label fx:id="lblUserType" layoutX="58.0" layoutY="20.0" text="Admin" textFill="WHITE">
          <font>
             <Font name="Segoe UI" size="16.0" />
          </font>

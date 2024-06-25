@@ -6,14 +6,12 @@ import edu.icet.coursework.dto.Product;
 import edu.icet.coursework.dto.Supplier;
 import edu.icet.coursework.dto.User;
 import edu.icet.coursework.entity.ProductEntity;
-import edu.icet.coursework.entity.SupplierEntity;
 import edu.icet.coursework.util.HibernateUtil;
 import javafx.collections.FXCollections;
 import javafx.collections.ObservableList;
 import org.hibernate.Session;
 import org.hibernate.Transaction;
 import org.modelmapper.ModelMapper;
-
 import java.util.List;
 
 public class ProductDaoImpl implements ProductDao {

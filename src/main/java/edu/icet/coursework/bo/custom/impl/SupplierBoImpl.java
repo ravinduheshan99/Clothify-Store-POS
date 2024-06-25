@@ -9,6 +9,7 @@ import edu.icet.coursework.util.DaoType;
 import javafx.collections.ObservableList;
 import org.modelmapper.ModelMapper;
 
+
 public class SupplierBoImpl implements  SupplierBo{
 
     SupplierDao supplierDao = DaoFactory.getInstance().getDao(DaoType.SUPPLIER);

@@ -107,3 +107,5 @@ r
 Bsrc/main/java/edu/icet/coursework/controller/user/UserSession.java,e\2\e26e69f0bd5cf479f697bd19855499a3b3c927c0
 `
 0src/main/java/edu/icet/coursework/util/Mail.java,5\4\543fca7bad057133f3dc5c266548e5e4e9a5d0e4
+Q
+!src/main/java/AppInitializer.java,d\8\d8724d5ff68b00b1e87def6fac487d03194f989f

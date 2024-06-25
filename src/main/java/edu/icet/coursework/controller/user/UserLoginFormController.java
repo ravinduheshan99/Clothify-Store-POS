@@ -16,13 +16,10 @@ import javafx.scene.control.CheckBox;
 import javafx.scene.input.MouseEvent;
 import javafx.scene.layout.AnchorPane;
 import javafx.stage.Stage;
-
-import javax.naming.Binding;
-import javax.script.Bindings;
 import java.io.IOException;
 import java.net.URL;
-import java.util.Map;
 import java.util.ResourceBundle;
+
 
 public class UserLoginFormController implements Initializable{
 
@@ -47,7 +44,9 @@ public class UserLoginFormController implements Initializable{
         });
     }
 
+
     UserBo userBoImpl = BoFactory.getInstance().getBo(BoType.USER);
+
 
     public void lblForgetPasswordOnAction(MouseEvent mouseEvent) {
         Stage stage=(Stage) adminPane.getScene().getWindow();
@@ -91,6 +90,7 @@ public class UserLoginFormController implements Initializable{
 
         }
     }
+
 
     private void navigateToDashboard(String userType) {
         if (userType.equals("Admin")){

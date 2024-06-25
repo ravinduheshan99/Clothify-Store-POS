@@ -1,22 +1,24 @@
 
-	java:S112&"FDefine and throw a dedicated exception instead of using a generic one.(Ò‚Òéüÿÿÿÿ8‰åÙ£ƒ2J$306dffea-1dd1-40d2-a96f-5f6598fab676
-	java:S1121"FDefine and throw a dedicated exception instead of using a generic one.(Ò‚Òéüÿÿÿÿ8ıøƒ¤ƒ2J$24ee4b74-7710-4ed6-b5e0-b5c1dbf114bb
-	java:S112<"FDefine and throw a dedicated exception instead of using a generic one.(Ò‚Òéüÿÿÿÿ8ÌŠ¤ƒ2J$253b93e1-bef0-4135-aed5-81d2158b856b
-	java:S112G"FDefine and throw a dedicated exception instead of using a generic one.(Ò‚Òéüÿÿÿÿ8²„‹¤ƒ2J$c2c7e57e-ee85-4e05-9ce8-0d4f429256d2
-	java:S112V"FDefine and throw a dedicated exception instead of using a generic one.(Ò‚Òéüÿÿÿÿ8©„àÔ„2J$bb3d8366-f8d8-4761-be8f-7053dba44a03
+	java:S112("FDefine and throw a dedicated exception instead of using a generic one.(Ò‚Òéüÿÿÿÿ8‰åÙ£ƒ2J$f384dd7c-bcb8-453a-8c1b-c87ce39b915c
+	java:S1123"FDefine and throw a dedicated exception instead of using a generic one.(Ò‚Òéüÿÿÿÿ8ıøƒ¤ƒ2J$d7b16ee7-123d-49ad-94ad-c26940ceb4fe
+	java:S112>"FDefine and throw a dedicated exception instead of using a generic one.(Ò‚Òéüÿÿÿÿ8ÌŠ¤ƒ2J$60d60499-9959-4655-b3c6-9475ae894f54
+	java:S112I"FDefine and throw a dedicated exception instead of using a generic one.(Ò‚Òéüÿÿÿÿ8²„‹¤ƒ2J$803cfe11-c992-4ab3-a07a-4f261394edbf
+	java:S112X"FDefine and throw a dedicated exception instead of using a generic one.(Ò‚Òéüÿÿÿÿ8©„àÔ„2J$6b56e5e8-a8a3-4b18-9523-6b357bc31eed
 
-java:S1104"UMake adminpane a static final constant or non-public and provide accessors if needed.(ˆ×£ÿÿÿÿÿ8ŒåÙ£ƒ2J$b7b22007-14cf-4510-b159-745c4ea22500
+java:S1104"UMake adminpane a static final constant or non-public and provide accessors if needed.(ˆ×£ÿÿÿÿÿ8ŒåÙ£ƒ2J$8698155f-2791-42c2-99f9-76d529589360
 ˜
-java:S1104"UMake lblUserId a static final constant or non-public and provide accessors if needed.(«†´±8åÙ£ƒ2J$9a2ad456-cdac-4bf1-ae43-55b029f3cc8c
+java:S1104"UMake lblUserId a static final constant or non-public and provide accessors if needed.(«†´±8åÙ£ƒ2J$40a0ce62-da04-448b-af88-54a3bbb9b10d
 š
-java:S1104"WMake lblUserType a static final constant or non-public and provide accessors if needed.(Œø±8åÙ£ƒ2J$b92503f1-e80a-403b-9f7f-6097b3c243e2
+java:S1104"WMake lblUserType a static final constant or non-public and provide accessors if needed.(Œø±8åÙ£ƒ2J$76d089e0-39a0-4b4e-be53-5b70822738e9
+š
+java:S1104"WMake lblUserName a static final constant or non-public and provide accessors if needed.(¼ä—Ó8·¯ø÷„2J$fb7f79c6-c198-467f-80b1-af9a96fd6e50
 u
-java:S1172!"2Remove this unused method parameter "actionEvent".(Å‘8«åÙ£ƒ2J$5fdae75e-3892-4cb7-acb0-82720db411a9
+java:S1172#"2Remove this unused method parameter "actionEvent".(Å‘8«åÙ£ƒ2J$75d52216-ddc6-462f-b5f4-da70357269d5
 u
-java:S1172,"2Remove this unused method parameter "actionEvent".(Å‡¦Ô8ãùƒ¤ƒ2J$78bed3e1-1f8b-485e-91ca-9bf0cb86a2a7
+java:S1172."2Remove this unused method parameter "actionEvent".(Å‡¦Ô8ãùƒ¤ƒ2J$e1d50162-a92e-43db-827e-55dbe385fc34
 z
-java:S11727"2Remove this unused method parameter "actionEvent".(„ù³½ıÿÿÿÿ8ª’Š¤ƒ2J$0808dbb0-7046-46c0-b89d-630922df6b0d
+java:S11729"2Remove this unused method parameter "actionEvent".(„ù³½ıÿÿÿÿ8ª’Š¤ƒ2J$7e73f4e2-696e-4f5d-8498-7ebc93cb65e1
 z
-java:S1172B"2Remove this unused method parameter "actionEvent".(àõºˆüÿÿÿÿ8˜…‹¤ƒ2J$53a3b5da-5073-4c4b-b2fd-33822ec194be
+java:S1172D"2Remove this unused method parameter "actionEvent".(àõºˆüÿÿÿÿ8˜…‹¤ƒ2J$dd040140-3646-4f78-966d-6efe2f84b139
 t
-java:S1172M"1Remove this unused method parameter "mouseEvent".(–›Æı8š¿¸Ô„2J$1aa39765-4702-4a10-8930-7c7269a456d0
+java:S1172O"1Remove this unused method parameter "mouseEvent".(–›Æı8š¿¸Ô„2J$f3967e4d-3c83-4c2e-b26a-846dfe4c5f3c

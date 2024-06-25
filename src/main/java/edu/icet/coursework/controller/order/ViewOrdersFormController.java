@@ -5,7 +5,6 @@ import edu.icet.coursework.bo.custom.OrderBo;
 import edu.icet.coursework.controller.user.UserSession;
 import edu.icet.coursework.dto.Order;
 import edu.icet.coursework.dto.User;
-import edu.icet.coursework.entity.OrderEntity;
 import edu.icet.coursework.util.BoType;
 import javafx.collections.FXCollections;
 import javafx.collections.ObservableList;
@@ -19,11 +18,11 @@ import javafx.scene.control.TableView;
 import javafx.scene.control.cell.PropertyValueFactory;
 import javafx.scene.layout.AnchorPane;
 import javafx.stage.Stage;
-
 import java.io.IOException;
 import java.net.URL;
 import java.util.List;
 import java.util.ResourceBundle;
+
 
 public class ViewOrdersFormController implements Initializable {
 
@@ -35,12 +34,14 @@ public class ViewOrdersFormController implements Initializable {
     public Label lblUserId;
     public Label lblUserType;
     public TableColumn colDiscount;
+    public Label lblUserName;
 
     @Override
     public void initialize(URL url, ResourceBundle resourceBundle) {
         User currentUser = UserSession.getInstance().getCurrentSession();
-        lblUserId.setText(currentUser.getUserId()+"-");
+        lblUserId.setText(currentUser.getUserId());
         lblUserType.setText(currentUser.getUserType());
+        lblUserName.setText(currentUser.getFname());
 
         colOid.setCellValueFactory(new PropertyValueFactory<>("orderId"));
         colUid.setCellValueFactory(new PropertyValueFactory<>("userId"));

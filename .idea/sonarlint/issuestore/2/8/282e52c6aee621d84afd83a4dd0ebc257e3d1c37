@@ -1,27 +1,21 @@
 
-	java:S1129"FDefine and throw a dedicated exception instead of using a generic one.(Ò‚Òéüÿÿÿÿ8À€šªƒ2J$1a3e3ba6-2b6e-414b-ad0d-3a54241ca612
-	java:S112e"FDefine and throw a dedicated exception instead of using a generic one.(Ò‚Òéüÿÿÿÿ8Á€šªƒ2J$d4fea806-f3b3-4dd4-abe9-0d30f43dbdbc
-	java:S112n"FDefine and throw a dedicated exception instead of using a generic one.(Ò‚Òéüÿÿÿÿ8óÄª„2J$dc261ba7-eefd-4dff-b2a2-d0f83f96ecb4
+	java:S1128"FDefine and throw a dedicated exception instead of using a generic one.(Ò‚Òéüÿÿÿÿ8À€šªƒ2J$05325004-581d-4f4a-b187-a79609d36a10
+	java:S112e"FDefine and throw a dedicated exception instead of using a generic one.(Ò‚Òéüÿÿÿÿ8Á€šªƒ2J$02a72071-58c5-4277-955d-47d765dc1254
+	java:S112n"FDefine and throw a dedicated exception instead of using a generic one.(Ò‚Òéüÿÿÿÿ8óÄª„2J$6a61aede-3319-463d-8389-350af35c3131
 œ
-java:S1104"TMake txtEmail a static final constant or non-public and provide accessors if needed.(Ø¦½üÿÿÿÿ8Ã€šªƒ2J$8f9e2129-64f7-4778-9195-b4f9d6ffc9c6
+java:S1104"TMake txtEmail a static final constant or non-public and provide accessors if needed.(Ø¦½üÿÿÿÿ8Ã€šªƒ2J$c7384d43-262b-4f94-a769-f522b66d1a09
 ™
-java:S1104"QMake txtPw a static final constant or non-public and provide accessors if needed.(óºñêıÿÿÿÿ8Ã€šªƒ2J$dc0a9a6b-cf13-4b16-b73a-50c5d5a68690
+java:S1104"QMake txtPw a static final constant or non-public and provide accessors if needed.(óºñêıÿÿÿÿ8Ã€šªƒ2J$1d000414-706b-4d58-8d68-008e71e860e9
 ˜
-java:S1104"UMake adminPane a static final constant or non-public and provide accessors if needed.(ÿ¿·8Ã€šªƒ2J$df9ac2c0-1eb8-4038-999d-5b733cb3a389
+java:S1104"UMake adminPane a static final constant or non-public and provide accessors if needed.(ÿ¿·8Ã€šªƒ2J$0f6f3129-309c-41dc-be99-563b5ef98e4a
 
-java:S1104 "ZMake checkBoxShowPw a static final constant or non-public and provide accessors if needed.(Å¢™˜8Ä€šªƒ2J$9e6b8d84-3f26-40a2-9e67-7a3c124f7614
+java:S1104"ZMake checkBoxShowPw a static final constant or non-public and provide accessors if needed.(Å¢™˜8Ä€šªƒ2J$d415dfaf-d0df-4b25-89c3-a71fea6dc2db
 
-java:S1104!"UMake txtPwShow a static final constant or non-public and provide accessors if needed.(ÕŒ’çşÿÿÿÿ8Ä€šªƒ2J$5188df41-e533-4831-a6ab-14972dbeea04
+java:S1104"UMake txtPwShow a static final constant or non-public and provide accessors if needed.(ÕŒ’çşÿÿÿÿ8Ä€šªƒ2J$9c531c65-92f3-4e8c-bad8-2e707e952fe0
 p
-java:S5411("(Use a primitive boolean expression here.(¬‰‘™şÿÿÿÿ8ÇÈ¨ªƒ2J$0db8ad6b-dfe2-4b42-9bae-60fa1464b20f
+java:S5411%"(Use a primitive boolean expression here.(¬‰‘™şÿÿÿÿ8ÇÈ¨ªƒ2J$6a10787c-acfa-4648-bdad-0a8cf036cee9
 y
-java:S11724"1Remove this unused method parameter "mouseEvent".(¶ØÔãøÿÿÿÿ8Ššªƒ2J$f2c2a24d-59dc-46a4-8224-ea9e7dcca9b4
+java:S11723"1Remove this unused method parameter "mouseEvent".(¶ØÔãøÿÿÿÿ8Ššªƒ2J$a3e8a250-bde4-477e-a19a-7e9ace23fac1
 z
-java:S1172?"2Remove this unused method parameter "actionEvent".(Ùõášşÿÿÿÿ8–šªƒ2J$87c099dd-b261-4331-a967-8fb732b46331
-k	java:S108Z")Either remove or fill this block of code.(”ı¾8›šªƒ2J$53d15683-c549-4912-a440-9686dab88a46
-y
-java:S1128"1Remove this unused import 'javax.naming.Binding'.(ÛÆ§“úÿÿÿÿ8¢²©ªƒ2J$7eb98a7a-b0a5-41ee-bc99-21b781f67df8
-z
-java:S1128"2Remove this unused import 'javax.script.Bindings'.(ôÎÚ‘ÿÿÿÿÿ8¢²©ªƒ2J$cbf6efde-a100-41d2-a732-730eeb533889
-r
-java:S1128"*Remove this unused import 'java.util.Map'.(¼è½Òşÿÿÿÿ8¢²©ªƒ2J$59a6d263-22b4-48f7-bfb5-3d1ffef3b966
+java:S1172>"2Remove this unused method parameter "actionEvent".(Ùõášşÿÿÿÿ8–šªƒ2J$dd538cec-f37e-4818-bb92-4a0f681f7fdf
+k	java:S108Y")Either remove or fill this block of code.(”ı¾8›šªƒ2J$5635f249-3e10-4231-b1e3-0ac96ce80efc

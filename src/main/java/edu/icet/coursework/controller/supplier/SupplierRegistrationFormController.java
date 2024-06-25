@@ -20,7 +20,6 @@ import javafx.scene.control.ButtonType;
 import javafx.scene.control.Label;
 import javafx.scene.layout.AnchorPane;
 import javafx.stage.Stage;
-
 import java.io.IOException;
 import java.net.URL;
 import java.sql.Connection;
@@ -32,6 +31,7 @@ import java.util.ResourceBundle;
 import java.util.regex.Matcher;
 import java.util.regex.Pattern;
 
+
 public class SupplierRegistrationFormController implements Initializable {
     public JFXTextField txtSid;
     public JFXTextField txtCompanyEmail;
@@ -42,6 +42,7 @@ public class SupplierRegistrationFormController implements Initializable {
     public JFXTextField txtProductDescription;
     public JFXTextField txtCompanyContactNumber;
     public JFXComboBox cbxCategory;
+    public Label lblUserName;
 
     @Override
     public void initialize(URL url, ResourceBundle resourceBundle) {
@@ -49,6 +50,7 @@ public class SupplierRegistrationFormController implements Initializable {
         User currentUser = UserSession.getInstance().getCurrentSession();
         lblUserId.setText(currentUser.getUserId());
         lblUserType.setText(currentUser.getUserType());
+        lblUserName.setText(currentUser.getFname());
 
         loadCategoryMenu();
         generateSupplierId();

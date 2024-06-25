@@ -6,7 +6,6 @@ import com.jfoenix.controls.JFXTextField;
 import edu.icet.coursework.bo.BoFactory;
 import edu.icet.coursework.bo.custom.UserBo;
 import edu.icet.coursework.db.DBConnection;
-import edu.icet.coursework.dto.Product;
 import edu.icet.coursework.dto.User;
 import edu.icet.coursework.util.BoType;
 import javafx.collections.FXCollections;
@@ -18,10 +17,8 @@ import javafx.scene.Scene;
 import javafx.scene.control.Alert;
 import javafx.scene.control.DatePicker;
 import javafx.scene.control.Label;
-import javafx.scene.input.MouseEvent;
 import javafx.scene.layout.AnchorPane;
 import javafx.stage.Stage;
-
 import java.io.IOException;
 import java.net.URL;
 import java.sql.Connection;
@@ -31,6 +28,7 @@ import java.sql.Statement;
 import java.util.ResourceBundle;
 import java.util.regex.Matcher;
 import java.util.regex.Pattern;
+
 
 public class UserRegistrationFormController implements Initializable {
     public JFXTextField txtUid;
@@ -47,13 +45,15 @@ public class UserRegistrationFormController implements Initializable {
     public Label lblUserType;
     public JFXPasswordField txtPw;
     public JFXPasswordField txtPwConfirm;
+    public Label lblUserName;
 
 
     @Override
     public void initialize(URL url, ResourceBundle resourceBundle) {
         User currentUser = UserSession.getInstance().getCurrentSession();
-        lblUserId.setText(currentUser.getUserId()+"-");
+        lblUserId.setText(currentUser.getUserId());
         lblUserType.setText(currentUser.getUserType());
+        lblUserName.setText(currentUser.getFname());
 
         loadUserTypesMenu();
         loadGendersMenu();

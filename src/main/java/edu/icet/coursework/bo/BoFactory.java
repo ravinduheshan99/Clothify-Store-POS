@@ -4,11 +4,12 @@ import edu.icet.coursework.bo.custom.impl.OrderBoImpl;
 import edu.icet.coursework.bo.custom.impl.ProductBoImpl;
 import edu.icet.coursework.bo.custom.impl.SupplierBoImpl;
 import edu.icet.coursework.bo.custom.impl.UserBoImpl;
-import edu.icet.coursework.dao.custom.impl.ProductDaoImpl;
 import edu.icet.coursework.util.BoType;
+
 
 //Factory Design Pattern
 public class BoFactory {
+
     //Singleton Design Pattern
     private BoFactory() {}
 
@@ -31,4 +32,5 @@ public class BoFactory {
         }
         return null;
     }
+
 }

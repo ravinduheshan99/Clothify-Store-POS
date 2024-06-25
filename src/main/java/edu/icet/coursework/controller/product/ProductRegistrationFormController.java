@@ -33,6 +33,7 @@ import java.util.ResourceBundle;
 import java.util.regex.Matcher;
 import java.util.regex.Pattern;
 
+
 public class ProductRegistrationFormController implements Initializable {
     public JFXTextField txtPid;
     public JFXTextField txtProductName;
@@ -45,12 +46,14 @@ public class ProductRegistrationFormController implements Initializable {
     public Label lblUserType;
     public JFXTextField txtProductCategory;
     public JFXComboBox cbxSupplierId;
+    public Label lblUserName;
 
     @Override
     public void initialize(URL url, ResourceBundle resourceBundle) {
         User currentUser = UserSession.getInstance().getCurrentSession();
         lblUserId.setText(currentUser.getUserId());
         lblUserType.setText(currentUser.getUserType());
+        lblUserName.setText(currentUser.getFname());
 
         generateProductId();
         loadSupplierIdMenu();

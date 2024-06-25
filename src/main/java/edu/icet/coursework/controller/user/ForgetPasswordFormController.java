@@ -10,9 +10,9 @@ import javafx.scene.control.Alert;
 import javafx.scene.input.MouseEvent;
 import javafx.scene.layout.AnchorPane;
 import javafx.stage.Stage;
-
 import java.io.IOException;
 import java.util.Random;
+
 
 public class ForgetPasswordFormController {
     public AnchorPane adminpane;
@@ -86,4 +86,5 @@ public class ForgetPasswordFormController {
         System.out.println("Generated OTP: " + otp);
         return otp;
     }
+
 }

@@ -9,6 +9,7 @@ import edu.icet.coursework.util.DaoType;
 import javafx.collections.ObservableList;
 import org.modelmapper.ModelMapper;
 
+
 public class UserBoImpl implements UserBo {
 
     private UserDao userDaoImpl = DaoFactory.getInstance().getDao(DaoType.USER);

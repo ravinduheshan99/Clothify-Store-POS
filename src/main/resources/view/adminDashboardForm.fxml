@@ -12,9 +12,9 @@
 <AnchorPane fx:id="adminpane" maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="551.0" prefWidth="711.0" xmlns="http://javafx.com/javafx/21" xmlns:fx="http://javafx.com/fxml/1" fx:controller="edu.icet.coursework.controller.user.AdminDashboardFormController">
    <children>
       <Rectangle arcHeight="5.0" arcWidth="5.0" height="59.0" stroke="WHITE" strokeType="INSIDE" width="711.0" />
-      <Label fx:id="lblUserId" layoutX="564.0" layoutY="20.0" text="U001" textFill="WHITE">
+      <Label fx:id="lblUserId" layoutX="574.0" layoutY="21.0" text="U001" textFill="WHITE">
          <font>
-            <Font name="Segoe UI" size="16.0" />
+            <Font name="Segoe UI" size="12.0" />
          </font>
       </Label>
       <ImageView fitHeight="49.0" fitWidth="50.0" layoutX="660.0" layoutY="4.0" pickOnBounds="true" preserveRatio="true">
@@ -117,9 +117,9 @@
             <Font name="Segoe UI" size="12.0" />
          </font>
       </Label>
-      <Label fx:id="lblUserType" layoutX="609.0" layoutY="20.0" text="Admin" textFill="WHITE">
+      <Label fx:id="lblUserName" layoutX="610.0" layoutY="21.0" text="Username" textFill="WHITE">
          <font>
-            <Font name="Segoe UI" size="16.0" />
+            <Font name="Segoe UI" size="12.0" />
          </font>
       </Label>
       <Label layoutX="267.0" layoutY="494.0" text="Do you want to signout?" textFill="WHITE">
@@ -130,6 +130,11 @@
       <Label layoutX="400.0" layoutY="494.0" onMouseClicked="#lblLoginFormNavOnAction" text="Signout" textFill="WHITE" underline="true">
          <font>
             <Font name="Segoe UI Bold" size="12.0" />
+         </font>
+      </Label>
+      <Label fx:id="lblUserType" layoutX="31.0" layoutY="20.0" text="Admin" textFill="WHITE">
+         <font>
+            <Font name="Segoe UI" size="16.0" />
          </font>
       </Label>
    </children>

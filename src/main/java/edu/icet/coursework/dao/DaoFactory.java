@@ -1,13 +1,14 @@
 package edu.icet.coursework.dao;
 
-import edu.icet.coursework.bo.custom.impl.SupplierBoImpl;
 import edu.icet.coursework.dao.custom.impl.OrderDaoImpl;
 import edu.icet.coursework.dao.custom.impl.ProductDaoImpl;
 import edu.icet.coursework.dao.custom.impl.SupplierDaoImpl;
 import edu.icet.coursework.dao.custom.impl.UserDaoImpl;
 import edu.icet.coursework.util.DaoType;
 
+
 public class DaoFactory {
+
     //Sigleton Design Patter
     private DaoFactory() {}
 

@@ -41,19 +41,24 @@
             <Image url="@../../../../assets/Logo.jpg" />
          </image>
       </ImageView>
-      <Label fx:id="lblUserId" layoutX="600.0" layoutY="21.0" text="U001" textFill="WHITE">
-         <font>
-            <Font name="Segoe UI" size="16.0" />
-         </font>
-      </Label>
-      <Label fx:id="lblUserType" layoutX="645.0" layoutY="21.0" text="Admin" textFill="WHITE">
-         <font>
-            <Font name="Segoe UI" size="16.0" />
-         </font>
-      </Label>
       <JFXTextField fx:id="txtProductDescription" focusColor="WHITE" layoutX="94.0" layoutY="375.0" prefHeight="25.0" prefWidth="569.0" promptText="Product Description" style="-fx-background-color: ffffff;" unFocusColor="WHITE" />
       <JFXTextField fx:id="txtCompanyContactNumber" focusColor="WHITE" layoutX="94.0" layoutY="332.0" prefHeight="25.0" prefWidth="272.0" promptText="Company Contact Number" style="-fx-background-color: ffffff;" unFocusColor="WHITE" />
       <JFXComboBox fx:id="cbxCategory" focusColor="WHITE" layoutX="391.0" layoutY="288.0" prefHeight="30.0" prefWidth="272.0" promptText="Product Category" style="-fx-background-color: #ffffff;" unFocusColor="WHITE" />
       <JFXButton layoutX="441.0" layoutY="421.0" onAction="#btnClearOnAction" prefHeight="39.0" prefWidth="106.0" style="-fx-background-color: #000000;" text="Clear Form" textFill="WHITE" />
+      <Label fx:id="lblUserId" layoutX="599.0" layoutY="22.0" text="U001" textFill="WHITE">
+         <font>
+            <Font name="Segoe UI" size="12.0" />
+         </font>
+      </Label>
+      <Label fx:id="lblUserName" layoutX="635.0" layoutY="22.0" text="Username" textFill="WHITE">
+         <font>
+            <Font name="Segoe UI" size="12.0" />
+         </font>
+      </Label>
+      <Label fx:id="lblUserType" layoutX="56.0" layoutY="21.0" text="Admin" textFill="WHITE">
+         <font>
+            <Font name="Segoe UI" size="16.0" />
+         </font>
+      </Label>
    </children>
 </AnchorPane>

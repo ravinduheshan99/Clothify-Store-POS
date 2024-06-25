@@ -12,7 +12,6 @@ import javafx.collections.ObservableList;
 import org.hibernate.Session;
 import org.hibernate.Transaction;
 import org.modelmapper.ModelMapper;
-
 import java.util.List;
 
 public class UserDaoImpl implements UserDao {
