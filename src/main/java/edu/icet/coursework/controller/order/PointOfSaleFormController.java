@@ -15,9 +15,11 @@ import edu.icet.coursework.dto.tm.TableModelCart;
 import edu.icet.coursework.entity.OrderDetailsEntity;
 import edu.icet.coursework.entity.OrderEntity;
 import edu.icet.coursework.util.BoType;
+import edu.icet.coursework.util.Mail;
 import javafx.animation.Animation;
 import javafx.animation.KeyFrame;
 import javafx.animation.Timeline;
+import javafx.application.Platform;
 import javafx.collections.FXCollections;
 import javafx.collections.ObservableList;
 import javafx.event.ActionEvent;
@@ -318,6 +320,7 @@ public class PointOfSaleFormController implements Initializable {
                     product.setQty((product.getQty() - cartItem.getQty()));
                     productBoImpl.updateProduct(product);
                 }
+                sendEBillToCustomer(txtCustomerEmail.getText(), cartList, order);
                 clearForm();
                 generateOrderId();
             } else {
@@ -380,6 +383,46 @@ public class PointOfSaleFormController implements Initializable {
         } else {
             return "0.00";
         }
+    }
+
+    private void sendEBillToCustomer(String email, ObservableList<TableModelCart> cartList, Order order) {
+        Mail mail = new Mail();
+        StringBuilder message = new StringBuilder();
+
+        // Construct the email message
+        message.append("Dear Customer,\n\n")
+                .append("Thank You For Visiting Us! Your Purchase Was Successful.\n")
+                .append("Here Are The Details Of Your Purchase:\n\n")
+                .append("OrderID: ").append(order.getOrderId()).append("\n")
+                .append("CashierID: ").append(order.getUserId()).append("\n")
+                .append("OrderDate: ").append(order.getOrderDate()).append("\n")
+                .append("Discount: ").append(order.getDiscount()).append("%\n")
+                .append("Total Bill Amount: ").append(String.format("%.2f", order.getTotalBillAmount())).append("\n")
+                .append("Thank You For Shopping With Us!\n")
+                .append("Have a Nice Day.\n")
+                .append("Clothify Store Panadura");
+
+        // Set the email details
+        mail.setMsg(message.toString());
+        mail.setTo(email);
+        mail.setSubject("Clothify Store - Order Confirmation E-Recipt");
+
+        // Send the email in a new thread
+        Thread thread = new Thread(mail);
+        thread.start();
+
+        // Show a notification
+        showNotification("E-Receipt Status", "E-Receipt sent successfully. Thanks for shopping with us!\nHave a nice day.\nClothify Store Panadura.");
+    }
+
+    private void showNotification(String title, String message) {
+        Platform.runLater(() -> {
+            Alert alert = new Alert(Alert.AlertType.INFORMATION);
+            alert.setTitle(title);
+            alert.setHeaderText(null);
+            alert.setContentText(message);
+            alert.show();
+        });
     }
 
     private void clearProductDetails() {
