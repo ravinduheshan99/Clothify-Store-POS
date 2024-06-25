@@ -85,7 +85,7 @@ public class AdminDashboardFormController implements Initializable {
     }
 
     public void lblLoginFormNavOnAction(MouseEvent mouseEvent) {
-        Alert alert = new Alert(Alert.AlertType.CONFIRMATION, "Are you Sure. Do you want to signout?");
+        Alert alert = new Alert(Alert.AlertType.CONFIRMATION, "Are you Sure. Do You Want To Signout?");
         Optional<ButtonType> result = alert.showAndWait();
 
         if (result.isPresent() && result.get() == ButtonType.OK) {

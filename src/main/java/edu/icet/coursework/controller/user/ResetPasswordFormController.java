@@ -79,7 +79,7 @@ public class ResetPasswordFormController {
     }
 
     public void btnBackOnAction(ActionEvent actionEvent) {
-        Alert alert = new Alert(Alert.AlertType.CONFIRMATION, "Are you Sure. Do you want to exit?");
+        Alert alert = new Alert(Alert.AlertType.CONFIRMATION, "Are you Sure. Do You Want To Exit?");
         Optional<ButtonType> result = alert.showAndWait();
 
         if (result.isPresent() && result.get() == ButtonType.OK) {

@@ -130,6 +130,14 @@ public class UserRegistrationFormController implements Initializable {
 
 
     public void btnRegisterOnAction(ActionEvent actionEvent) {
+        String password = txtPw.getText();
+        String confirmPassword = txtPwConfirm.getText();
+
+        if (!password.equals(confirmPassword)) {
+            new Alert(Alert.AlertType.ERROR, "Passwords do not match!").show();
+            return; // Exit method if passwords do not match
+        }
+
         User user = new User(txtUid.getText(),
                         cbxUserType.getValue().toString(),
                         txtFname.getText(),
