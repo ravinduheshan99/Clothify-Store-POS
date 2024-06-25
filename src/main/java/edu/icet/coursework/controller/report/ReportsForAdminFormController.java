@@ -217,7 +217,6 @@ public class ReportsForAdminFormController implements Initializable {
         }
     }
 
-
     private void showAlert(String title, String message, Alert.AlertType alertType) {
         Alert alert = new Alert(alertType);
         alert.setTitle(title);
@@ -225,6 +224,7 @@ public class ReportsForAdminFormController implements Initializable {
         alert.setContentText(message);
         alert.showAndWait();
     }
+
 
     public void btnInventoryReportOnAction(ActionEvent actionEvent) {
         try {
