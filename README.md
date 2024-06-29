@@ -17,32 +17,32 @@ The project follows a layered architecture, consisting of several components to 
 
 ## Interfaces
 
-<div style="display: flex; justify-content: center; align-items: center;">
-   <img src="" alt="Interface 01" width="1200" height="600">
-</div>
-
 ---
 
 <table>
+   <tr>
+    <td><img src="https://github.com/ravinduheshan99/Clothify-Store-POS/blob/main/assets/1.png" alt="Interface 01" width="1200" height="400"></td>
+    <td><img src="https://github.com/ravinduheshan99/Clothify-Store-POS/blob/main/assets/6.png" alt="Interface 06" width="1200" height="400"></td>
+  </tr>
+   
   <tr>
-    <td><img src="" alt="Interface 02" width="1200" height="400"></td>
-    <td><img src="" alt="Interface 03" width="1200" height="400"></td>
+    <td><img src="https://github.com/ravinduheshan99/Clothify-Store-POS/blob/main/assets/8.png" alt="Interface 08" width="1200" height="400"></td>
+    <td><img src="https://github.com/ravinduheshan99/Clothify-Store-POS/blob/main/assets/2.png" alt="Interface 02" width="1200" height="400"></td>
   </tr>
   
   <tr>
-    <td><img src="" alt="Interface 04" width="1200" height="400"></td>
-    <td><img src="" alt="Interface 05" width="1200" height="400"></td>
+    <td><img src="https://github.com/ravinduheshan99/Clothify-Store-POS/blob/main/assets/3.png" alt="Interface 03" width="1200" height="400"></td>
+    <td><img src="https://github.com/ravinduheshan99/Clothify-Store-POS/blob/main/assets/4.png" alt="Interface 04" width="1200" height="400"></td>
   </tr>
   
   <tr>
-    <td><img src="" alt="Interface 06" width="1200" height="400"></td>
-    <td><img src="" alt="Interface 07" width="1200" height="400"></td>
+    <td><img src="https://github.com/ravinduheshan99/Clothify-Store-POS/blob/main/assets/5.png" alt="Interface 05" width="1200" height="400"></td>
+    <td><img src="https://github.com/ravinduheshan99/Clothify-Store-POS/blob/main/assets/7.png" alt="Interface 07" width="1200" height="400"></td>
   </tr>
   
 </table>
 
 ---
-
 
 ## Project Requirements
 
@@ -62,7 +62,7 @@ The application consists of two interfaces:
 - **User Authentication**: 
   - Email and password verification during login.
   - OTP pin for password reset.
-  - Redirect to appropriate dashboard based on user type.
+  - Redirect to the appropriate dashboard based on user type.
 
 ### Product Management
 
@@ -103,9 +103,11 @@ The application consists of two interfaces:
   - Generated using Jasper Reports.
 
 ## Contact
+
 For any inquiries or feedback, please contact:
 
 Email: ravinduheshan99@gmail.com
 
 ## Authors
+
 - [@ravinduheshan99](https://github.com/ravinduheshan99)
